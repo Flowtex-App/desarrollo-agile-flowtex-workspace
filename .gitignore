@@ -1,0 +1,16 @@
+# Build output
+build/
+*.docx
+*.pdf
+
+# Excepción: plantilla institucional sí se versiona
+!docs/templates/*.docx
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
