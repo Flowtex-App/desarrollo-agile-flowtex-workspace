@@ -7,7 +7,7 @@
 ## Flujograma maestro
 
 ```mermaid
-flowchart TD
+flowchart LR
     INI([Punto de partida<br/>Claro paga cuatrocientos mil soles al año por NINTEX<br/>y la operación se ralentiza por semanas en cada formulario<br/><i>visión orientada a valor económico</i>])
 
     A[1 · Levantar el contexto del producto<br/>se mapea al cliente, los proveedores y los factores externos<br/>contrastándolos con el benchmark del mercado<br/><i>FODA · PEST · benchmark · pentágono de oportunidades</i>]
