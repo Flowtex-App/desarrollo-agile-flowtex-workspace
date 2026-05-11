@@ -45,21 +45,21 @@
       <bpmn:outgoing>F_DEF_DEC1</bpmn:outgoing>
     </bpmn:task>
 
-    <bpmn:exclusiveGateway id="DEC1" name="En que fase del modelo de Tuckman esta el equipo al momento de idear?">
+    <bpmn:exclusiveGateway id="DEC1" name="En que fase del modelo de Tuckman esta el equipo?">
       <bpmn:incoming>F_DEF_DEC1</bpmn:incoming>
       <bpmn:outgoing>F_DEC1_ID1</bpmn:outgoing>
       <bpmn:outgoing>F_DEC1_ID2</bpmn:outgoing>
       <bpmn:outgoing>F_DEC1_ID3</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="ID1" name="Aplicar Escribir en silencio (equipo en Forming)">
+    <bpmn:task id="ID1" name="Aplicar Escribir en silencio (Forming)">
       <bpmn:incoming>F_DEC1_ID1</bpmn:incoming>
       <bpmn:outgoing>F_ID1_POOL</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="ID2" name="Aplicar Round Robin (equipo en Norming)">
+    <bpmn:task id="ID2" name="Aplicar Round Robin (Norming)">
       <bpmn:incoming>F_DEC1_ID2</bpmn:incoming>
       <bpmn:outgoing>F_ID2_POOL</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="ID3" name="Aplicar Free (equipo en Performing)">
+    <bpmn:task id="ID3" name="Aplicar Free (Performing)">
       <bpmn:incoming>F_DEC1_ID3</bpmn:incoming>
       <bpmn:outgoing>F_ID3_POOL</bpmn:outgoing>
     </bpmn:task>
@@ -82,7 +82,7 @@
       <bpmn:incoming>F_BL_MVP</bpmn:incoming>
       <bpmn:outgoing>F_MVP_AI</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="AI" name="9b. Capacidad de inteligencia artificial del producto minimo viable">
+    <bpmn:task id="AI" name="9b. Capacidad de inteligencia artificial">
       <bpmn:incoming>F_MVP_AI</bpmn:incoming>
       <bpmn:outgoing>F_AI_VAL</bpmn:outgoing>
       <bpmn:outgoing>F_AI_DEF</bpmn:outgoing>
@@ -91,26 +91,26 @@
       <bpmn:incoming>F_AI_VAL</bpmn:incoming>
       <bpmn:outgoing>F_VAL_LIN</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="LIN" name="11. Iterar con Lean Inception (cinco dias)">
+    <bpmn:task id="LIN" name="11. Iterar con Lean Inception">
       <bpmn:incoming>F_VAL_LIN</bpmn:incoming>
       <bpmn:outgoing>F_LIN_DEC2</bpmn:outgoing>
     </bpmn:task>
 
-    <bpmn:exclusiveGateway id="DEC2" name="Que tipo de problema aparece durante el sprint?">
+    <bpmn:exclusiveGateway id="DEC2" name="Que tipo de problema aparece en el sprint?">
       <bpmn:incoming>F_LIN_DEC2</bpmn:incoming>
       <bpmn:outgoing>F_DEC2_PR1</bpmn:outgoing>
       <bpmn:outgoing>F_DEC2_PR2</bpmn:outgoing>
       <bpmn:outgoing>F_DEC2_PR3</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="PR1" name="Aplicar Recordar el futuro (riesgos del trabajo por venir)">
+    <bpmn:task id="PR1" name="Aplicar Recordar el futuro (Riesgos)">
       <bpmn:incoming>F_DEC2_PR1</bpmn:incoming>
       <bpmn:outgoing>F_PR1_KB</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="PR2" name="Aplicar Arbol (nuevas funcionalidades sobre el producto estable)">
+    <bpmn:task id="PR2" name="Aplicar Arbol (Nuevas funcionalidades)">
       <bpmn:incoming>F_DEC2_PR2</bpmn:incoming>
       <bpmn:outgoing>F_PR2_KB</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="PR3" name="Aplicar Lancha rapida (friccion interna del equipo)">
+    <bpmn:task id="PR3" name="Aplicar Lancha rapida (Friccion)">
       <bpmn:incoming>F_DEC2_PR3</bpmn:incoming>
       <bpmn:outgoing>F_PR3_KB</bpmn:outgoing>
     </bpmn:task>
@@ -127,7 +127,7 @@
       <bpmn:outgoing>F_KPI_C</bpmn:outgoing>
     </bpmn:task>
 
-    <bpmn:endEvent id="Z" name="Producto verificable, listo para la siguiente vuelta del ciclo">
+    <bpmn:endEvent id="Z" name="Producto verificable, siguiente vuelta del ciclo">
       <bpmn:incoming>F_KPI_Z</bpmn:incoming>
       <bpmn:outgoing>F_Z_A</bpmn:outgoing>
     </bpmn:endEvent>
@@ -151,7 +151,7 @@
     <bpmn:sequenceFlow id="F_AI_VAL" sourceRef="AI" targetRef="VAL"/>
     <bpmn:sequenceFlow id="F_VAL_LIN" sourceRef="VAL" targetRef="LIN"/>
     <bpmn:sequenceFlow id="F_LIN_DEC2" sourceRef="LIN" targetRef="DEC2"/>
-    <bpmn:sequenceFlow id="F_DEC2_PR1" name="Riesgos del trabajo" sourceRef="DEC2" targetRef="PR1"/>
+    <bpmn:sequenceFlow id="F_DEC2_PR1" name="Riesgos" sourceRef="DEC2" targetRef="PR1"/>
     <bpmn:sequenceFlow id="F_DEC2_PR2" name="Nuevas funcionalidades" sourceRef="DEC2" targetRef="PR2"/>
     <bpmn:sequenceFlow id="F_DEC2_PR3" name="Friccion del equipo" sourceRef="DEC2" targetRef="PR3"/>
     <bpmn:sequenceFlow id="F_PR1_KB" sourceRef="PR1" targetRef="KB"/>
@@ -161,7 +161,7 @@
     <bpmn:sequenceFlow id="F_KPI_Z" sourceRef="KPI" targetRef="Z"/>
     <bpmn:sequenceFlow id="F_KPI_C" name="realimenta los objetivos" sourceRef="KPI" targetRef="C"/>
     <bpmn:sequenceFlow id="F_Z_A" name="nuevo aprendizaje del ciclo anterior" sourceRef="Z" targetRef="A"/>
-    <bpmn:sequenceFlow id="F_AI_DEF" name="ataca directamente las semanas de espera" sourceRef="AI" targetRef="DEF"/>
+    <bpmn:sequenceFlow id="F_AI_DEF" name="ataca las semanas de espera" sourceRef="AI" targetRef="DEF"/>
 
   </bpmn:process>
 
@@ -169,231 +169,231 @@
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collab_1">
 
       <bpmndi:BPMNShape id="Pool_Flowtex_di" bpmnElement="Pool_Flowtex" isHorizontal="true">
-        <dc:Bounds x="160" y="0" width="2750" height="600"/>
+        <dc:Bounds x="160" y="0" width="2950" height="470"/>
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="INI_di" bpmnElement="INI" bioc:stroke="#2e7d32" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#2e7d32">
-        <dc:Bounds x="200" y="312" width="36" height="36"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="170" y="355" width="120" height="55"/></bpmndi:BPMNLabel>
+        <dc:Bounds x="200" y="222" width="36" height="36"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="170" y="265" width="120" height="45"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="A_di" bpmnElement="A" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="270" y="290" width="110" height="80"/>
+        <dc:Bounds x="270" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="B_di" bpmnElement="B" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="410" y="290" width="110" height="80"/>
+        <dc:Bounds x="410" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="C_di" bpmnElement="C" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="550" y="290" width="110" height="80"/>
+        <dc:Bounds x="550" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="D_di" bpmnElement="D" bioc:stroke="#5e35b1" bioc:fill="#d1c4e9" color:background-color="#d1c4e9" color:border-color="#5e35b1">
-        <dc:Bounds x="690" y="290" width="110" height="80"/>
+        <dc:Bounds x="690" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="DEF_di" bpmnElement="DEF" bioc:stroke="#5e35b1" bioc:fill="#d1c4e9" color:background-color="#d1c4e9" color:border-color="#5e35b1">
-        <dc:Bounds x="830" y="290" width="110" height="80"/>
+        <dc:Bounds x="830" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="DEC1_di" bpmnElement="DEC1" isMarkerVisible="true" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="975" y="305" width="50" height="50"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="945" y="360" width="120" height="55"/></bpmndi:BPMNLabel>
+        <dc:Bounds x="975" y="215" width="50" height="50"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="945" y="170" width="120" height="40"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ID1_di" bpmnElement="ID1" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="1070" y="60" width="160" height="55"/>
+        <dc:Bounds x="1070" y="50" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ID2_di" bpmnElement="ID2" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="1070" y="140" width="160" height="55"/>
+        <dc:Bounds x="1070" y="100" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ID3_di" bpmnElement="ID3" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="1070" y="220" width="160" height="55"/>
+        <dc:Bounds x="1070" y="150" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="POOL_T_di" bpmnElement="POOL_T" bioc:stroke="#5e35b1" bioc:fill="#d1c4e9" color:background-color="#d1c4e9" color:border-color="#5e35b1">
-        <dc:Bounds x="1270" y="290" width="110" height="80"/>
+        <dc:Bounds x="1270" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="HU_di" bpmnElement="HU" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="1410" y="290" width="110" height="80"/>
+        <dc:Bounds x="1410" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BL_di" bpmnElement="BL" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="1550" y="290" width="110" height="80"/>
+        <dc:Bounds x="1550" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="MVP_di" bpmnElement="MVP" bioc:stroke="#1565c0" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#1565c0">
-        <dc:Bounds x="1690" y="290" width="110" height="80"/>
+        <dc:Bounds x="1690" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="AI_di" bpmnElement="AI" bioc:stroke="#ef6c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#ef6c00">
-        <dc:Bounds x="1830" y="280" width="140" height="100"/>
+        <dc:Bounds x="1830" y="190" width="140" height="100"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="VAL_di" bpmnElement="VAL" bioc:stroke="#5e35b1" bioc:fill="#d1c4e9" color:background-color="#d1c4e9" color:border-color="#5e35b1">
-        <dc:Bounds x="2000" y="290" width="110" height="80"/>
+        <dc:Bounds x="2000" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="LIN_di" bpmnElement="LIN" bioc:stroke="#2e7d32" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#2e7d32">
-        <dc:Bounds x="2140" y="290" width="110" height="80"/>
+        <dc:Bounds x="2140" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="DEC2_di" bpmnElement="DEC2" isMarkerVisible="true" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="2285" y="305" width="50" height="50"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="2255" y="360" width="120" height="40"/></bpmndi:BPMNLabel>
+        <dc:Bounds x="2285" y="215" width="50" height="50"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="2255" y="170" width="120" height="40"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="PR1_di" bpmnElement="PR1" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="2380" y="60" width="160" height="55"/>
+        <dc:Bounds x="2380" y="50" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="PR2_di" bpmnElement="PR2" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="2380" y="140" width="160" height="55"/>
+        <dc:Bounds x="2380" y="100" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="PR3_di" bpmnElement="PR3" bioc:stroke="#f57f17" bioc:fill="#fff9c4" color:background-color="#fff9c4" color:border-color="#f57f17">
-        <dc:Bounds x="2380" y="220" width="160" height="55"/>
+        <dc:Bounds x="2380" y="150" width="160" height="40"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="KB_di" bpmnElement="KB" bioc:stroke="#455a64" bioc:fill="#cfd8dc" color:background-color="#cfd8dc" color:border-color="#455a64">
-        <dc:Bounds x="2580" y="290" width="110" height="80"/>
+        <dc:Bounds x="2580" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="KPI_di" bpmnElement="KPI" bioc:stroke="#455a64" bioc:fill="#cfd8dc" color:background-color="#cfd8dc" color:border-color="#455a64">
-        <dc:Bounds x="2720" y="290" width="110" height="80"/>
+        <dc:Bounds x="2720" y="200" width="110" height="80"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Z_di" bpmnElement="Z" bioc:stroke="#c62828" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#c62828">
-        <dc:Bounds x="2860" y="312" width="36" height="36"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="2810" y="355" width="140" height="55"/></bpmndi:BPMNLabel>
+        <dc:Bounds x="2860" y="222" width="36" height="36"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="2810" y="265" width="140" height="45"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNEdge id="F_INI_A_di" bpmnElement="F_INI_A">
-        <di:waypoint x="236" y="330"/>
-        <di:waypoint x="270" y="330"/>
+        <di:waypoint x="236" y="240"/>
+        <di:waypoint x="270" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_A_B_di" bpmnElement="F_A_B">
-        <di:waypoint x="380" y="330"/>
-        <di:waypoint x="410" y="330"/>
+        <di:waypoint x="380" y="240"/>
+        <di:waypoint x="410" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_B_C_di" bpmnElement="F_B_C">
-        <di:waypoint x="520" y="330"/>
-        <di:waypoint x="550" y="330"/>
+        <di:waypoint x="520" y="240"/>
+        <di:waypoint x="550" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_C_D_di" bpmnElement="F_C_D">
-        <di:waypoint x="660" y="330"/>
-        <di:waypoint x="690" y="330"/>
+        <di:waypoint x="660" y="240"/>
+        <di:waypoint x="690" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_D_DEF_di" bpmnElement="F_D_DEF">
-        <di:waypoint x="800" y="330"/>
-        <di:waypoint x="830" y="330"/>
+        <di:waypoint x="800" y="240"/>
+        <di:waypoint x="830" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEF_DEC1_di" bpmnElement="F_DEF_DEC1">
-        <di:waypoint x="940" y="330"/>
-        <di:waypoint x="975" y="330"/>
+        <di:waypoint x="940" y="240"/>
+        <di:waypoint x="975" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC1_ID1_di" bpmnElement="F_DEC1_ID1">
-        <di:waypoint x="1000" y="305"/>
-        <di:waypoint x="1000" y="87"/>
-        <di:waypoint x="1070" y="87"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="200" width="55" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="1000" y="215"/>
+        <di:waypoint x="1000" y="70"/>
+        <di:waypoint x="1070" y="70"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="150" width="55" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC1_ID2_di" bpmnElement="F_DEC1_ID2">
-        <di:waypoint x="1000" y="305"/>
-        <di:waypoint x="1000" y="167"/>
-        <di:waypoint x="1070" y="167"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="240" width="60" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="1000" y="215"/>
+        <di:waypoint x="1000" y="120"/>
+        <di:waypoint x="1070" y="120"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="180" width="60" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC1_ID3_di" bpmnElement="F_DEC1_ID3">
-        <di:waypoint x="1000" y="305"/>
-        <di:waypoint x="1000" y="247"/>
-        <di:waypoint x="1070" y="247"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="280" width="70" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="1000" y="215"/>
+        <di:waypoint x="1000" y="170"/>
+        <di:waypoint x="1070" y="170"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1005" y="200" width="70" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_ID1_POOL_di" bpmnElement="F_ID1_POOL">
-        <di:waypoint x="1230" y="87"/>
-        <di:waypoint x="1325" y="87"/>
-        <di:waypoint x="1325" y="290"/>
+        <di:waypoint x="1230" y="70"/>
+        <di:waypoint x="1325" y="70"/>
+        <di:waypoint x="1325" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_ID2_POOL_di" bpmnElement="F_ID2_POOL">
-        <di:waypoint x="1230" y="167"/>
-        <di:waypoint x="1325" y="167"/>
-        <di:waypoint x="1325" y="290"/>
+        <di:waypoint x="1230" y="120"/>
+        <di:waypoint x="1325" y="120"/>
+        <di:waypoint x="1325" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_ID3_POOL_di" bpmnElement="F_ID3_POOL">
-        <di:waypoint x="1230" y="247"/>
-        <di:waypoint x="1325" y="247"/>
-        <di:waypoint x="1325" y="290"/>
+        <di:waypoint x="1230" y="170"/>
+        <di:waypoint x="1325" y="170"/>
+        <di:waypoint x="1325" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_POOL_HU_di" bpmnElement="F_POOL_HU">
-        <di:waypoint x="1380" y="330"/>
-        <di:waypoint x="1410" y="330"/>
+        <di:waypoint x="1380" y="240"/>
+        <di:waypoint x="1410" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_HU_BL_di" bpmnElement="F_HU_BL">
-        <di:waypoint x="1520" y="330"/>
-        <di:waypoint x="1550" y="330"/>
+        <di:waypoint x="1520" y="240"/>
+        <di:waypoint x="1550" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_BL_MVP_di" bpmnElement="F_BL_MVP">
-        <di:waypoint x="1660" y="330"/>
-        <di:waypoint x="1690" y="330"/>
+        <di:waypoint x="1660" y="240"/>
+        <di:waypoint x="1690" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_MVP_AI_di" bpmnElement="F_MVP_AI">
-        <di:waypoint x="1800" y="330"/>
-        <di:waypoint x="1830" y="330"/>
+        <di:waypoint x="1800" y="240"/>
+        <di:waypoint x="1830" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_AI_VAL_di" bpmnElement="F_AI_VAL">
-        <di:waypoint x="1970" y="330"/>
-        <di:waypoint x="2000" y="330"/>
+        <di:waypoint x="1970" y="240"/>
+        <di:waypoint x="2000" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_VAL_LIN_di" bpmnElement="F_VAL_LIN">
-        <di:waypoint x="2110" y="330"/>
-        <di:waypoint x="2140" y="330"/>
+        <di:waypoint x="2110" y="240"/>
+        <di:waypoint x="2140" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_LIN_DEC2_di" bpmnElement="F_LIN_DEC2">
-        <di:waypoint x="2250" y="330"/>
-        <di:waypoint x="2285" y="330"/>
+        <di:waypoint x="2250" y="240"/>
+        <di:waypoint x="2285" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC2_PR1_di" bpmnElement="F_DEC2_PR1">
-        <di:waypoint x="2310" y="305"/>
-        <di:waypoint x="2310" y="87"/>
-        <di:waypoint x="2380" y="87"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="200" width="120" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="2310" y="215"/>
+        <di:waypoint x="2310" y="70"/>
+        <di:waypoint x="2380" y="70"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="150" width="60" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC2_PR2_di" bpmnElement="F_DEC2_PR2">
-        <di:waypoint x="2310" y="305"/>
-        <di:waypoint x="2310" y="167"/>
-        <di:waypoint x="2380" y="167"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="240" width="140" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="2310" y="215"/>
+        <di:waypoint x="2310" y="120"/>
+        <di:waypoint x="2380" y="120"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="180" width="140" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_DEC2_PR3_di" bpmnElement="F_DEC2_PR3">
-        <di:waypoint x="2310" y="305"/>
-        <di:waypoint x="2310" y="247"/>
-        <di:waypoint x="2380" y="247"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="280" width="120" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="2310" y="215"/>
+        <di:waypoint x="2310" y="170"/>
+        <di:waypoint x="2380" y="170"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="2315" y="200" width="120" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_PR1_KB_di" bpmnElement="F_PR1_KB">
-        <di:waypoint x="2540" y="87"/>
-        <di:waypoint x="2635" y="87"/>
-        <di:waypoint x="2635" y="290"/>
+        <di:waypoint x="2540" y="70"/>
+        <di:waypoint x="2635" y="70"/>
+        <di:waypoint x="2635" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_PR2_KB_di" bpmnElement="F_PR2_KB">
-        <di:waypoint x="2540" y="167"/>
-        <di:waypoint x="2635" y="167"/>
-        <di:waypoint x="2635" y="290"/>
+        <di:waypoint x="2540" y="120"/>
+        <di:waypoint x="2635" y="120"/>
+        <di:waypoint x="2635" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_PR3_KB_di" bpmnElement="F_PR3_KB">
-        <di:waypoint x="2540" y="247"/>
-        <di:waypoint x="2635" y="247"/>
-        <di:waypoint x="2635" y="290"/>
+        <di:waypoint x="2540" y="170"/>
+        <di:waypoint x="2635" y="170"/>
+        <di:waypoint x="2635" y="200"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_KB_KPI_di" bpmnElement="F_KB_KPI">
-        <di:waypoint x="2690" y="330"/>
-        <di:waypoint x="2720" y="330"/>
+        <di:waypoint x="2690" y="240"/>
+        <di:waypoint x="2720" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_KPI_Z_di" bpmnElement="F_KPI_Z">
-        <di:waypoint x="2830" y="330"/>
-        <di:waypoint x="2860" y="330"/>
+        <di:waypoint x="2830" y="240"/>
+        <di:waypoint x="2860" y="240"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_KPI_C_di" bpmnElement="F_KPI_C">
-        <di:waypoint x="2775" y="370"/>
-        <di:waypoint x="2775" y="500"/>
-        <di:waypoint x="605" y="500"/>
-        <di:waypoint x="605" y="370"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="1500" y="480" width="200" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="2775" y="280"/>
+        <di:waypoint x="2775" y="350"/>
+        <di:waypoint x="605" y="350"/>
+        <di:waypoint x="605" y="280"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1500" y="332" width="200" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_Z_A_di" bpmnElement="F_Z_A">
-        <di:waypoint x="2878" y="348"/>
-        <di:waypoint x="2878" y="560"/>
-        <di:waypoint x="325" y="560"/>
-        <di:waypoint x="325" y="370"/>
-        <bpmndi:BPMNLabel><dc:Bounds x="1400" y="540" width="260" height="14"/></bpmndi:BPMNLabel>
+        <di:waypoint x="2878" y="258"/>
+        <di:waypoint x="2878" y="420"/>
+        <di:waypoint x="325" y="420"/>
+        <di:waypoint x="325" y="280"/>
+        <bpmndi:BPMNLabel><dc:Bounds x="1400" y="402" width="260" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F_AI_DEF_di" bpmnElement="F_AI_DEF">
-        <di:waypoint x="1900" y="280"/>
+        <di:waypoint x="1900" y="190"/>
         <di:waypoint x="1900" y="20"/>
         <di:waypoint x="885" y="20"/>
-        <di:waypoint x="885" y="290"/>
+        <di:waypoint x="885" y="200"/>
         <bpmndi:BPMNLabel><dc:Bounds x="1180" y="0" width="260" height="14"/></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
 
