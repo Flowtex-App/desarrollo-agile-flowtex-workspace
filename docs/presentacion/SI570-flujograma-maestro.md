@@ -8,47 +8,45 @@
 
 ```mermaid
 flowchart LR
-    INI([Punto de partida<br/>Claro paga cuatrocientos mil soles al año por NINTEX<br/>y la operación se ralentiza por semanas en cada formulario<br/><i>visión orientada a valor económico</i>])
+    INI([Punto de partida<br/>Claro paga cuatrocientos mil soles al año por NINTEX<br/>y la operación se ralentiza por semanas en cada formulario])
 
-    A[1 · Levantar el contexto del producto<br/>se mapea al cliente, los proveedores y los factores externos<br/>contrastándolos con el benchmark del mercado<br/><i>FODA · PEST · benchmark · pentágono de oportunidades</i>]
+    A[1 · Levantar el contexto del producto<br/>se mapea al cliente, los proveedores y los factores externos<br/>contrastándolos con el benchmark del mercado]
 
-    B[2 · Conformar y madurar al equipo<br/>se atraviesan las fases de Tuckman<br/>hasta que el equipo opera de forma autónoma<br/><i>modelo de Tuckman · cross-functional team</i>]
+    B[2 · Conformar y madurar al equipo<br/>se atraviesan las fases de Tuckman<br/>hasta que el equipo opera de forma autónoma]
 
-    C[3 · Formular objetivos SMART<br/>cada objetivo se justifica en costo evitado o valor generado<br/>y se ata a un plazo concreto del ciclo<br/><i>SMART · OKRs alineados a resultado financiero</i>]
+    C[3 · Formular objetivos SMART<br/>cada objetivo se justifica en costo evitado o valor generado<br/>y se ata a un plazo concreto del ciclo]
 
-    D[4 · Empatizar con el usuario<br/>se entrevista al administrador TI de Claro<br/>y se construye la persona del solicitante<br/><i>Design Thinking · empatizar · persona · jobs-to-be-done</i>]
+    D[4 · Empatizar con el usuario<br/>se entrevista al administrador TI de Claro<br/>y se construye la persona del solicitante]
 
-    DEF[5 · Definir el problema<br/>los pain points heredados de NINTEX<br/>se redactan como dolor concreto del cliente<br/><i>Design Thinking · definir · pain points</i>]
+    DEF[5 · Definir el problema<br/>los pain points heredados de NINTEX<br/>se redactan como dolor concreto del cliente]
 
-    DEC1{¿En qué fase de Tuckman<br/>se encuentra el equipo<br/>al momento de idear?<br/><i>selección contextual de herramienta</i>}
-    ID1[Aplicar Escribir en silencio<br/>se nivela el aporte cuando el equipo todavía no se anima<br/>a debatir de forma abierta<br/><i>técnica de ideación · contexto Forming</i>]
-    ID2[Aplicar Round Robin<br/>cada miembro aporta su idea por turno<br/>cuando el grupo ya tiene una confianza intermedia<br/><i>técnica de ideación · contexto Norming</i>]
-    ID3[Aplicar Free<br/>la discusión ocurre en paralelo y sin filtros<br/>cuando el equipo ya está consolidado<br/><i>técnica de ideación · contexto Performing</i>]
+    DEC1{¿En qué fase de Tuckman<br/>se encuentra el equipo<br/>al momento de idear?}
+    ID1[Aplicar Escribir en silencio<br/>se nivela el aporte cuando el equipo todavía no se anima<br/>a debatir de forma abierta]
+    ID2[Aplicar Round Robin<br/>cada miembro aporta su idea por turno<br/>cuando el grupo ya tiene una confianza intermedia]
+    ID3[Aplicar Free<br/>la discusión ocurre en paralelo y sin filtros<br/>cuando el equipo ya está consolidado]
 
-    POOL[6 · Cosechar el pool de ideas<br/>las ideas válidas se traducen en oportunidades y amenazas<br/>y cada oportunidad concreta se vuelve funcionalidad candidata<br/><i>convergencia · pentágono O/A · Design Thinking idear</i>]
+    POOL[6 · Cosechar el pool de ideas<br/>las ideas válidas se traducen en oportunidades y amenazas<br/>y cada oportunidad concreta se vuelve funcionalidad candidata]
 
-    HU[7 · Redactar las historias de usuario<br/>cada funcionalidad se escribe como Como/Quiero/Para<br/>con criterios de aceptación gherkin verificables<br/><i>user stories · Gherkin Given/When/Then · INVEST</i>]
+    HU[7 · Redactar las historias de usuario<br/>cada funcionalidad se escribe como Como/Quiero/Para<br/>con criterios de aceptación gherkin verificables]
 
-    BL[8 · Construir el backlog priorizado<br/>las historias se ordenan con la regla MoSCoW<br/>y se agrupan en épicas por bounded context<br/><i>MoSCoW · épicas · DDD bounded context</i>]
+    BL[8 · Construir el backlog priorizado<br/>las historias se ordenan con la regla MoSCoW<br/>y se agrupan en épicas por bounded context]
 
-    MVP[9 · Liberar el MVP genérico<br/>se entrega únicamente el bloque Must Have del backlog<br/>las historias Should y Could quedan ocultas en reserva<br/><i>MVP · Lean Startup · build-measure-learn</i>]
+    MVP[9 · Liberar el MVP genérico<br/>se entrega únicamente el bloque Must Have del backlog<br/>las historias Should y Could quedan ocultas en reserva]
 
-    AI[★ 9b · Capacidad IA del MVP<br/>asistente con IA generativa<br/>traduce lo que el solicitante escribe en lenguaje normal<br/>en una estructura de formulario lista para usar<br/><i>Lean: eliminación del waiting waste · autoservicio asistido · continuous discovery</i>]
+    VAL[10 · Validar el MVP con el cliente<br/>el cliente prueba el producto en el ambiente de QA<br/>y devuelve feedback que alimenta la próxima iteración]
 
-    VAL[10 · Validar el MVP con el cliente<br/>el cliente prueba el producto en el ambiente de QA<br/>y devuelve feedback que alimenta la próxima iteración<br/><i>Design Thinking · testear · validated learning</i>]
+    LIN[11 · Iterar con Lean Inception<br/>cada nueva épica se construye en cinco días<br/>desde la visión inicial hasta el lanzamiento controlado]
 
-    LIN[11 · Iterar con Lean Inception<br/>cada nueva épica se construye en cinco días<br/>desde la visión inicial hasta el lanzamiento controlado<br/><i>Lean Inception · Caroli · ciclo de cinco días</i>]
+    DEC2{¿Qué tipo de problema<br/>aparece durante el sprint<br/>en curso?}
+    PR1[Aplicar Recordar el futuro<br/>se imagina que el sprint terminó mal<br/>para anticipar los riesgos del trabajo por venir]
+    PR2[Aplicar Árbol<br/>se dibuja el tronco del MVP estable y sus ramas<br/>para descubrir las nuevas funcionalidades posibles]
+    PR3[Aplicar Lancha rápida<br/>se identifica lo que impulsa al equipo y lo que lo ancla<br/>para resolver la fricción interna del sprint]
 
-    DEC2{¿Qué tipo de problema<br/>aparece durante el sprint<br/>en curso?<br/><i>diagnóstico antes de remedio</i>}
-    PR1[Aplicar Recordar el futuro<br/>se imagina que el sprint terminó mal<br/>para anticipar los riesgos del trabajo por venir<br/><i>retrospectiva proactiva · pre-mortem</i>]
-    PR2[Aplicar Árbol<br/>se dibuja el tronco del MVP estable y sus ramas<br/>para descubrir las nuevas funcionalidades posibles<br/><i>técnica de retrospectiva expansiva</i>]
-    PR3[Aplicar Lancha rápida<br/>se identifica lo que impulsa al equipo y lo que lo ancla<br/>para resolver la fricción interna del sprint<br/><i>retrospectiva de fuerzas · Speed Boat</i>]
+    KB[12 · Operar el flujo Kanban<br/>las historias avanzan por la swim lane que les corresponde<br/>respetando los límites WIP que el equipo se impone]
 
-    KB[12 · Operar el tablero Kanban<br/>cada historia avanza por su columna del tablero<br/>y el equipo limita cuántas se trabajan a la vez<br/><i>Kanban · límite de tareas en curso · trabajo que se jala, no se empuja</i>]
+    KPI[13 · Medir con la Ley de Little<br/>el Lead Time, el Throughput y la tasa de bloqueo<br/>retroalimentan los objetivos del próximo ciclo]
 
-    KPI[13 · Medir el ritmo con la Ley de Little<br/>cuánto tarda una historia, cuántas terminamos por sprint<br/>y cuántas quedan bloqueadas<br/><i>Ley de Little · tiempo de entrega · velocidad del equipo</i>]
-
-    Z([Producto verificable<br/>cada historia del backlog queda demostrable<br/>y el equipo entra a una nueva vuelta del proceso<br/><i>Definition of Done · ciclo cerrado</i>])
+    Z([Producto verificable<br/>cada historia del backlog queda demostrable<br/>y el equipo entra a una nueva vuelta del proceso])
 
     INI --> A --> B --> C --> D --> DEF --> DEC1
     DEC1 -->|Forming| ID1
@@ -57,10 +55,7 @@ flowchart LR
     ID1 --> POOL
     ID2 --> POOL
     ID3 --> POOL
-    POOL --> HU --> BL --> MVP
-    MVP --> AI
-    AI --> VAL
-    VAL --> LIN --> DEC2
+    POOL --> HU --> BL --> MVP --> VAL --> LIN --> DEC2
     DEC2 -->|Riesgos del trabajo| PR1
     DEC2 -->|Nuevas funcionalidades| PR2
     DEC2 -->|Fricción del equipo| PR3
@@ -70,7 +65,6 @@ flowchart LR
     KB --> KPI --> Z
     KPI -. realimenta los objetivos .-> C
     Z -. nuevo aprendizaje .-> A
-    AI -. ataca directamente las 3-6 semanas de espera .-> DEF
 ```
 
 ---
