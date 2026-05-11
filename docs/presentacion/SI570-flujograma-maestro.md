@@ -33,6 +33,8 @@ flowchart LR
 
     MVP[9 · Liberar el MVP genérico<br/>se entrega únicamente el bloque Must Have del backlog<br/>las historias Should y Could quedan ocultas en reserva]
 
+    AI[★ 9b · Capacidad IA del MVP<br/>asistente con inteligencia artificial generativa<br/>traduce lo que el solicitante escribe en lenguaje normal<br/>en una estructura de formulario lista para usar]
+
     VAL[10 · Validar el MVP con el cliente<br/>el cliente prueba el producto en el ambiente de QA<br/>y devuelve feedback que alimenta la próxima iteración]
 
     LIN[11 · Iterar con Lean Inception<br/>cada nueva épica se construye en cinco días<br/>desde la visión inicial hasta el lanzamiento controlado]
@@ -55,7 +57,10 @@ flowchart LR
     ID1 --> POOL
     ID2 --> POOL
     ID3 --> POOL
-    POOL --> HU --> BL --> MVP --> VAL --> LIN --> DEC2
+    POOL --> HU --> BL --> MVP
+    MVP --> AI
+    AI --> VAL
+    VAL --> LIN --> DEC2
     DEC2 -->|Riesgos del trabajo| PR1
     DEC2 -->|Nuevas funcionalidades| PR2
     DEC2 -->|Fricción del equipo| PR3
@@ -65,6 +70,7 @@ flowchart LR
     KB --> KPI --> Z
     KPI -. realimenta los objetivos .-> C
     Z -. nuevo aprendizaje .-> A
+    AI -. ataca directamente las 3-6 semanas de espera .-> DEF
 ```
 
 ---
