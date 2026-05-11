@@ -10,43 +10,43 @@
 flowchart LR
     INI([Punto de partida<br/>Claro paga cuatrocientos mil soles al año por NINTEX<br/>y la operación se ralentiza por semanas en cada formulario])
 
-    A[1 · Levantar el contexto del producto<br/>se mapea al cliente, los proveedores y los factores externos<br/>contrastándolos con el benchmark del mercado]
+    A[1 · Comprender el contexto<br/>se aplican las 5 fuerzas de Porter, el FODA y el PEST<br/>para mapear cliente, proveedores y factores externos]
 
-    B[2 · Conformar y madurar al equipo<br/>se atraviesan las fases de Tuckman<br/>hasta que el equipo opera de forma autónoma]
+    B[2 · Madurar al equipo en las cuatro fases de Tuckman<br/>Forming = comprender el contexto<br/>Storming = capacitación<br/>Norming = liberar mando y control con objetivo SMART<br/>Performing = empoderar al equipo para pensamiento crítico]
 
-    C[3 · Formular objetivos SMART<br/>cada objetivo se justifica en costo evitado o valor generado<br/>y se ata a un plazo concreto del ciclo]
+    C[3 · Formular el objetivo SMART<br/>específico, medible, alcanzable, relevante y temporal<br/>se justifica en costo evitado o valor generado para el cliente]
 
-    D[4 · Empatizar con el usuario<br/>se entrevista al administrador TI de Claro<br/>y se construye la persona del solicitante]
+    D[4 · Empatizar con el cliente<br/>etapa uno del pentágono de Design Thinking<br/>entrevistar al administrador TI de Claro y construir la persona]
 
-    DEF[5 · Definir el problema<br/>los pain points heredados de NINTEX<br/>se redactan como dolor concreto del cliente]
+    DEF[5 · Definir la idea<br/>etapa dos del pentágono de Design Thinking<br/>los dolores del cliente se redactan como problema concreto]
 
     DEC1{¿En qué fase de Tuckman<br/>se encuentra el equipo<br/>al momento de idear?}
-    ID1[Aplicar Escribir en silencio<br/>se nivela el aporte cuando el equipo todavía no se anima<br/>a debatir de forma abierta]
-    ID2[Aplicar Round Robin<br/>cada miembro aporta su idea por turno<br/>cuando el grupo ya tiene una confianza intermedia]
-    ID3[Aplicar Free<br/>la discusión ocurre en paralelo y sin filtros<br/>cuando el equipo ya está consolidado]
+    ID1[Aplicar Escribir en silencio<br/>se nivela el aporte cuando el equipo<br/>todavía no se anima a debatir abierto]
+    ID2[Aplicar Round Robin<br/>cada miembro aporta su idea por turno<br/>cuando el grupo ya tiene confianza intermedia]
+    ID3[Aplicar Free for all<br/>la discusión ocurre en paralelo y sin filtros<br/>cuando el equipo ya está consolidado]
 
-    POOL[6 · Cosechar el pool de ideas<br/>las ideas válidas se traducen en oportunidades y amenazas<br/>y cada oportunidad concreta se vuelve funcionalidad candidata]
+    POOL[6 · Idear<br/>etapa tres del pentágono de Design Thinking<br/>las oportunidades y amenazas se vuelven funcionalidades candidatas]
 
-    HU[7 · Redactar las historias de usuario<br/>cada funcionalidad se escribe como Como/Quiero/Para<br/>con criterios de aceptación gherkin verificables]
+    HU[7 · Redactar las historias de usuario<br/>las historias buenas son las funcionalidades deseadas<br/>las historias en contra son lo que el cliente quiere evitar]
 
-    BL[8 · Construir el backlog priorizado<br/>las historias se ordenan con la regla MoSCoW<br/>y se agrupan en épicas por bounded context]
+    BL[8 · Priorizar el backlog con SAFe MoSCoW<br/>Must, Should, Could y Won't<br/>y agrupar las historias en épicas]
 
-    MVP[9 · Liberar el MVP genérico<br/>se entrega únicamente el bloque Must Have del backlog<br/>las historias Should y Could quedan ocultas en reserva]
+    MVP[9 · Liberar el MVP<br/>el MVP es el acta de constitución del producto:<br/>una promesa de trabajo futuro hacia el cliente<br/>se entrega solo el bloque Must Have del backlog]
 
-    AI[★ 9b · Capacidad IA del MVP<br/>asistente con inteligencia artificial generativa<br/>traduce lo que el solicitante escribe en lenguaje normal<br/>en una estructura de formulario lista para usar]
+    AI[★ 9b · Capacidad de inteligencia artificial dentro del MVP<br/>un asistente convierte lo que el solicitante describe en palabras<br/>en una estructura de formulario lista para usar]
 
-    VAL[10 · Validar el MVP con el cliente<br/>el cliente prueba el producto en el ambiente de QA<br/>y devuelve feedback que alimenta la próxima iteración]
+    VAL[10 · Testear y medir el MVP con el cliente<br/>etapa cinco del pentágono de Design Thinking<br/>y paso medir del ciclo Lean Startup: crear / medir / aprender]
 
-    LIN[11 · Iterar con Lean Inception<br/>cada nueva épica se construye en cinco días<br/>desde la visión inicial hasta el lanzamiento controlado]
+    LIN[11 · Aprender e iterar con Lean Inception<br/>paso aprender del ciclo Lean Startup<br/>cada nueva épica se trabaja en cinco días<br/>desde la visión hasta el lanzamiento controlado]
 
     DEC2{¿Qué tipo de problema<br/>aparece durante el sprint<br/>en curso?}
     PR1[Aplicar Recordar el futuro<br/>se imagina que el sprint terminó mal<br/>para anticipar los riesgos del trabajo por venir]
-    PR2[Aplicar Árbol<br/>se dibuja el tronco del MVP estable y sus ramas<br/>para descubrir las nuevas funcionalidades posibles]
-    PR3[Aplicar Lancha rápida<br/>se identifica lo que impulsa al equipo y lo que lo ancla<br/>para resolver la fricción interna del sprint]
+    PR2[Aplicar Podar el árbol<br/>se dibuja el tronco del MVP estable y sus ramas<br/>para descubrir nuevas funcionalidades posibles]
+    PR3[Aplicar Lancha rápida<br/>se identifica lo que impulsa al equipo y lo que lo ancla<br/>para resolver los problemas del sprint que viene]
 
-    KB[12 · Operar el flujo Kanban<br/>las historias avanzan por la swim lane que les corresponde<br/>respetando los límites WIP que el equipo se impone]
+    KB[12 · Operar el tablero Kanban<br/>cada historia avanza por su columna del tablero<br/>y el equipo limita cuántas se trabajan al mismo tiempo]
 
-    KPI[13 · Medir con la Ley de Little<br/>el Lead Time, el Throughput y la tasa de bloqueo<br/>retroalimentan los objetivos del próximo ciclo]
+    KPI[13 · Medir el ritmo con la Ley de Little<br/>tiempo de entrega, velocidad del equipo y tasa de bloqueo<br/>retroalimentan los objetivos del próximo ciclo]
 
     Z([Producto verificable<br/>cada historia del backlog queda demostrable<br/>y el equipo entra a una nueva vuelta del proceso])
 
