@@ -125,74 +125,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ---
 
-## 6. Las herramientas del flujograma agrupadas por fase del PDCA
-
-> El ciclo PDCA de Deming (Planificar → Hacer → Verificar → Mejorar) es el patrón clásico de mejora continua. En Lean Startup, Eric Ries usa el ciclo Build-Measure-Learn, que es una versión moderna y abreviada del mismo PDCA. **Los dos describen lo mismo: un proceso que aprende y vuelve a empezar.** Acá mostramos qué herramienta del flujograma sirve a cada fase del PDCA.
-
-### Tabla maestra — qué herramienta sirve en cada fase
-
-| Fase del PDCA | Herramientas que usamos en el flujograma | Para qué sirven |
-|---|---|---|
-| 🔵 **PLAN** — Planificar | Análisis del entorno (FODA, PEST, benchmark, pentágono de oportunidades) · Modelo de Tuckman · Objetivos SMART · Design Thinking (empatizar y definir) · Decisión 1 (elegir herramienta de ideación) · Escribir en silencio / Round Robin / Free · Pool de ideas · Historias de usuario (Como/Quiero/Para con Gherkin) · Priorización MoSCoW · Épicas por bounded context · Lean Inception | Entender el problema y planificar qué construir antes de tocar código |
-| 🟣 **DO** — Hacer | Producto mínimo viable (Lean Startup) · Capacidad de inteligencia artificial · Ciclo Build-Measure-Learn | Construir y entregar al cliente lo mínimo que ya genera valor |
-| 🟡 **CHECK** — Verificar | Validar con el cliente (etapa Testear del Design Thinking) · Decisión 2 (elegir técnica de retrospectiva) · Recordar el futuro / Árbol / Lancha rápida · Tablero Kanban con límite de tareas en curso · Ley de Little (tiempo de entrega, velocidad, tasa de bloqueo) | Medir cómo se comporta el producto y el equipo, y aprender de los datos |
-| 🟪 **ACT** — Mejorar | Las tres flechas de retroalimentación · Ajuste de objetivos SMART según las métricas · Lean Inception para cada nueva característica · Iteración del ciclo completo | Ajustar el plan del próximo ciclo con lo aprendido |
-
-### Detalle por fase
-
-#### 🔵 PLAN — qué herramientas usamos para planificar
-
-| Herramienta | Qué hace en una frase |
-|---|---|
-| **FODA + PEST + benchmark** | Entender el contexto interno y externo del producto antes de construirlo |
-| **Modelo de Tuckman** | Diagnosticar en qué fase del equipo estamos para tomar decisiones acertadas |
-| **Objetivos SMART** | Atar cada objetivo a un resultado financiero medible y a un plazo concreto |
-| **Design Thinking — empatizar** | Construir la persona del usuario con entrevistas y observación |
-| **Design Thinking — definir** | Redactar el dolor como dolor concreto, no como generalidad |
-| **Decisión 1 (Tuckman)** | Elegir la herramienta de ideación según la madurez del equipo |
-| **Escribir en silencio / Round Robin / Free** | Tres técnicas de ideación, una por fase del equipo |
-| **Pool de ideas** | Convergencia: filtrar las ideas válidas y traducirlas a funcionalidades |
-| **Historias de usuario** | Formalizar las funcionalidades con plantilla "Como / Quiero / Para" y criterios Gherkin |
-| **MoSCoW** | Priorizar el backlog en Must, Should, Could, Won't |
-| **Bounded context** | Agrupar épicas por dominio coherente del producto |
-| **Lean Inception** | Comprimir el descubrimiento de una nueva característica en cinco días |
-
-#### 🟣 DO — qué herramientas usamos para hacer
-
-| Herramienta | Qué hace en una frase |
-|---|---|
-| **Producto mínimo viable** | Liberar únicamente el bloque Must Have del backlog, el resto queda en reserva |
-| **Capacidad de inteligencia artificial** | Eliminar la dependencia del usuario no técnico hacia el equipo de Tecnología |
-| **Ciclo Build-Measure-Learn** | El motor mental del Lean Startup: construir, medir, aprender, repetir |
-
-#### 🟡 CHECK — qué herramientas usamos para verificar
-
-| Herramienta | Qué hace en una frase |
-|---|---|
-| **Validar con el cliente (Testear)** | El cliente prueba el producto en ambiente de calidad y devuelve feedback |
-| **Decisión 2 (tipo de problema)** | Elegir la técnica de retrospectiva según el tipo de problema del sprint |
-| **Recordar el futuro (pre-mortem)** | Anticipar riesgos imaginando que el sprint terminó mal |
-| **Árbol** | Descubrir nuevas funcionalidades sobre el producto estable |
-| **Lancha rápida (Speed Boat)** | Identificar lo que impulsa al equipo y lo que lo ancla |
-| **Tablero Kanban con límite de tareas en curso** | Visualizar el flujo y evitar que el equipo trabaje 20 cosas a la vez |
-| **Ley de Little** | Medir tiempo de entrega, velocidad del equipo y tasa de bloqueo |
-
-#### 🟪 ACT — qué herramientas usamos para mejorar
-
-| Herramienta | Qué hace en una frase |
-|---|---|
-| **Flecha de retroalimentación 1: métricas → objetivos** | Si la velocidad cae, se ajusta el plazo del SMART antes de comprometer alcance nuevo |
-| **Flecha de retroalimentación 2: producto → contexto** | Lo aprendido en producción reabre el análisis del entorno |
-| **Flecha de retroalimentación 3: inteligencia artificial → problema** | Cierra el bucle entre la solución y el dolor original |
-| **Lean Inception para cada nueva característica** | El ciclo no termina: cada característica nueva arranca un mini-ciclo de cinco días |
-
-### Cómo defenderlo en una frase
-
-> *"El flujograma cubre las cuatro fases del PDCA con herramientas concretas del curso. En el PLAN tenemos análisis de entorno, Tuckman, SMART y Design Thinking. En el DO tenemos producto mínimo viable con inteligencia artificial. En el CHECK tenemos validación con el cliente, retrospectivas y la Ley de Little. En el ACT tenemos tres flechas de retroalimentación y Lean Inception para iterar. **Cada decisión tiene su herramienta, y cada herramienta tiene su fase.**"*
-
----
-
-## 7. Las tres flechas de retroalimentación (el ciclo que se cierra)
+## 6. Las tres flechas de retroalimentación (el ciclo que se cierra)
 
 > Estas son las flechas largas que vuelven al principio. Son lo que convierte una línea en un ciclo.
 
@@ -207,7 +140,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ---
 
-## 8. Preguntas que la profesora puede hacer y cómo responder
+## 7. Preguntas que la profesora puede hacer y cómo responder
 
 ### "¿Por qué el backlog está antes del producto mínimo viable?"
 
@@ -251,7 +184,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ---
 
-## 9. La frase de cierre — con la que rematas el 20
+## 8. La frase de cierre — con la que rematas el 20
 
 > *"El flujograma de FLOWTEX no es una serie de cajas conectadas con flechas. Es un sistema vivo que combina cinco marcos teóricos enganchados: Tuckman para el equipo, Design Thinking para empatizar y validar con el usuario, Lean Startup para el producto mínimo viable y la inteligencia artificial, Lean Inception para cada iteración y Kanban con la Ley de Little para la operación.*
 
@@ -261,9 +194,9 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ---
 
-## 10. Mapa rápido para usar antes de la expo
+## 9. Mapa rápido para usar antes de la expo
 
-Si tienes 10 minutos para memorizar lo esencial, son estas 11 filas. Si las dominas, defiendes el flujograma entero.
+Si tienes 10 minutos para memorizar lo esencial, son estas 10 filas. Si las dominas, defiendes el flujograma entero.
 
 | Recuerda esta palabra | Y di esto |
 |---|---|
@@ -277,8 +210,7 @@ Si tienes 10 minutos para memorizar lo esencial, son estas 11 filas. Si las domi
 | **Ley de Little** | Cuanta más cosas en paralelo, más lento sale cada una. Tres indicadores: tiempo de entrega, velocidad, tasa de bloqueo. |
 | **Waiting waste** | El desperdicio de esperar a otro equipo. Es lo que mata la inteligencia artificial del paso 9b. |
 | **Ciclo, no línea** | Tres flechas de retroalimentación cierran el bucle. El proceso aprende. |
-| **PDCA** | Planificar, Hacer, Verificar, Mejorar. Cada herramienta del flujograma cae en una de esas cuatro fases. Build-Measure-Learn de Lean Startup es la versión moderna del mismo ciclo. |
 
 ---
 
-**Si dominas las 11 filas de esa tabla, defiendes la presentación entera y ganas el 20.**
+**Si dominas las 10 filas de esa tabla, defiendes la presentación entera y ganas el 20.**
