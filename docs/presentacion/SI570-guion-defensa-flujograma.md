@@ -1,4 +1,4 @@
-# SI570 · Guion de defensa — Flujograma maestro de FLOWTEX
+# SI570 · Guion de defensa: Flujograma maestro de FLOWTEX
 
 > Guion para sustentar el flujograma maestro frente a la profesora. Pensado para que cualquier miembro del equipo lo pueda hablar sin estudiar de memoria. Frases listas, ejemplos concretos, respuestas para preguntas anticipables. Acompaña al archivo `SI570-flujograma-maestro.bpmn` (que es la versión BPMN del flujograma que ya fue aprobado).
 
@@ -16,21 +16,21 @@ Con esa frase ya dijiste todo: **el proceso es un ciclo de mejora, no una línea
 
 Si la profesora te apura, recorre el diagrama agrupando los 13 pasos en tres bloques. Esto es lo que dices al señalar cada bloque.
 
-### Bloque 1 · Setup (pasos 1 a 3) — antes de tocar producto
+### Bloque 1 · Setup (pasos 1 a 3): antes de tocar producto
 
 **Qué pasa:** Levantar el contexto del producto (paso 1), conformar y madurar al equipo (paso 2), formular objetivos SMART (paso 3).
 
 **Qué dices:**
 > *"Antes de empezar a construir, hacemos tres cosas: entender el contexto del producto con análisis del entorno, atravesar las fases del equipo según el modelo de Tuckman, y formular objetivos SMART con justificación financiera. **Sin contexto el equipo no sabe qué construir, sin equipo maduro los objetivos quedan en buenas intenciones, y sin objetivos claros no hay forma de medir si el sprint sirvió.**"*
 
-### Bloque 2 · Creación (pasos 4 a 11) — donde nace el producto
+### Bloque 2 · Creación (pasos 4 a 11): donde nace el producto
 
 **Qué pasa:** Empatizar y definir (pasos 4 y 5), idear con la herramienta correcta (paso 6 con decisión), cosechar el pool de ideas (paso 7), redactar historias de usuario (paso 8), construir el backlog priorizado (paso 9), liberar el producto mínimo viable más la capacidad de inteligencia artificial (pasos 10 y 10b), validar con el cliente (paso 11), iterar con Lean Inception (paso 12).
 
 **Qué dices:**
 > *"Acá pasa lo importante. Aplicamos las cinco etapas del Design Thinking: empatizar, definir, idear, prototipar y testear. Pero no aplicamos las herramientas de ideación todas a la vez, porque se contradicen. La primera decisión del flujograma elige la herramienta según la madurez del equipo. El resultado es un pool de ideas que se convierte en historias de usuario, luego en un backlog priorizado, y de ahí sale el producto mínimo viable. **El producto mínimo viable incluye la capacidad de inteligencia artificial porque es lo que ataca directamente el problema raíz que identificamos al empatizar: el solicitante depende del equipo de Tecnología.** Después validamos con el cliente y entramos al ciclo de Lean Inception para cada nueva característica."*
 
-### Bloque 3 · Operación (pasos 12 y 13) — el motor que no se apaga
+### Bloque 3 · Operación (pasos 12 y 13): el motor que no se apaga
 
 **Qué pasa:** Decisión de problema durante el sprint (paso 12 con decisión), operar el tablero Kanban (paso 13), medir el ritmo con la Ley de Little (paso 14).
 
@@ -43,7 +43,7 @@ Si la profesora te apura, recorre el diagrama agrupando los 13 pasos en tres blo
 
 Estos son los dos puntos donde el flujograma deja claro que **no se aplican todas las herramientas a la vez**. La profesora valora esto fuertemente.
 
-### Decisión 1 — ¿En qué fase de Tuckman está el equipo al idear?
+### Decisión 1: ¿En qué fase de Tuckman está el equipo al idear?
 
 | Fase del equipo | Herramienta de ideación | Por qué |
 |---|---|---|
@@ -54,7 +54,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 **Cómo se defiende:**
 > *"Las tres herramientas no son intercambiables. Si el equipo es tímido y aplicamos Free, los más callados se quedan callados. Si el equipo es maduro y aplicamos Escribir en silencio, los aburre. **La herramienta correcta depende del contexto de Tuckman, no del gusto del facilitador.**"*
 
-### Decisión 2 — ¿Qué tipo de problema aparece en el sprint?
+### Decisión 2: ¿Qué tipo de problema aparece en el sprint?
 
 | Tipo de problema | Técnica | Para qué sirve |
 |---|---|---|
@@ -80,10 +80,10 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 | Razón en simple | Concepto del curso |
 |---|---|
-| Resuelve el dolor real identificado en empatizar y definir | Design Thinking — etapas 1 y 2 conectadas con la solución |
+| Resuelve el dolor real identificado en empatizar y definir | Design Thinking (etapas 1 y 2 conectadas con la solución) |
 | Llega hasta donde el usuario no técnico puede llegar solo | Persona y *jobs-to-be-done* |
-| Quita la espera, que es el peor desperdicio | Lean Software Development — eliminación del *waiting waste* |
-| Reduce el tiempo de entrega del formulario | Ley de Little — el indicador del paso 13 |
+| Quita la espera, que es el peor desperdicio | Lean Software Development: eliminación del *waiting waste* |
+| Reduce el tiempo de entrega del formulario | Ley de Little: el indicador del paso 13 |
 
 **Lo que hay si Groq se cae:** una lógica interna de respaldo que devuelve sugerencias razonables. La aplicación no se rompe nunca.
 
@@ -107,22 +107,22 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ### Frases listas para soltar al pasar por cada bloque
 
-**Cuando llegues al paso 2 — Tuckman:**
+**Cuando llegues al paso 2, Tuckman:**
 > *"Tuckman propuso en 1965 cuatro fases por las que pasa todo equipo nuevo: Forming ('Comprender el contexto'), Storming ('Capacitar'), Norming ('Liberar de mando y control') y Performing ('Empoderar'). Hoy el equipo está en Norming. Aplicar herramientas sin entender en qué fase está el equipo es como recetar sin diagnosticar."*
 
-**Cuando llegues al paso 4 — Design Thinking:**
+**Cuando llegues al paso 4, Design Thinking:**
 > *"Design Thinking, popularizado por IDEO y Tim Brown, dice que para resolver un problema primero hay que ponerse en los zapatos de quien lo sufre. Por eso empatizamos antes de construir."*
 
-**Cuando llegues al paso 9 — Producto mínimo viable:**
+**Cuando llegues al paso 9, Producto mínimo viable:**
 > *"Eric Ries en Lean Startup propone que la mejor forma de aprender es entregar lo mínimo viable que ya genere valor, medir cómo lo usa el cliente, y aprender para la siguiente iteración. Es el ciclo Build-Measure-Learn. Por eso liberamos solo el bloque Must Have del backlog."*
 
-**Cuando llegues al paso 12 — Lean Inception:**
+**Cuando llegues al paso 12, Lean Inception:**
 > *"Paulo Caroli propone comprimir el descubrimiento de una característica nueva en un taller de cinco días con cinco pasos: visión del producto (con el Product Vision Board), personas, journey del usuario, características, y el secuenciador o MVP Canvas. El quinto día cierra con un Showcase. Es Design Thinking acelerado para cuando el contexto general ya es conocido. Primero usamos Lean Startup para el primer producto mínimo viable, y luego Lean Inception para cada iteración siguiente."*
 
-**Cuando llegues al paso 13 — Kanban:**
+**Cuando llegues al paso 13, Kanban:**
 > *"David Anderson formalizó Kanban para software en 2010. Tres reglas básicas: visualizar el trabajo, limitar las tareas en curso, y jalar el trabajo cuando hay capacidad libre, no empujarlo por agenda."*
 
-**Cuando llegues al paso 14 — Ley de Little:**
+**Cuando llegues al paso 14, Ley de Little:**
 > *"La Ley de Little dice que el tiempo de entrega depende de cuántas tareas estamos trabajando en paralelo. **Cuantas más tareas a la vez, más lento sale cada una.** Por eso limitamos las tareas en curso en el Kanban: menos cosas en paralelo, más rápido todo el mundo."*
 
 ---
@@ -206,7 +206,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ---
 
-## 8. La frase de cierre — con la que rematas el 20
+## 8. La frase de cierre, con la que rematas el 20
 
 > *"El flujograma de FLOWTEX no es una serie de cajas conectadas con flechas. Es un sistema vivo que combina siete marcos enganchados: Cynefin para justificar el enfoque ágil, Tuckman para el equipo, Design Thinking para empatizar y validar con el usuario, Lean Startup para el producto mínimo viable y la inteligencia artificial, Lean Inception para cada iteración, Kanban con la Ley de Little para la operación, y el PDCA que envuelve todo el ciclo.*
 

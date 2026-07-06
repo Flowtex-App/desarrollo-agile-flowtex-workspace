@@ -8,14 +8,14 @@
 
 Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes:
 
-- **Qué es** — una frase que define el concepto.
-- **Por qué lo hacemos** — el problema o necesidad que justifica el paso.
-- **Para qué sirve** — el resultado o entregable concreto que aporta.
-- **Cómo se ve en FLOWTEX** — el caso aplicado al proyecto.
+- **Qué es:** una frase que define el concepto.
+- **Por qué lo hacemos:** el problema o necesidad que justifica el paso.
+- **Para qué sirve:** el resultado o entregable concreto que aporta.
+- **Cómo se ve en FLOWTEX:** el caso aplicado al proyecto.
 
 ---
 
-## Punto de partida (INI) — Claro paga 400 mil soles al año
+## Punto de partida (INI): Claro paga 400 mil soles al año
 
 **Qué es:** un planteamiento del problema económico que justifica todo el proyecto.
 
@@ -27,7 +27,19 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 1 — Comprender el contexto del producto (Porter, FODA, PEST)
+## Por qué un enfoque ágil (Cynefin)
+
+**Qué es:** un marco de Dave Snowden que clasifica los problemas en cuatro dominios (Claro, Complicado, Complejo y Caótico) para elegir cómo abordarlos.
+
+**Por qué lo hacemos:** antes de decidir cómo trabajar, hay que saber en qué tipo de problema estamos. Un problema predecible se planifica de una vez, uno cambiante se explora por iteraciones.
+
+**Para qué sirve:** para justificar por qué usamos un enfoque ágil y no uno predictivo (cascada).
+
+**Cómo se ve en FLOWTEX:** el proyecto está en el dominio Complejo, porque los requisitos de los formularios de Claro evolucionan y no se conocen por completo al inicio. En ese dominio la receta es experimentar, sentir y responder, que es el trabajo iterativo del agilismo. Por eso elegimos ágil.
+
+---
+
+## Paso 1: Comprender el contexto del producto (Porter, FODA, PEST)
 
 **Qué es:** un análisis del entorno externo e interno del producto, usando tres herramientas distintas.
 
@@ -37,15 +49,15 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 **Las tres herramientas que usamos:**
 
-- **5 fuerzas de Porter** — analiza cinco actores del entorno: clientes, proveedores, competencia directa, productos sustitutos y nuevos entrantes. Para cada uno se identifica qué oportunidad y qué amenaza representa.
-- **FODA** — interno (Fortalezas y Debilidades) y externo (Oportunidades y Amenazas). Es el resumen estratégico.
-- **PEST** — factores externos: Políticos, Económicos, Sociales y Tecnológicos.
+- **5 fuerzas de Porter:** analiza cinco actores del entorno: clientes, proveedores, competencia directa, productos sustitutos y nuevos entrantes. Para cada uno se identifica qué oportunidad y qué amenaza representa.
+- **FODA:** interno (Fortalezas y Debilidades) y externo (Oportunidades y Amenazas). Es el resumen estratégico.
+- **PEST:** factores externos (Políticos, Económicos, Sociales y Tecnológicos).
 
 **Cómo se ve en FLOWTEX:** el cliente es el área de Tecnología de Claro Perú. El proveedor problemático es la plataforma actual con su licencia cara. La competencia indirecta son Google Forms y plataformas similares. La tecnología (inteligencia artificial generativa) abre una oportunidad nueva que no existía hace dos años.
 
 ---
 
-## Paso 2 — Madurar al equipo en las cuatro fases de Tuckman
+## Paso 2: Madurar al equipo en las cuatro fases de Tuckman
 
 **Qué es:** asegurar que el equipo atravesó las cuatro fases que Bruce Tuckman describió en 1965 para todo equipo nuevo.
 
@@ -55,16 +67,16 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 **Las cuatro fases:**
 
-- **Forming (formación)** — el equipo recién se conoce. Comprende el contexto del cliente y de las personas que van a usar el producto. Hay incertidumbre.
-- **Storming (tormenta)** — el equipo capacita y choca. Hay debates técnicos y colaborativos.
-- **Norming (norma)** — el equipo acuerda las reglas. Se libera el mando y control desde la jefatura y se establecen objetivos SMART.
-- **Performing (alto rendimiento)** — el equipo opera autónomamente con pensamiento crítico. Ya no necesita supervisión cercana.
+- **Forming (formación, "Comprender el contexto"):** el equipo recién se conoce. Comprende el contexto del cliente y de las personas que van a usar el producto. Hay incertidumbre.
+- **Storming (tormenta, "Capacitar"):** el equipo se capacita y choca. Hay debates técnicos y colaborativos.
+- **Norming (norma, "Liberar de mando y control"):** el equipo acuerda las reglas. Se libera el mando y control desde la jefatura y se establecen objetivos SMART.
+- **Performing (alto rendimiento, "Empoderar"):** el equipo opera autónomamente con pensamiento crítico. Ya no necesita supervisión cercana.
 
-**Cómo se ve en FLOWTEX:** el equipo Hitss arrancó en Forming en el kick-off, cerró Storming al acordar la arquitectura del producto, cerró Norming al acordar políticas del tablero y de pruebas, y hoy opera en Performing.
+**Cómo se ve en FLOWTEX:** el equipo Hitss arrancó en Forming en el kick-off y cerró Storming al acordar la arquitectura del producto. Hoy opera en Norming ("Liberar de mando y control"), con las políticas del tablero y de pruebas ya interiorizadas. Performing ("Empoderar") es el estado objetivo hacia el que evoluciona, todavía en consolidación.
 
 ---
 
-## Paso 3 — Formular el objetivo SMART
+## Paso 3: Formular el objetivo SMART
 
 **Qué es:** un objetivo redactado con cinco propiedades verificables.
 
@@ -86,7 +98,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 4 — Empatizar con el cliente (Design Thinking, etapa 1)
+## Paso 4: Empatizar con el cliente (Design Thinking, etapa 1)
 
 **Qué es:** ponerse en los zapatos del cliente y de los usuarios que van a usar el producto.
 
@@ -98,7 +110,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 5 — Definir la idea (Design Thinking, etapa 2)
+## Paso 5: Definir la idea (Design Thinking, etapa 2)
 
 **Qué es:** redactar el problema del cliente como un dolor concreto, no como una generalidad.
 
@@ -110,7 +122,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Primera decisión del flujo — ¿En qué fase de Tuckman está el equipo al idear?
+## Primera decisión del flujo: ¿En qué fase de Tuckman está el equipo al idear?
 
 **Qué es:** una decisión que elige la herramienta de ideación según la madurez del equipo.
 
@@ -138,11 +150,11 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 - **Por qué se usa en Performing:** el equipo es autónomo y no necesita estructura para participar. Todos opinan sin miedo.
 - **Para qué sirve:** para producir muchas ideas rápido cuando ya hay confianza total.
 
-**Cómo se ve en FLOWTEX:** el equipo está en Performing, así que aplicamos Free for All durante las sesiones de ideación.
+**Cómo se ve en FLOWTEX:** el equipo está en Norming ("Liberar de mando y control"), así que en las sesiones de ideación aplicamos Round Robin, que le da el turno a cada miembro y evita que los más conversadores monopolicen.
 
 ---
 
-## Paso 6 — Idear (Design Thinking, etapa 3)
+## Paso 6: Idear (Design Thinking, etapa 3)
 
 **Qué es:** generar y filtrar ideas para resolver el problema definido en el paso 5.
 
@@ -154,7 +166,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 7 — Redactar las historias de usuario
+## Paso 7: Redactar las historias de usuario
 
 **Qué es:** convertir cada funcionalidad candidata en una historia escrita con un formato verificable.
 
@@ -164,8 +176,8 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 **Dos tipos de historias:**
 
-- **Historias buenas (positivas)** — describen lo que el cliente sí quiere. *"Como administrador, quiero crear un formulario, para no depender del equipo de Tecnología".*
-- **Historias en contra (negativas)** — describen lo que el cliente quiere evitar. *"Como administrador, no quiero que los datos del formulario viajen sin cifrar, porque la ley de protección de datos lo exige".*
+- **Historias buenas (positivas):** describen lo que el cliente sí quiere. *"Como administrador, quiero crear un formulario, para no depender del equipo de Tecnología".*
+- **Historias en contra (negativas):** describen lo que el cliente quiere evitar. *"Como administrador, no quiero que los datos del formulario viajen sin cifrar, porque la ley de protección de datos lo exige".*
 
 **Por qué importan las dos:** las historias buenas describen el éxito; las historias en contra describen lo que sería un fracaso. Ambas tienen que estar cubiertas.
 
@@ -173,7 +185,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 8 — Priorizar el backlog con SAFe MoSCoW
+## Paso 8: Priorizar el backlog con SAFe MoSCoW
 
 **Qué es:** ordenar las historias del backlog en cuatro grupos según importancia.
 
@@ -196,7 +208,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 9 — Liberar el MVP (acta de constitución, promesa de trabajo futuro)
+## Paso 9: Liberar el MVP (acta de constitución, promesa de trabajo futuro)
 
 **Qué es:** entregar el producto mínimo viable al cliente. **El MVP es el acta de constitución del producto: una promesa de trabajo futuro hacia el cliente.**
 
@@ -210,7 +222,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 9b — Capacidad de inteligencia artificial dentro del MVP
+## Paso 9b: Capacidad de inteligencia artificial dentro del MVP
 
 **Qué es:** un asistente con inteligencia artificial generativa que convierte lo que el solicitante describe en palabras en una estructura de formulario lista para usar.
 
@@ -224,7 +236,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 10 — Testear y medir el MVP con el cliente
+## Paso 10: Testear y medir el MVP con el cliente
 
 **Qué es:** entregar el MVP al cliente para que lo pruebe en un ambiente de pruebas y nos devuelva su reacción.
 
@@ -241,7 +253,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 11 — Aprender e iterar con Lean Inception
+## Paso 11: Aprender e iterar con Lean Inception
 
 **Qué es:** un método de Paulo Caroli (2018) que comprime el descubrimiento de una nueva característica en cinco días.
 
@@ -251,11 +263,11 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 **Las cinco etapas en cinco días:**
 
-1. **Visión del producto** — qué problema resuelve y para quién.
-2. **Persona** — actualización del usuario objetivo.
-3. **Stack lógico** — cómo se conectan las piezas.
-4. **Mapa de funcionalidades por valor y esfuerzo** — qué entrega más con menos.
-5. **Lanzamiento controlado** — primero a pruebas, después a producción.
+1. **Visión del producto:** qué problema resuelve y para quién.
+2. **Persona:** actualización del usuario objetivo.
+3. **Stack lógico:** cómo se conectan las piezas.
+4. **Mapa de funcionalidades por valor y esfuerzo:** qué entrega más con menos.
+5. **Lanzamiento controlado:** primero a pruebas, después a producción.
 
 **Este paso es el "Aprender" del ciclo Lean Startup.** El feedback del paso anterior (testear y medir) se procesa aquí y produce las próximas características del producto.
 
@@ -263,7 +275,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Segunda decisión del flujo — ¿Qué tipo de problema aparece en el sprint?
+## Segunda decisión del flujo: ¿Qué tipo de problema aparece en el sprint?
 
 **Qué es:** una decisión que elige la técnica de retrospectiva según el tipo de problema que aparece durante el sprint.
 
@@ -295,7 +307,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 12 — Operar el tablero Kanban
+## Paso 12: Operar el tablero Kanban
 
 **Qué es:** una forma de trabajar donde el trabajo se visualiza en un tablero con columnas y se limita cuántas tareas se hacen al mismo tiempo.
 
@@ -305,9 +317,9 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 **Tres reglas básicas:**
 
-1. **Visualizar el trabajo** — todo lo que el equipo hace está en una tarjeta del tablero.
-2. **Limitar las tareas en curso** — si el límite es 3 en la columna "En proceso", no se puede agregar la cuarta hasta que una pase a Terminado.
-3. **Jalar, no empujar** — cuando alguien termina una tarea, él mismo toma la siguiente; nadie le asigna por arriba.
+1. **Visualizar el trabajo:** todo lo que el equipo hace está en una tarjeta del tablero.
+2. **Limitar las tareas en curso:** si el límite es 3 en la columna "En proceso", no se puede agregar la cuarta hasta que una pase a Terminado.
+3. **Jalar, no empujar:** cuando alguien termina una tarea, él mismo toma la siguiente; nadie le asigna por arriba.
 
 **Analogía simple:** es como una cocina de restaurante. Si el cocinero tiene veinte pedidos a la vez, ninguno sale rápido. Si se limita a cinco, salen ordenados.
 
@@ -315,7 +327,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## Paso 13 — Medir el ritmo con la Ley de Little
+## Paso 13: Medir el ritmo con la Ley de Little
 
 **Qué es:** una fórmula que dice que el tiempo de entrega de una tarea depende de cuántas tareas estamos trabajando al mismo tiempo.
 
@@ -345,19 +357,19 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 > Estas son las flechas punteadas del flujograma. Son lo que convierte una línea en un ciclo de mejora continua.
 
-### Flecha 1 — Las métricas del paso 13 realimentan los objetivos del paso 3
+### Flecha 1: Las métricas del paso 13 realimentan los objetivos del paso 3
 
 **Qué dice:** si la velocidad del equipo cae o el tiempo de entrega sube, **se ajusta el plazo del objetivo SMART** antes de comprometer alcance nuevo.
 
 **Por qué importa:** porque no se le miente al cliente con una fecha que el dato dice que no vamos a cumplir.
 
-### Flecha 2 — El producto verificable realimenta el contexto del paso 1
+### Flecha 2: El producto verificable realimenta el contexto del paso 1
 
 **Qué dice:** lo aprendido durante la operación en producción **reabre el análisis del contexto** del próximo ciclo. El análisis FODA / PEST / Porter no es de una vez para siempre: se actualiza con lo aprendido.
 
 **Por qué importa:** porque el mercado cambia, el cliente cambia, la competencia cambia. Si el contexto no se actualiza, el siguiente producto se construye con información obsoleta.
 
-### Flecha 3 — La inteligencia artificial ataca directamente las semanas de espera del paso 5
+### Flecha 3: La inteligencia artificial ataca directamente las semanas de espera del paso 5
 
 **Qué dice:** la capacidad de inteligencia artificial del paso 9b **cierra el bucle** con el dolor que se definió en el paso 5. La solución no flota suelta: vuelve directamente al problema que la justifica.
 
@@ -365,7 +377,7 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
-## El cierre — Producto verificable, siguiente vuelta del ciclo
+## El cierre: Producto verificable, siguiente vuelta del ciclo
 
 **Qué es:** el punto donde el producto está demostrable y el equipo entra a una nueva vuelta del proceso.
 
@@ -375,10 +387,20 @@ Antes de la expo, repasa de adelante hacia atrás. Cada bloque tiene tres partes
 
 ---
 
+## El ciclo completo es un PDCA (Deming, base Shewhart)
+
+**Qué es:** el ciclo de mejora continua Planificar, Hacer, Verificar y Actuar, que popularizó Edwards Deming sobre la base de Walter Shewhart.
+
+**Por qué importa:** demuestra que el flujograma no es una secuencia suelta de pasos, sino un ciclo de mejora reconocido.
+
+**Cómo se ve en FLOWTEX:** todo el flujograma es un PDCA. Plan es el sprint planning donde priorizamos el backlog con MoSCoW. Do es el desarrollo de las historias de usuario. Check son las métricas de la Ley de Little y la retrospectiva. Act son las mejoras que aplicamos en el siguiente sprint. Las tres flechas de retroalimentación son ese PDCA hecho visible: el proceso planifica, hace, verifica, ajusta, y vuelve a empezar.
+
+---
+
 ## La frase de cierre para sacar el 20
 
 > *"El flujograma maestro de FLOWTEX no es una serie de cajas conectadas con flechas. Cada paso tiene su porqué (el problema que resuelve) y su para qué (el resultado que entrega).*
 
-> *Empezamos con un problema económico de cuatrocientos mil soles al año. Lo aterrizamos con Porter, FODA y PEST. Maduramos al equipo con Tuckman. Formulamos un objetivo SMART. Empatizamos y definimos el problema con Design Thinking. Ideamos eligiendo la herramienta según la madurez del equipo. Redactamos historias buenas y en contra. Priorizamos con SAFe MoSCoW. Liberamos el MVP como un acta de constitución, una promesa de trabajo futuro hacia el cliente. Lo reforzamos con inteligencia artificial para atacar el dolor raíz. Testeamos y medimos. Aprendemos e iteramos con Lean Inception. Resolvemos problemas del sprint con la técnica adecuada al tipo de problema. Operamos en un tablero Kanban con límite de tareas en curso. Medimos el ritmo con la Ley de Little. Y volvemos a empezar con lo aprendido.*
+> *Elegimos un enfoque ágil porque el problema es del dominio Complejo de Cynefin. Empezamos con un problema económico de cuatrocientos mil soles al año. Lo aterrizamos con Porter, FODA y PEST. Maduramos al equipo con Tuckman. Formulamos un objetivo SMART. Empatizamos y definimos el problema con Design Thinking. Ideamos eligiendo la herramienta según la madurez del equipo. Redactamos historias buenas y en contra. Priorizamos con SAFe MoSCoW. Liberamos el MVP como un acta de constitución, una promesa de trabajo futuro hacia el cliente. Lo reforzamos con inteligencia artificial para atacar el dolor raíz. Testeamos y medimos. Aprendemos e iteramos con Lean Inception. Resolvemos problemas del sprint con la técnica adecuada al tipo de problema. Operamos en un tablero Kanban con límite de tareas en curso. Medimos el ritmo con la Ley de Little. Y volvemos a empezar con lo aprendido, cerrando el ciclo PDCA que envuelve todo el proceso.*
 
 > ***Cada concepto tiene su lugar, cada lugar tiene su porqué, y cada porqué tiene su para qué.***"*
