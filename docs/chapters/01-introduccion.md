@@ -50,6 +50,12 @@ El sistema se desarrolla con el siguiente stack tecnológico:
 | Áreas operativas de Claro Perú | Clientes internos. Son beneficiarios directos de la agilización de los procesos de formularios y aprobaciones. |
 | Gerencia de TI de América Móvil | Cliente estratégico. Supervisa el cumplimiento de los estándares tecnológicos del grupo y el retorno de inversión de la solución. |
 
+**Usuario final frente a cliente/patrocinador.**
+El usuario final y el cliente no son la misma persona y tienen necesidades distintas.
+El usuario final opera el sistema en su día a día: el administrador TI que crea formularios, el solicitante que envía un pedido y el aprobador que decide, cuya necesidad es funcional (crear, enviar, aprobar y dar seguimiento sin fricción ni esperas).
+El cliente/patrocinador es el Área de Tecnología de Claro Perú, que financia el desarrollo a través de Hitss y cuya necesidad es estratégica (recuperar autonomía, reducir el costo de licenciamiento de NINTEX, cumplir con OSIPTEL y sostener la operación sin depender de un proveedor externo).
+El proyecto entrega valor solo cuando satisface ambas necesidades a la vez: un sistema usable para el usuario final y, a la vez, rentable y conforme para el patrocinador.
+
 ---
 
 ## 1.2 Perfiles de integrantes del equipo
@@ -218,6 +224,19 @@ No se trata de un producto comercializable externamente, sino de una solución e
 | Soberanía de datos | Datos en servidores del proveedor externo | Datos en infraestructura de América Móvil en Perú |
 | Reducción de costo de licenciamiento | Referencia: 100% del gasto actual | Reducción estimada superior al 60% |
 | Disponibilidad objetivo | Sujeta a SLA del proveedor externo | 99.5% mensual garantizado en infraestructura propia |
+
+### 1.5.4 Tipos de valor entregado al usuario y al cliente
+
+El valor de Flowtex se diferencia según a quién beneficia y de qué naturaleza es.
+
+| Tipo de valor | Valor para el usuario final | Valor para el cliente/patrocinador |
+|---|---|---|
+| **Funcional** | Crear formularios en 2 días laborales, aprobar desde una bandeja única y seguir cada solicitud por su ticket sin consultar al Área de TI | Un sistema que replica y supera las capacidades de NINTEX (versionamiento, trazabilidad, flujos configurables) bajo control propio |
+| **Económico** | Menos tiempo perdido en reprocesos manuales y esperas de semanas | Reducción superior al 60% del costo anual de licenciamiento y eliminación del pago por personalización externa |
+| **Social** | Menos tareas repetitivas de bajo valor y procesos sin papel (ODS 8 y 12) | Cumplimiento demostrable ante OSIPTEL y soberanía de datos como diferenciador (ODS 9) |
+| **De aprendizaje** | Mayor autonomía: el administrador aprende a construir y ajustar sus propios formularios sin depender de terceros | Conocimiento interno del producto en Hitss, que reduce el costo marginal de cada mejora futura |
+
+El usuario final valora sobre todo el valor funcional y de aprendizaje (autonomía operativa), mientras que el cliente pondera el valor económico y social (ahorro, cumplimiento y soberanía).
 
 ---
 
@@ -541,6 +560,14 @@ Los siguientes objetivos se definen bajo el marco SMART (Específico, Medible, A
 
 ---
 
+### 1.7.1 Definición de valor ágil y verificación de resultado
+
+Para este proyecto se define el valor ágil como la reducción medible del tiempo, del costo y del riesgo operativo del proceso de formularios y aprobaciones de Claro, verificada por el propio cliente en cada entrega.
+No se considera valor el software que compila ni la funcionalidad construida, sino el cambio observable en la operación del usuario (outcome), no la actividad de desarrollo (output).
+La entrega de valor se demuestra de tres formas concordantes: la validación del representante del Área de Tecnología de Claro en la Review (aceptación explícita), la mejora de los KPIs de resultado (tiempo de ciclo de creación, tasa de aprobación dentro del SLA, porcentaje de migración) y el cumplimiento de los objetivos SMART de la sección 1.7.
+Cada objetivo SMART se verifica contra una métrica de resultado y no contra horas trabajadas o tareas cerradas: por ejemplo, el Objetivo 1 no se cumple por haber construido el FormBuilder, sino solo cuando un formulario real se publica en 2 días laborales en producción.
+De este modo se distingue el valor (el problema del cliente resuelto) de la actividad (el trabajo del equipo realizado).
+
 ## 1.8 Herramientas de priorización: MoSCoW aplicado a las Historias de Usuario
 
 ### 1.8.1 Tabla de priorización MoSCoW
@@ -596,6 +623,14 @@ Las historias con mayor WSJF se desarrollan primero, porque entregan más valor 
 Para Flowtex se adoptó MoSCoW como técnica principal por su simplicidad y por la claridad que aporta a la conversación con el cliente Claro, dado que el equipo es de cinco personas y el backlog es acotado.
 WSJF se reserva como herramienta de desempate cuantitativo cuando dos historias de la misma categoría MoSCoW compiten por la capacidad de un mismo período: en ese caso, el cociente entre costo de retraso y tamaño ofrece un criterio objetivo para decidir cuál se ejecuta antes.
 La combinación aprovecha la agilidad comunicativa de MoSCoW y el rigor numérico de WSJF sin renunciar a ninguno de los dos.
+
+### 1.8.5 Escalamiento con SAFe: épicas, features e historias
+
+Si Flowtex se escalara con SAFe (Scaled Agile Framework), su backlog se reorganizaría en niveles jerárquicos.
+Las tres épicas actuales (FormBuilder, FlowEngine, MigraFlow) se mantendrían como Épicas SAFe, por su horizonte amplio y su impacto transversal en la operación de Claro.
+Los grandes bloques funcionales dentro de cada épica pasarían a ser Features: por ejemplo, "editor drag-and-drop", "versionamiento de formularios", "motor de rutas de aprobación", "escalamiento y delegación" y "migración paralela".
+Las Historias de Usuario actuales (HU01 a HU13) permanecerían como Historias, unidades pequeñas y verificables dentro de un mismo ciclo.
+Por encima, la iniciativa completa "Reemplazo de NINTEX y soberanía de datos" se modelaría como un Tema estratégico o línea de inversión alineada al ODS 9, que es el nivel donde WSJF prioriza entre épicas que compiten por presupuesto.
 
 ---
 
@@ -684,6 +719,11 @@ La siguiente tabla presenta la adaptación de los cuatro valores y los doce prin
 | **Principio 10: La simplicidad (el arte de maximizar la cantidad de trabajo no realizado) es esencial** | MoSCoW prioriza únicamente las funcionalidades que replican y mejoran el núcleo de NINTEX en el MVP; las funcionalidades de valor secundario se posponen explícitamente | Construir funcionalidades no esenciales (dashboards de BI, integraciones ERP legacy) en el primer ciclo habría consumido capacidad del equipo sin incrementar el valor entregado al cliente en el plazo definido |
 | **Principio 11: Las mejores arquitecturas, requisitos y diseños emergen de equipos autoorganizados** | Cada miembro del equipo de Hitss tiene autonomía para proponer soluciones técnicas dentro de la arquitectura acordada, sin dependencia de aprobación jerárquica en cada decisión de implementación | La autoorganización del equipo aceleró la decisión sobre el stack tecnológico (Java 21 + React 18) y la arquitectura (DDD + CQRS), evitando ciclos de aprobación burocrática que habrían retrasado el inicio del desarrollo |
 | **Principio 12: El equipo reflexiona regularmente sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia** | Se realiza una retrospectiva quincenal al cierre de cada sprint, con análisis estructurado de lo que funcionó, lo que debe mejorar y compromisos de ajuste concretos para el siguiente ciclo | El equipo adapta sus herramientas, sus procesos y su distribución de tareas al ritmo real del proyecto, en lugar de seguir una planificación rígida que no contemple los aprendizajes de cada sprint |
+
+**Respuesta ante un cambio importante del cliente a mitad del proyecto.**
+Si el Área de Tecnología de Claro cambia una necesidad relevante durante la ejecución, el principio rector es el Principio 2 ("bienvenidos los requisitos cambiantes, incluso en etapas tardías"), sostenido por el Valor 4 ("responder al cambio sobre seguir un plan").
+La decisión concreta no es rehacer el plan completo, sino llevar el cambio al Replenishment Meeting (capítulo III, sección 3.1), re-priorizar el backlog con MoSCoW y, si el cambio compite con otra historia de la misma categoría, desempatar con WSJF (sección 1.8.4).
+El cambio se absorbe reordenando el flujo, sin romper el trabajo en progreso ni superar el WIP limit del equipo.
 
 ---
 

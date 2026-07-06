@@ -904,6 +904,32 @@ Las columnas del tablero se mantienen como antes:
 | Review semanal | Viernes de cada semana | 1 hora | Demostración de lo completado al representante del Área de Tecnología de Claro |
 | Retrospectiva | Cada dos semanas | 1 hora | Reflexión sobre proceso, personas y producto; herramientas rotativas (4Ls, Roses/Thorns/Buds) |
 
+### 3.1.1 Diseño del sistema con STATIK (8 pasos)
+
+El tablero anterior no es una plantilla genérica: se diseñó siguiendo STATIK (System Thinking Approach to Introducing Kanban), el método de ocho pasos para introducir Kanban a partir de la demanda real.
+
+| Paso STATIK | Aplicación en FLOWTEX |
+|---|---|
+| 1. Entender el propósito del sistema | Sostener el flujo de creación de formularios y aprobaciones de Claro reemplazando a NINTEX, con trazabilidad y sin dependencia externa |
+| 2. Entender la demanda | Solicitudes de nuevos formularios y de cambios (entre 2 y 3 por semana según la entrevista SPIN del capítulo II), más bugs y mejoras detectadas en QA y en las Reviews con Claro |
+| 3. Identificar los tipos de trabajo | Feature (HU nueva), Bug (defecto), Chore (tarea técnica sin valor directo) y Spike (investigación acotada), clasificados en la tarjeta (sección 3.2) |
+| 4. Analizar las clases de servicio | Urgente, Fecha fija, Estándar e Intangible, que fijan la prioridad dinámica de cada tarjeta sin replanificar el tablero |
+| 5. Diseñar el flujo de trabajo | Columnas Backlog, Por Hacer, En Desarrollo, En Revisión, Testing y Hecho, con seis swim lanes por bounded context |
+| 6. Definir las políticas explícitas | Reglas de entrada y salida por columna (criterios gherkin para entrar a Desarrollo; QA y validación del PO para llegar a Hecho) documentadas en la sección 3.1 |
+| 7. Establecer los WIP limits | Límite por swim lane (2 en los BC principales, 1 en Notifications y Reporting) y por columna, calibrado a un equipo de cinco personas |
+| 8. Acordar las cadencias de retroalimentación | Daily, Replenishment, Review semanal con Claro y Retrospectiva quincenal (tabla de cadencias de la sección 3.1) |
+
+La demanda que llega al sistema es de dos naturalezas: demanda de valor (formularios y flujos nuevos o modificados que pide el cliente Claro) y demanda de falla (bugs y retrabajo que genera el propio sistema).
+El objetivo del tablero es maximizar la primera y minimizar la segunda.
+
+### 3.1.2 Cuellos de botella previsibles del flujo
+
+El diseño del tablero anticipa tres cuellos de botella probables.
+El primero es la columna En Revisión (WIP 2): si el code review se demora, las HUs terminadas se acumulan esperando revisor, por lo que la política obliga a revisar antes de tomar una HU nueva cuando la columna está llena.
+El segundo es Testing, donde un único responsable de pruebas puede saturarse si varias swim lanes entregan a la vez; se mitiga con el WIP limit de 2 y con la regla de que prueba quien no escribió el código.
+El tercero es la validación del PO para pasar a Hecho: al ser una sola persona (Christopher) el punto de aceptación, su disponibilidad limita el cierre de HUs, lo que se atiende agendando la validación dentro de la Review semanal con Claro.
+La Tasa de bloqueo y el Cycle Time (sección 3.3) son las señales que delatan cuál de estos cuellos se está activando.
+
 ---
 
 ## 3.2 Consideraciones para la tarjeta de trabajo (work item card) del tablero KANBAN
@@ -929,6 +955,12 @@ Cada tarjeta del tablero Kanban representa una unidad de trabajo (historia de us
 
 La clase de servicio determina la prioridad dinámica de la tarjeta dentro del flujo. Una HU "Urgente" puede adelantar a tarjetas "Estándar" sin replanificar todo el tablero, coherente con la política de gestión explícita del método Kanban.
 
+### 3.2.1 Método de estimación
+
+El equipo estima cada tarjeta con una escala relativa de t-shirt sizing (S, M, L, XL) traducida a puntos de historia (S = 1, M = 3, L = 5, XL = 8), no en horas.
+La talla se decide por comparación con historias ya completadas (estimación por afinidad) y se consensúa en el Replenishment Meeting mediante planning poker: cada integrante propone una talla en simultáneo y, ante divergencias amplias, se discute el criterio antes de acordar el valor final.
+Se prefiere la estimación relativa sobre la estimación en horas porque es más rápida, reduce la falsa precisión y alimenta directamente la Ley de Little (sección 3.5) para calcular el WIP óptimo.
+
 ---
 
 ## 3.3 KPIs que serán gestionados
@@ -950,6 +982,12 @@ La clase de servicio determina la prioridad dinámica de la tarjeta dentro del f
 - **Tasa de re-trabajo** > 10% indica problemas en la definición de HUs o en los criterios gherkin.
 - **Tasa de bloqueo** > 5% indica bloqueadores sistémicos que requieren acción estructural, no resolución individual.
 
+**KPIs de desempeño frente a KPIs de eficiencia.**
+Los KPIs de la tabla se leen en dos grupos.
+Los KPIs de desempeño miden si el equipo entrega valor al cliente: el Throughput semanal (cuántas HUs terminadas llegan a Claro) y el Lead Time (cuánto espera el cliente desde que pide hasta que recibe).
+Los KPIs de eficiencia miden si el flujo interno mejora: el Cycle Time, el WIP actual, la Tasa de re-trabajo y la Tasa de bloqueo.
+La distinción evita optimizar el flujo (eficiencia) sin entregar más valor (desempeño): un Cycle Time bajo no sirve si el Throughput de HUs aceptadas por Claro no sube.
+
 ---
 
 ## 3.4 Tabla resumen de pasos para la evaluación del método en planificación
@@ -968,7 +1006,9 @@ Cada reunión genera al menos un artefacto: el Daily actualiza el tablero; el Re
 
 ## 3.5 Pasos principales para una planificación ágil según la solución propuesta
 
-La planificación ágil en FLOWTEX sigue una secuencia de cinco pasos que retroalimentan permanentemente al primero:
+La planificación ágil en FLOWTEX sigue una secuencia de cinco pasos que retroalimentan permanentemente al primero.
+Esta secuencia recorre la cadena completa de planificación ágil: la visión del producto (declaración de visión de Lean Inception, capítulo II) se traduce en un roadmap de seis épicas por bounded context, que se descompone en el backlog priorizado (sección 3.0.3), se ordena en releases e iteraciones de dos semanas, se opera en el tablero Kanban (sección 3.1) y se controla con las métricas de flujo (sección 3.3).
+Los cinco pasos operativos son los siguientes:
 
 1. **Diseñar el sistema de trabajo**: definir las columnas del tablero Kanban, los WIP limits por columna y swim lane, las políticas explícitas de transición y los criterios de la Definition of Done. El tablero se diseña colectivamente en la sesión de kick-off.
 2. **Construir y priorizar el backlog**: aplicar MoSCoW e ImpactPriority para ordenar las HUs por valor de negocio e impacto en la operación del cliente Claro. Resultado: backlog con prioridades visibles para todo el equipo (sección 3.0.3).
@@ -979,6 +1019,11 @@ La planificación ágil en FLOWTEX sigue una secuencia de cinco pasos que retroa
    > **Lead Time = WIP / Throughput**
 
    Con throughput objetivo de 3 HUs/semana y Lead Time aceptable de 5 días hábiles, el WIP óptimo del flujo central (En Desarrollo + En Revisión + Testing) es 3 tarjetas activas, distribuidas según la swim lane (sección 3.1).
+
+**Decisión ante muchas tareas empezadas y pocas terminadas.**
+Si el tablero muestra alto WIP y bajo Throughput (muchas tarjetas en curso, pocas en Hecho), la decisión no es empezar más trabajo sino terminar el iniciado: "dejar de empezar y empezar a terminar".
+En la práctica se congela el ingreso de nuevas HUs a En Desarrollo, se baja temporalmente el WIP limit de la columna saturada y el equipo se concentra en desatascar las tarjetas más próximas a Hecho, priorizando la resolución de bloqueadores y de revisiones pendientes.
+Reducir el WIP acorta el Cycle Time (Ley de Little) y devuelve previsibilidad al flujo antes de admitir nueva demanda.
 
 ---
 

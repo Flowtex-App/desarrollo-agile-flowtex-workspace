@@ -4,6 +4,10 @@
 
 El equipo de Flowtex aplicó las cinco fases del Design Thinking para comprender el problema real de los administradores de TI de Claro Perú antes de proponer cualquier solución técnica.
 
+La elección de estos métodos responde a la naturaleza del problema, diagnosticado como complejo con Cynefin (capítulo I, sección 1.11): no se conoce de antemano qué configuración exacta de formularios y flujos necesita cada área de Claro.
+Por eso se combinaron tres enfoques complementarios: Design Thinking para empatizar y descubrir el problema real del usuario antes de diseñar, Lean Startup para validar la hipótesis de valor con el menor esfuerzo posible, y Lean Inception para alinear al equipo y al cliente en torno a la visión del MVP.
+Se descartó un enfoque de requisitos cerrados por adelantado porque, en un dominio complejo, la solución correcta solo emerge experimentando con el usuario y no analizándola de una sola vez.
+
 ### Fase 1: Empatizar
 
 Se utilizó la técnica SPIN para entrevistar al Administrador de TI de Claro Perú, con el objetivo de diagnosticar el problema desde la perspectiva del usuario real.
@@ -142,6 +146,14 @@ Las convenciones de código, el tablero Kanban con WIP limits y las cadencias ya
 La señal que confirmó la entrada a "Liberar de mando y control" fue la primera Historia de Usuario completada sin bloqueadores ni intervención directiva (HU01, tipos de campo del FormBuilder), que evidenció que el equipo puede operar bajo sus propias normas sin mando y control constante.
 La fase Performing ("Empoderar"), de autoorganización plena, se plantea como estado objetivo aún en consolidación.
 
+**Acciones para avanzar hacia el alto desempeño (Performing).**
+Para mover al equipo de "Liberar de mando y control" (Norming) hacia "Empoderar" (Performing) se ejecutan acciones concretas.
+Se sostienen las retrospectivas quincenales con acciones de mejora medibles y con responsable asignado.
+Se rota el rol de revisor de código para difundir el conocimiento del sistema y romper la concentración en una sola persona.
+Se mantiene el WIP limit para que el equipo cierre lo empezado antes de abrir trabajo nuevo.
+Se reduce de forma progresiva la intervención del Scrum Master hasta dejarla solo en la remoción de impedimentos.
+La señal de que se alcanzó Performing será una cadena sostenida de Historias de Usuario entregadas sin intervención directiva y con code reviews resueltos por el propio equipo dentro del plazo acordado.
+
 ### Check List de Verificación de Liderazgo Ágil
 
 El Scrum Master verifica el siguiente check list al inicio de cada sprint para asegurar las condiciones mínimas de trabajo colaborativo del equipo Flowtex.
@@ -187,6 +199,12 @@ El ciclo Build-Measure-Learn (Construir-Medir-Aprender) fue formulado por Eric R
 | Build (Construir) | Se construye el MVP: FormBuilder con 5 tipos de campo básico más FlowEngine con flujo secuencial de hasta 2 niveles de aprobación |
 | Measure (Medir) | Se miden tres KPIs principales: tiempo de creación de formulario, tasa de aprobación dentro del SLA, y NPS inicial de los administradores TI de Claro |
 | Learn (Aprender) | Se valida la hipótesis central del proyecto: ¿los administradores de TI pueden crear formularios funcionales en menos de 2 días sin capacitación previa? |
+
+**Criterio de perseverar, pivotar o detener.**
+El resultado del ciclo Build-Measure-Learn define la decisión sobre el proyecto, tal como propone Eric Ries.
+Se persevera si al menos el 80% de los administradores TI crea un formulario básico en menos de 30 minutos sin capacitación previa y el NPS inicial es igual o superior a 7 sobre 10: la hipótesis de autonomía queda validada y se continúa el roadmap.
+Se pivota si los usuarios completan la tarea pero valoran mal la experiencia (por ejemplo, un rechazo mayoritario del editor drag-and-drop): se conserva el problema validado y se cambia la solución (rediseño de la interfaz o del flujo de construcción).
+Se detiene o se replantea de raíz si los administradores no logran crear formularios de forma autónoma ni siquiera con ajustes, porque en ese caso la hipótesis central de valor (autonomía sin dependencia de un proveedor) quedaría refutada.
 
 ### Lean Inception: Visión del Producto
 
@@ -244,6 +262,11 @@ El sistema envía notificaciones por correo electrónico a los aprobadores en me
 Cada acción sobre una solicitud (envío, aprobación, rechazo, comentario) queda registrada de forma permanente en el historial.
 El solicitante puede consultar el estado de su solicitud en cualquier momento mediante el número de ticket.
 
+**Componente de IA del MVP:**
+El MVP incorpora un asistente de sugerencia de campos por IA: el diseñador describe en lenguaje natural el propósito del formulario y el sistema propone los campos relevantes con su tipo recomendado y una justificación corta.
+Esta IA aumenta el valor porque ataca el punto de mayor fricción del diseño (la hoja en blanco): reduce el tiempo de construcción inicial de un formulario nuevo y baja la barrera para los administradores TI sin experiencia previa en modelado de formularios.
+La IA asiste pero no decide: el diseñador acepta, edita o descarta cada sugerencia, de modo que el control final permanece en el usuario y no se introducen campos sin supervisión.
+
 ### Funcionalidades excluidas del MVP inicial
 
 Las siguientes funcionalidades quedan fuera del MVP y serán desarrolladas en iteraciones posteriores:
@@ -267,6 +290,13 @@ Los indicadores clave de desempeño de Flowtex se definen con fórmulas explíci
 | Tasa de migración exitosa desde NINTEX | Formularios migrados sin error / Total de formularios activos en NINTEX × 100 | 100% (con pruebas paralelas) |
 | Reducción de costo de herramientas workflow | (Costo anual NINTEX − Costo anual Flowtex) / Costo anual NINTEX × 100 | ≥ 60% |
 | Disponibilidad del sistema | Tiempo de operación efectiva / Tiempo total del período × 100 | ≥ 99.5% |
+
+**Fuente de datos, frecuencia de medición y decisión que habilita cada KPI.**
+Cada indicador declara, además de su fórmula, de dónde salen sus datos, cada cuánto se mide y qué decisión permite tomar.
+El tiempo promedio de creación de formulario se obtiene del registro automático de FormBuilder (fecha de solicitud contra fecha de publicación), se mide por cada formulario creado y decide si el diseño del editor es suficientemente ágil o requiere simplificación.
+La tasa de aprobación dentro del SLA se obtiene de los eventos de Tracking, se mide semanalmente y decide si un flujo necesita ajustar sus tiempos o su escalamiento.
+El NPS de los administradores TI se obtiene de una encuesta breve posterior a la prueba de usabilidad, se mide en cada iteración de validación y decide si se persevera con el diseño actual o se rediseña la experiencia.
+La tasa de migración exitosa se obtiene del panel de control de MigraFlow, se mide por lote migrado y decide cuándo es seguro dar de baja un formulario en NINTEX.
 
 ---
 

@@ -196,6 +196,39 @@ El método es especialmente efectivo en contextos donde el cliente ya tiene un p
 FlowAgile no es adecuado para proyectos de desarrollo de productos de consumo masivo (B2C) donde la experimentación con usuarios externos y la validación mediante A/B testing sean el núcleo del método.
 Tampoco es adecuado para proyectos con requisitos completamente fijos y sin posibilidad de cambio, como proyectos de cumplimiento regulatorio con especificación inmutable, donde un método predictivo (cascada o CMMI) es más apropiado.
 
+### Diferencia de FlowAgile frente a Scrum, Kanban, Scrumban y Lean Startup
+
+FlowAgile no reemplaza a esos métodos: los fusiona y les añade una capa de métricas de flujo y de trazabilidad al Manifiesto que ninguno exige por separado.
+
+| Método | Qué aporta | Qué le falta que FlowAgile añade |
+|---|---|---|
+| Scrum | Cadencias, roles y compromiso por iteración. | No gestiona flujo continuo ni WIP; FlowAgile conserva las cadencias útiles pero controla el trabajo con WIP limits y Lead Time en lugar de Sprints de alcance cerrado. |
+| Kanban | Visualización del flujo, WIP limits y métricas. | No prescribe cómo iniciar (empatía, MVP) ni cómo mejorar al equipo; FlowAgile antepone una fase de Inicio (Design Thinking + Lean Startup) y una fase de Mejora en tres dimensiones. |
+| Scrumban | Combina eventos de Scrum con flujo Kanban. | Se queda en la ejecución; FlowAgile lo extiende a un ciclo completo de cinco fases (Inicio, Plan, Ejecución, Control, Mejora) con herramientas propias en cada una. |
+| Lean Startup | Construir-Medir-Aprender y decisión de pivotar o perseverar. | Está pensado para productos nuevos con usuarios externos; FlowAgile lo adapta a un cliente organizacional que reemplaza un proceso existente (NINTEX) y lo integra con control de flujo y calidad técnica. |
+
+El rasgo distintivo es que cada herramienta de FlowAgile es una fusión de al menos dos métodos del sílabo y se respalda de forma explícita en un valor o principio del Manifiesto Ágil, algo que los métodos originales no imponen como regla de construcción.
+
+### Pasos mínimos para replicar FlowAgile
+
+Un equipo que quiera replicar FlowAgile necesita seguir seis pasos mínimos, no la copia de todas sus herramientas.
+
+1. Comprender el problema y al usuario con empatía y definir el MVP antes de escribir código (fase Inicio).
+2. Diseñar el sistema de trabajo con STATIK: tablero, tipos y clases de servicio, WIP limits y cadencias, partiendo de la demanda real del cliente.
+3. Establecer las cadencias mínimas (Replenishment, Daily, Review con el cliente y Retrospectiva quincenal).
+4. Instrumentar el control con métricas de flujo (Lead Time, WIP, Throughput) y al menos un radiador visible para el cliente.
+5. Integrar CI/CD y una Definition of Done desde el primer período, no como actividad posterior.
+6. Cerrar el ciclo con retrospectivas en tres dimensiones (personas, procesos, producto) que produzcan acciones concretas, aplicando PDCA para estandarizar lo que funciona.
+
+Cada equipo debe adaptar las respuestas del STATIK y las herramientas a su propio contexto: replicar FlowAgile es reproducir su método de razonamiento (fusión, respaldo en el Manifiesto y control por flujo), no calcar sus tablas.
+
+### Qué ajustaría FlowAgile tras la ejecución
+
+Con el aprendizaje del proyecto, FlowAgile incorporaría tres ajustes.
+Primero, adelantar la validación del propósito con el cliente a la Definition of Ready, porque el review reveló que una HU puede cumplir lo pedido y aun así no entregar el valor esperado.
+Segundo, dar a MigraFlow una clase de servicio y un límite de WIP propios desde el inicio, ya que su alto retrabajo por defectos exigió tratarlo distinto de FormBuilder y FlowEngine.
+Tercero, automatizar antes los radiadores (CFD y Throughput) para que el costo de controlar no compita con el tiempo de construir, en línea con el criterio anti-burocracia de la sección 5.6.
+
 ## 7.6 Evidencia del MVP desarrollado durante el ciclo
 
 El MVP de Flowtex comprende tres módulos: FormBuilder (creación de formularios), FlowEngine (motor de flujos de aprobación) y MigraFlow (migración de formularios existentes).
@@ -240,5 +273,8 @@ Al completarse el último paso de aprobación, el sistema notifica al solicitant
 
 El MVP de Flowtex se desplegó en el ambiente de QA de Hitss Perú con automatización CI/CD mediante GitHub Actions y contenedores Docker.
 Las capturas de pantalla de los flujos 1 a 4 (incluyendo el editor de FormBuilder, el editor de flujo de FlowEngine, la vista de seguimiento del solicitante y las notificaciones de Teams) se adjuntan en la sección de Anexos del informe final.
+
+La trazabilidad del proyecto encadena seis niveles de forma verificable: el ODS 9 (infraestructura tecnológica) se conecta con el problema (la lentitud y la dependencia de NINTEX en Claro), el problema se traduce en el backlog (épicas EP01 a EP03 y sus HUs con criterios de aceptación), el backlog se materializa en el MVP (los tres módulos desplegados en QA), el MVP se mide con KPIs (tiempo de aprobación, tasa de adopción y KPIs del Asistente de IA de la sección 5.14) y esos KPIs evidencian el valor entregado (reducción de tiempos, eliminación de reprocesos y de papel).
+Cada nivel deja rastro en un artefacto concreto: la Definition of Ready exige que toda HU tenga trazabilidad a los archivos del repositorio, y los radiadores del capítulo V permiten seguir cada HU desde su selección hasta el valor medido, de modo que la cadena que enlaza ODS, problema, backlog, MVP, KPI y valor puede recorrerse en ambos sentidos.
 
 Más allá del valor operativo y económico para Claro Perú, el MVP evidencia el aporte del proyecto a los Objetivos de Desarrollo Sostenible (sección 1.3.4): al digitalizar y automatizar un proceso antes manual, Flowtex fortalece la infraestructura tecnológica interna (ODS 9), reduce el desperdicio de papel y de reprocesos (ODS 12) y libera tiempo del personal hacia trabajo de mayor valor (ODS 8).

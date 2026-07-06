@@ -114,3 +114,23 @@ El mapeo a las ceremonias reales del equipo es directo.
 De este modo, la retrospectiva quincenal descrita en las secciones anteriores es exactamente la etapa Check del ciclo, y las acciones de mejora que produce son la etapa Act.
 El cierre del lazo es lo que da continuidad al método: las acciones de mejora (Act) alimentan la planificación del período siguiente (Plan), de manera que cada iteración de dos semanas equivale a una vuelta completa del ciclo PDCA.
 El equipo adopta PDCA porque le da un lenguaje común y una disciplina para que la mejora sea sistemática y basada en evidencia, en coherencia con el Principio 12 del Manifiesto Ágil (el equipo reflexiona a intervalos regulares sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia).
+
+## 6.8 Review con el cliente: qué se muestra, qué se valida y qué se decide
+
+El review es el punto de cierre de cada período donde el equipo confronta el software con el cliente real (el representante del Área de Tecnología de Claro).
+Su lógica tiene tres momentos.
+Qué se muestra: software funcionando desplegado en el ambiente QA de Hitss (no diapositivas ni maquetas), recorriendo los flujos completos del MVP (creación de formulario, configuración de flujo, envío y aprobación, documentados en la sección 7.6).
+Qué se valida: que cada Historia de Usuario cumple sus criterios de aceptación gherkin y que la funcionalidad resuelve el problema real del usuario, no solo lo que decía la especificación.
+Qué se decide: aceptar la HU, devolverla con observaciones o reordenar el backlog según el nuevo aprendizaje del cliente.
+
+Las evidencias que el equipo presenta para demostrar valor en el review son concretas y verificables: el software desplegado en QA operado en vivo, la lista de criterios de aceptación marcados como cumplidos, los radiadores de flujo del capítulo V (Burndown, CFD y Throughput Run Chart) que muestran el avance real, y los KPIs del MVP (incluidos los del Asistente de IA de la sección 5.14) que evidencian que la funcionalidad se usa y ayuda.
+La evidencia nunca es un porcentaje de avance, porque el Principio 7 del Manifiesto establece que el software funcionando es la medida principal de progreso.
+
+### Terminado por el equipo (DoD) frente a aceptado por el cliente
+
+"Terminado por el equipo" significa que la Historia de Usuario cumple la Definition of Done (sección 4.4): build, tests con cobertura, deploy a QA y criterios de aceptación verificados internamente.
+"Aceptado por el cliente" significa que, además, el representante de Claro validó en la Review que la funcionalidad entrega el valor esperado en su proceso real.
+Ambos estados son distintos: una HU puede estar Done según el equipo y aun así ser rechazada en la Review si el cliente descubre que, pese a cumplir lo solicitado, no resuelve su necesidad real.
+Cuando eso ocurre (situación en la que el cliente rechaza una funcionalidad que cumplía lo pedido), el aprendizaje es que el criterio de aceptación estaba completo pero la comprensión del problema era incompleta.
+El equipo lo trata como aprendizaje validado, ajusta la Definition of Ready para incluir una validación temprana del propósito con el cliente y reordena el backlog con ProductRetro y LearnPivot, en lugar de asumirlo como un defecto de ejecución.
+Esta distinción es la razón por la que el review con el cliente es un control de valor y no solo de conformidad.

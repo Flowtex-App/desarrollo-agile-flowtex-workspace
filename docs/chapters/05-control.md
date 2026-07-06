@@ -147,7 +147,16 @@ La medición del Lead Time y el Throughput elimina esta ilusión: el equipo es t
 
 El control en FlowAgile no es un fin en sí mismo: es el mecanismo por el cual el método genera valor sostenible para Claro, para Hitss y para el equipo de desarrollo.
 
+### Cómo evitar que el control se vuelva burocrático
+
+El control solo se justifica si cada métrica y cada cadencia termina en una decisión; una medición que no cambia ninguna acción es desperdicio y debe eliminarse.
+El equipo evalúa la utilidad de su propio método de control con tres criterios prácticos: cada radiador debe haber gatillado al menos una decisión en el período (si no, se retira), ninguna reunión de control debe exceder su tiempo fijo (Daily de 15 minutos, Review semanal acotada), y la recolección de métricas debe estar automatizada tanto como sea posible (script del CFD, tags de versión) para que el costo de controlar no compita con el tiempo de construir.
+Este chequeo se hace en la propia retrospectiva: si una práctica de control consume más esfuerzo del que ahorra, se trata como un desperdicio Lean de sobreproceso y se simplifica o elimina, en coherencia con el principio de que el método existe para aprender, no para cumplir un rito.
+
 ## 5.7 Tabla de control
+
+El control de Flowtex vigila cuatro dimensiones de desviación con una señal distinta para cada una: el tiempo se detecta cuando el Lead Time supera el SLA por servicio; la calidad se detecta cuando la tasa de HUs devueltas de Testing supera el 10%; el alcance se detecta cuando entra trabajo no registrado como HU o cambio formal (gestión de cambios de la sección 4.4), lo que hace crecer el WIP sin acuerdo; y el valor se detecta cuando una HU cumple sus criterios de aceptación pero el cliente no la valida en la Review o los KPIs del MVP (incluidos los del Asistente de IA de la sección 5.14) no mejoran.
+La siguiente tabla resume qué se controla, por qué y qué acción se toma.
 
 | Qué controlar | Por qué controlar | Qué acción tomar luego del control |
 |---|---|---|
@@ -219,6 +228,23 @@ Las ocho fases del ciclo DevOps se aplican de manera continua e iterativa en el 
 | Deploy | El deploy al ambiente QA se ejecuta automáticamente en cada merge aprobado a main; los smoke tests automáticos validan la disponibilidad del servicio en QA; la promoción a producción requiere aprobación manual del PO; los feature flags permiten activar módulos de manera gradual para un subconjunto de usuarios de Claro |
 | Operate | El equipo de Hitss monitorea la disponibilidad del sistema con un SLA de disponibilidad igual o superior al 99.5% mensual; las alertas automáticas notifican al equipo por Teams si la disponibilidad cae por debajo del umbral; el SLA de respuesta a incidentes es de 1 hora desde la detección hasta el inicio de la atención |
 | Monitor | Las métricas de rendimiento objetivo son: tiempo de respuesta menor a 3 segundos para el 95% de las operaciones y tasa de error menor al 0.1%; los logs de todos los servicios se centralizan en el stack ELK (Elasticsearch, Logstash, Kibana) para análisis y trazabilidad; las alertas de umbral se envían automáticamente al canal de Teams del equipo cuando se superan los límites definidos |
+
+## 5.11.1 Prácticas de prueba: DoD, TDD, BDD y ATDD
+
+El proyecto distingue cuatro prácticas complementarias que ordenan cómo se define y se verifica que una funcionalidad está terminada y es correcta.
+La Definition of Done (DoD) es el acuerdo del equipo sobre las condiciones que toda Historia de Usuario debe cumplir para considerarse terminada (build, tests con cobertura, deploy a QA y validación del PO), detalladas en la sección 4.4.
+El TDD (Test-Driven Development) es la disciplina de escribir primero el test unitario y luego el código que lo hace pasar, aplicada en Flowtex a los aggregates y use cases del backend (sección 4.5).
+El BDD (Behavior-Driven Development) describe el comportamiento esperado en lenguaje de negocio con el formato Given-When-Then (gherkin), y en Flowtex se materializa en los criterios de aceptación de cada HU exigidos por la Definition of Ready (sección 4.4), lo que alinea a desarrollo y negocio en un mismo lenguaje.
+El ATDD (Acceptance Test-Driven Development) parte de definir, junto con el PO, las pruebas de aceptación antes de construir, de modo que la validación del PO en QA verifica exactamente esos escenarios acordados.
+De las cuatro, el proyecto aplica TDD como práctica de construcción diaria y BDD/ATDD como puente con el cliente: los escenarios gherkin acordados con el PO (BDD) son también las pruebas de aceptación que este valida en la Review (ATDD), y la DoD garantiza que todo lo anterior se cumplió antes de marcar la HU como Hecha.
+
+## 5.11.2 Gestión de la deuda técnica del MVP
+
+Construir el MVP con rapidez genera deuda técnica, es decir, decisiones de diseño tomadas para avanzar rápido que encarecen los cambios futuros si no se corrigen.
+Flowtex la gestiona de forma explícita en lugar de ignorarla: SonarQube marca los code smells y la cobertura insuficiente en cada pull request, y el Quality Gate bloqueante impide que la deuda crítica entre a la rama principal sin decisión consciente.
+La deuda que sí se acepta de forma deliberada (para no retrasar una entrega) se registra como una Historia de Usuario de tipo "chore" en el backlog, con su costo estimado, y se prioriza con MoSCoW junto al resto del trabajo, de modo que es visible y no invisible.
+El ciclo ArchFlow (sección 4.7) evita que la deuda se acumule sin control, porque la calidad arquitectónica (bounded contexts, aggregates sin setters, ports respetados) es criterio de aceptación de cada HU y no una limpieza que se posterga al final del proyecto.
+Cada retrospectiva reserva parte de la capacidad del período siguiente para pagar la deuda de mayor impacto en el Lead Time, tratando el refactor como inversión y no como lujo.
 
 ## 5.12 Tabla de cinco pasos del método: Control
 

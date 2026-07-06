@@ -17,6 +17,10 @@ A continuación se describe cómo cada fase se manifiesta en el equipo de Hitss 
 Ese hito evidenció que el equipo podía operar bajo sus propias normas acordadas sin necesidad de mando y control constante, lo que habilitó al Scrum Master a delegar y retirar la supervisión directa.
 La progresión a través de las cuatro fases de Tuckman no es automática ni garantizada: las intervenciones deliberadas del líder en "Comprender el contexto" y "Capacitar" son condición necesaria para que el equipo alcance la autonomía de "Liberar de mando y control" y, posteriormente, el empoderamiento pleno de Performing dentro del horizonte temporal del proyecto.
 
+Como líder facilitador, ante señales de baja participación de un integrante (por ejemplo, silencio recurrente en el Daily o ausencia en las cadencias), el Scrum Master actúa sin recurrir al mando y control.
+Conversa en privado para entender la causa (sobrecarga, falta de claridad o desmotivación), redistribuye o reduce el WIP asignado si el problema es de carga, y usa la retrospectiva de personas (Roses, Thorns and Buds del capítulo VI) para que el propio equipo exprese la fricción y proponga acuerdos.
+Si el plazo se acerca y el equipo aún está en la fase de conflicto (Storming), el líder prioriza cerrar el desacuerdo abierto con una decisión rápida y documentada como ADR (por ejemplo, votación ponderada), porque un equipo que sigue en Storming sin resolución no alcanza el ritmo predecible que exige la fecha comprometida.
+
 ---
 
 ## 4.2 STATIK Kanban como enfoque de ejecución
@@ -28,6 +32,9 @@ Flowtex tiene tres servicios diferenciados (FormBuilder, FlowEngine y MigraFlow)
 - **FormBuilder**: demanda alta y predecible; cinco HUs de funcionalidades definidas con criterios de aceptación claros.
 - **FlowEngine**: demanda media con complejidad variable; siete HUs que incluyen reglas condicionales y lógica de orquestación de procesos.
 - **MigraFlow**: demanda baja pero de alta criticidad; una HU de migración con riesgo operativo alto para la operación de Claro.
+
+En términos de Kanban, un servicio es un flujo de trabajo que entrega una clase de solicitudes a un cliente bajo un acuerdo de nivel de servicio (SLA).
+Flowtex opera tres servicios, y FormBuilder es el servicio principal porque construye los formularios de los que dependen FlowEngine (que los enruta en flujos de aprobación) y MigraFlow (que migra los existentes desde NINTEX).
 
 El enfoque STATIK permite diseñar el sistema comenzando desde la demanda externa del cliente (Área de Tecnología de Claro) hacia la capacidad interna del equipo de Hitss, en lugar de imponer un proceso genérico sobre el equipo. Esta orientación desde afuera hacia adentro es la diferencia fundamental respecto a Scrumban, que parte de la estructura interna del equipo.
 
@@ -42,6 +49,28 @@ El enfoque STATIK permite diseñar el sistema comenzando desde la demanda extern
 | 5. ¿Cuáles son los tipos de trabajo? | Features, Bugs, Chores, Spikes. |
 | 6. ¿Cuáles son las clases de servicio? | Urgente, Fecha fija, Estándar, Intangible. |
 | 7. ¿Cuál es el diseño del sistema Kanban? | Tablero con 6 columnas, 3 swim lanes (una por módulo), WIP limits definidos por capacidad del equipo y flujo esperado. |
+
+### Rediseño del sistema con STATIK cuando el flujo no funciona
+
+El STATIK no es un ejercicio único de arranque, sino un procedimiento repetible de rediseño del sistema de trabajo.
+Cuando una métrica de flujo evidencia que el sistema dejó de funcionar (por ejemplo, el Lead Time de FlowEngine supera de forma sostenida su SLA o una columna acumula trabajo), el equipo vuelve a recorrer las 7 preguntas para el servicio afectado.
+El rediseño se concreta ajustando las respuestas a las preguntas 5, 6 y 7: se revisan los tipos de trabajo, las clases de servicio y, sobre todo, el diseño del tablero (número de columnas, ubicación de los WIP limits y swim lanes).
+El caso documentado en el capítulo V (FlowEngine con 8 HUs activas y Lead Time de 20 días) es un ejemplo de rediseño: la pregunta 7 se responde de nuevo reduciendo el WIP a 3 HUs activas por swim lane, sin cambiar la capacidad del equipo.
+Este rediseño evolutivo es la diferencia entre Kanban como método de mejora y un tablero estático que solo visualiza el trabajo.
+
+### Cadencias del equipo y relación con Scrumban
+
+Aunque el diseño del sistema parte de STATIK, la operación del equipo combina el flujo continuo de Kanban con un conjunto de eventos de cadencia tomados de Scrum, configuración que corresponde a un Scrumban.
+El equipo no trabaja por Sprints de alcance cerrado (el trabajo entra por flujo continuo cuando hay capacidad), pero sí adopta cuatro cadencias con propósito definido.
+
+| Cadencia | Frecuencia | Origen | Para qué sirve |
+|---|---|---|---|
+| Replenishment Meeting | Lunes (semanal) | Kanban | Seleccionar y comprometer las HUs del período según la capacidad y el throughput histórico; fijar los WIP limits de la semana. |
+| Daily standup (15 minutos) | Diaria | Scrum | Sincronizar el trabajo, reportar bloqueadores y revisar WIP vs WIP limit al inicio de la sesión. |
+| Review | Viernes (semanal) | Scrum | Mostrar al representante de Claro el software desplegado en QA, validar criterios de aceptación y contrastar el throughput real con el planificado. |
+| Retrospectiva | Quincenal | Scrum | Reflexionar sobre personas, procesos y producto con las herramientas del capítulo VI y generar acciones de mejora. |
+
+La elección de Scrumban en lugar de Scrum puro responde a que la demanda del proyecto es en parte impredecible (bugs de migración, cambios de prioridad de Claro): el flujo continuo de Kanban absorbe esa variabilidad sin romper el compromiso de un Sprint, mientras que las cadencias de Scrum aportan ritmo, sincronización y puntos de inspección con el cliente.
 
 ---
 
@@ -107,6 +136,14 @@ La Definition of Ready evita que el equipo comience historias ambiguas o incompl
 | Indisponibilidad del ambiente de QA de Hitss | Media | Media | Ambiente de QA replicado localmente mediante Docker Compose; cualquier integrante puede levantarlo con un único comando. |
 | Cambios en la API de Microsoft Teams (notificaciones de flujo) | Baja | Alta | Capa de abstracción implementada en el adapter de notificaciones (arquitectura hexagonal); fallback a notificaciones por correo electrónico en caso de fallo del adapter de Teams. |
 | Rotación de un integrante del equipo | Baja | Alta | Documentación de decisiones arquitectónicas en ADRs versionados en el repositorio; práctica de pair programming para transferencia de conocimiento en HUs de alta complejidad. |
+
+### Teoría de Restricciones (TOC)
+
+La Teoría de Restricciones, formulada por Eliyahu Goldratt, sostiene que el rendimiento de todo sistema está limitado por un número muy pequeño de restricciones (cuellos de botella), de modo que optimizar cualquier recurso que no sea la restricción no mejora el resultado global.
+Goldratt propone cinco pasos de enfoque: identificar la restricción, explotarla (aprovecharla al máximo sin inversión), subordinar el resto del sistema a ella, elevarla (aumentar su capacidad) y, una vez superada, volver al primer paso para atacar la siguiente restricción.
+La restricción actual de Flowtex es la etapa de revisión y testing: es la columna donde el trabajo se acumula (situaciones documentadas en el capítulo V) porque hay menos capacidad de revisar y probar que de desarrollar.
+El equipo aplica los cinco pasos así: identifica la restricción con el CFD y el WIP por columna, la explota reservando las primeras horas del día del revisor a las HUs en cola antes de iniciar código nuevo, subordina el desarrollo mediante la regla "stop starting, start finishing" y el WIP limit en desarrollo, y la eleva con revisión por pares rotativa y la práctica de shift-left (escribir los tests durante el desarrollo, no después).
+Cuando la restricción se traslada a otra etapa (por ejemplo QA), el equipo repite el ciclo sobre la nueva restricción, en lugar de acelerar etapas que no limitan el flujo.
 
 ---
 
