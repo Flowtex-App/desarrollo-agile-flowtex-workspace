@@ -240,3 +240,5 @@ Al completarse el último paso de aprobación, el sistema notifica al solicitant
 
 El MVP de Flowtex se desplegó en el ambiente de QA de Hitss Perú con automatización CI/CD mediante GitHub Actions y contenedores Docker.
 Las capturas de pantalla de los flujos 1 a 4 (incluyendo el editor de FormBuilder, el editor de flujo de FlowEngine, la vista de seguimiento del solicitante y las notificaciones de Teams) se adjuntan en la sección de Anexos del informe final.
+
+Más allá del valor operativo y económico para Claro Perú, el MVP evidencia el aporte del proyecto a los Objetivos de Desarrollo Sostenible (sección 1.3.4): al digitalizar y automatizar un proceso antes manual, Flowtex fortalece la infraestructura tecnológica interna (ODS 9), reduce el desperdicio de papel y de reprocesos (ODS 12) y libera tiempo del personal hacia trabajo de mayor valor (ODS 8).

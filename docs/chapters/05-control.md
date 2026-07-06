@@ -229,3 +229,54 @@ Las ocho fases del ciclo DevOps se aplican de manera continua e iterativa en el 
 | DevOps CI/CD + Kanban (pipeline como columna del tablero) | **DeployKan**: integración del pipeline de CI/CD con el tablero Kanban, donde el estado del deploy (building, testing, deployed to QA, promoted to prod) es visible como una extensión de las columnas del tablero, eliminando la brecha de información entre el equipo de desarrollo y el equipo de operaciones | Principio 3: "Entregar software funcionando frecuentemente, en períodos de dos semanas a dos meses, con preferencia al período de tiempo más corto", DeployKan hace visible el camino de cada HU desde el código hasta la producción, acortando el ciclo de entrega |
 | Gráfico de quemado + CFD (Diagrama de Flujo Acumulado) | **FlowRadiator**: conjunto integrado de radiadores de información (Burndown Chart + CFD + Throughput Run Chart) que muestran el avance real del proyecto en tiempo real, accesibles para el equipo de Hitss y para el cliente Claro sin necesidad de generar reportes adicionales ni programar reuniones de estado | Valor 4: "Responder al cambio sobre seguir un plan", FlowRadiator permite detectar desviaciones en tiempo real y ajustar el plan antes de que el retraso sea irreversible, reemplazando el seguimiento reactivo por el control proactivo |
 | 5 Porqués (análisis de causa raíz) + Cycle Time | **RootCycleFlow**: proceso de análisis de causa raíz que aplica la técnica de los 5 Porqués específicamente a las anomalías en el Cycle Time (HUs que tardan el doble del promedio histórico del servicio) generando acciones de mejora concretas con responsable asignado y fecha de verificación | Principio 12: "A intervalos regulares el equipo reflexiona sobre cómo ser más efectivo para a continuación ajustar y perfeccionar su comportamiento en consecuencia", RootCycleFlow convierte cada anomalía en una oportunidad de aprendizaje sistemático |
+
+## 5.13 Prácticas y herramientas DevOps del proyecto
+
+Las prácticas DevOps de Flowtex articulan un pipeline de integración y despliegue continuo que conecta el repositorio de código con el sistema en operación, de forma coherente con el despliegue del backend y del frontend sobre la infraestructura de nube corporativa de América Móvil.
+El enfoque se apoya en tres pilares: integración y despliegue continuo, pruebas automatizadas dentro del pipeline, y monitoreo y observabilidad en producción.
+
+**Pipeline de integración y despliegue continuo.**
+El control de versiones se gestiona con Git alojado en GitHub, con estrategia trunk-based development y pull request obligatorio antes de cada merge.
+Cada merge a la rama principal dispara GitHub Actions, que construye el artefacto del backend (Java 21 + Spring Boot 3.3) y empaqueta backend y frontend como imágenes Docker.
+Los contenedores Docker se publican en el registro privado de Hitss y se despliegan sobre la nube corporativa (backend y frontend), lo que garantiza que el mismo artefacto probado en QA es el que se promueve a producción, eliminando la clase de fallos "funciona en mi máquina".
+
+**Pruebas automatizadas en el pipeline.**
+El pipeline ejecuta pruebas unitarias y de integración (JUnit 5 + Mockito + Spring Boot Test en backend; Vitest + Testing Library en frontend) y bloquea el merge si la cobertura cae por debajo del 80% o si el Quality Gate de SonarQube no está en estado "Passed".
+Tras el despliegue en QA se ejecutan smoke tests automáticos que validan la disponibilidad de los servicios críticos antes de habilitar la promoción a producción.
+
+**Monitoreo y observabilidad en producción.**
+La operación se observa mediante centralización de logs (stack ELK) y alertas automáticas al canal de Teams cuando la disponibilidad cae por debajo del 99.5% mensual o cuando la tasa de error supera el umbral definido.
+El enfoque contempla, como evolución del método y no como hecho ya implementado, la orquestación de contenedores con Kubernetes, la automatización complementaria del pipeline con Jenkins o GitLab CI/CD, y la exposición de métricas de sistema con Prometheus y Grafana.
+Estas herramientas se citan como ejemplos del enfoque de observabilidad y escalamiento hacia el que tiende el proyecto, coherente con el requisito no funcional de escalamiento horizontal del backend.
+
+## 5.14 Métricas y control del Asistente de IA (HU-FB-05)
+
+El Asistente de IA de Flowtex sugiere campos relevantes a partir de una descripción en lenguaje natural del propósito del formulario (HU-FB-05).
+Como toda funcionalidad basada en IA, requiere métricas propias de valor y controles específicos que eviten que la IA "adorne" el producto sin ayudar realmente al usuario.
+
+### 5.14.1 KPIs del Asistente de IA
+
+Los siguientes KPIs se calculan sobre las sesiones de sugerencia registradas por el backend y se reportan junto a las métricas de flujo del proyecto, con umbral tipo semáforo (verde: objetivo cumplido; ámbar: en observación; rojo: acción correctiva obligatoria).
+
+| KPI | Numerador / Denominador | Umbral semáforo | Decisión que habilita |
+|---|---|---|---|
+| **Tasa de aceptación de campos sugeridos** | Campos sugeridos agregados al canvas / Total de campos sugeridos mostrados | Verde ≥ 60%; Ámbar 40%-59%; Rojo < 40% | Si es rojo, la IA sugiere campos poco pertinentes y no ahorra tiempo de diseño; se revisa el prompt del modelo y el conjunto de contextos de ejemplo. |
+| **Precisión de las sugerencias (tipo correcto)** | Sugerencias aceptadas cuyo tipo de campo no se corrige después de agregarlo / Total de sugerencias aceptadas | Verde ≥ 80%; Ámbar 65%-79%; Rojo < 65% | Si es rojo, las sugerencias exigen retrabajo del diseñador; se ajusta el mapeo de tipos y se refuerza la validación previa. |
+| **Cobertura del fallback heurístico** | Solicitudes de sugerencia resueltas (por el modelo o por el fallback) / Total de solicitudes de sugerencia | Verde ≥ 99%; Ámbar 95%-98%; Rojo < 95% | Si es rojo, hay solicitudes sin respuesta ante caídas del modelo; se refuerza la continuidad del fallback heurístico antes de exponer la función. |
+
+La tasa de aceptación y la precisión responden a la pregunta de si la IA realmente ayuda y no solo adorna el producto: una IA que sugiere campos que el usuario descarta o corrige no aporta valor, aunque sea vistosa.
+La cobertura del fallback mide la continuidad del servicio cuando el modelo no está disponible o entrega baja confianza.
+
+### 5.14.2 Controles y salvaguardas de la IA
+
+El Asistente de IA opera bajo el principio de "IA que sugiere, humano que decide", con dos controles principales.
+Primero, la validación humana obligatoria: ninguna sugerencia se incorpora al formulario de forma automática, el diseñador debe aceptar cada campo y puede editar su etiqueta y tipo antes de publicar, de modo que ningún formulario se publica sin revisión humana de los campos generados.
+Segundo, el fallback heurístico como control de continuidad: si el modelo de IA falla, se demora o devuelve sugerencias con confianza insuficiente, el sistema entrega un conjunto de campos basado en reglas heurísticas derivadas del título y las palabras clave del formulario, evitando que la ausencia del modelo bloquee la función.
+Como control adicional ante respuestas incorrectas de la IA (por ejemplo sugerencias inconsistentes con el propósito del formulario), antes de liberar la funcionalidad se define un umbral mínimo de precisión en pruebas de aceptación y se mantiene la sugerencia como propuesta no vinculante, nunca como configuración aplicada sin confirmación del usuario.
+
+## 5.15 Dimensión ética del manejo de datos
+
+El manejo de datos en Flowtex se rige por tres principios éticos aplicados de forma explícita.
+La privacidad y la minimización de datos implican que el sistema recolecta únicamente los datos necesarios para tramitar cada formulario y su flujo de aprobación, sin capturar información sensible que no aporte al proceso, y que el acceso al historial auditado se limita a los roles de Auditoría y Compliance mediante control de acceso por rol.
+El cumplimiento normativo se ancla en la Ley N.º 29733 de Protección de Datos Personales del Perú y su reglamento, lo que exige consentimiento y finalidad declarada en el tratamiento de datos personales de los colaboradores, cifrado en tránsito y en reposo (RNF03), y trazabilidad de quién accede a cada dato (RNF05).
+El uso responsable de la IA establece que el Asistente de IA no emplea datos personales ni sensibles de los solicitantes para entrenar o ajustar modelos, opera solo sobre la descripción del propósito del formulario que introduce el diseñador, y mantiene transparencia con el usuario indicando de forma visible que las sugerencias son generadas por IA y que requieren su validación antes de publicarse.

@@ -111,6 +111,26 @@ La combinación de estos factores genera tres consecuencias organizacionales de 
 2. **Acumulación de deuda técnica y regulatoria:** la ausencia de versionamiento, trazabilidad e historial expone a Claro Perú a observaciones de auditoría interna y riesgos de incumplimiento ante los requisitos de OSIPTEL.
 3. **Dependencia estructural de un proveedor externo:** la totalidad del proceso de formularios y aprobaciones queda sujeta a las decisiones comerciales, la disponibilidad del servicio y los cambios de precios de un proveedor que no pertenece al grupo América Móvil.
 
+### 1.3.4 Vinculación con los Objetivos de Desarrollo Sostenible (ODS)
+
+El problema que resuelve Flowtex no es solo operativo: se conecta de forma directa con la Agenda 2030 de las Naciones Unidas.
+El proyecto se alinea con un ODS principal y dos ODS secundarios, cada uno con un eslabón concreto respecto a la problemática descrita.
+
+| ODS | Rol en el proyecto | Eslabón concreto con Flowtex |
+|---|---|---|
+| **ODS 9: Industria, innovación e infraestructura** (meta 9.4 y 9.5) | Principal | Flowtex reemplaza una dependencia SaaS externa por una infraestructura digital propia, resiliente y bajo soberanía de datos de Claro Perú. La digitalización y automatización de un proceso manual (creación de formularios y flujos de aprobación) moderniza la infraestructura tecnológica interna y eleva la capacidad de innovación del Área de Tecnología. |
+| **ODS 12: Producción y consumo responsables** (meta 12.5) | Secundario | La automatización de los flujos de aprobación elimina la circulación de formularios impresos, correos manuales y reprocesos, lo que reduce el desperdicio de papel y de esfuerzo humano en tareas de bajo valor. El versionamiento y la trazabilidad evitan la duplicación de documentos y el retrabajo. |
+| **ODS 8: Trabajo decente y crecimiento económico** (meta 8.2) | Secundario | Al liberar a los colaboradores de tareas manuales repetitivas (seguimiento de aprobaciones, escalamiento manual), Flowtex incrementa la productividad y permite reasignar el tiempo del personal a trabajo de mayor valor, con procesos más predecibles y menos sujetos a cuellos de botella. |
+
+El eslabón central es el siguiente: digitalizar y automatizar un proceso hoy manual reduce el desperdicio (papel, esperas, retrabajo) y mejora la productividad del Área de Tecnología, que son las dos palancas que conectan el proyecto con los ODS 9, 12 y 8.
+
+**Indicador de impacto social asociado al ODS.**
+El impacto social del ODS elegido se demuestra con indicadores medibles y trazables al proyecto: porcentaje de procesos de aprobación tramitados de forma totalmente digital (sin papel ni correo manual), número de horas-persona de reproceso manual evitadas al mes, y reducción del tiempo de ciclo de creación de formularios (de 21 días a 2 días laborales).
+La mejora de estos indicadores evidencia una infraestructura digital más eficiente (ODS 9) y una operación con menos desperdicio (ODS 12).
+
+**Trazabilidad ODS - problema - backlog - MVP - KPI - valor.**
+La cadena de trazabilidad recorre todo el informe: el ODS 9 y 12 se aterrizan en la problemática de la sección 1.3 (proceso manual, lento, dependiente de un proveedor externo y con desperdicio de papel), que origina las épicas FormBuilder y FlowEngine del backlog, materializadas en el MVP de los capítulos posteriores, medidas por KPIs de tiempo de ciclo y de porcentaje de migración, y verificadas como valor entregado en las Reviews con el cliente Claro.
+
 ---
 
 ## 1.4 Flujograma básico del proceso
