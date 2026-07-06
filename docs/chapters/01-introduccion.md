@@ -207,16 +207,16 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 | ID | Requisito Funcional | Épica asociada | Justificación |
 |---|---|---|---|
-| RF01 | El sistema debe permitir crear formularios con al menos 10 tipos de campo configurables (texto, número, fecha, archivo, lista desplegable, casilla de verificación, radio, correo, teléfono, área de texto) | EP01 – FormBuilder | Replica y amplía la capacidad de NINTEX para definir campos; es el núcleo del módulo FormBuilder |
-| RF02 | El sistema debe proveer un editor drag-and-drop para la disposición visual de los campos del formulario | EP01 – FormBuilder | Reduce la dependencia de configuración técnica avanzada; permite que administradores TI sin conocimientos de código construyan formularios |
-| RF03 | El sistema debe validar los datos ingresados en los formularios según las reglas configuradas (obligatoriedad, formato, longitud, expresión regular) | EP01 – FormBuilder | Garantiza la integridad de la información antes de iniciar el flujo de aprobación |
-| RF04 | El sistema debe gestionar versiones de cada formulario, permitiendo consultar y restaurar versiones anteriores | EP01 – FormBuilder | Cubre la ausencia crítica de versionamiento en NINTEX; requisito de trazabilidad para auditoría |
-| RF05 | El sistema debe generar un ticket de seguimiento único por cada solicitud enviada a través de un formulario | EP01 – FormBuilder | Permite al solicitante y al aprobador identificar y rastrear cada transacción de forma unívoca |
-| RF06 | El sistema debe soportar flujos de aprobación secuenciales y paralelos configurables por formulario | EP02 – FlowEngine | Habilita los dos patrones de aprobación más frecuentes en Claro Perú, actualmente gestionados de forma manual |
-| RF07 | El sistema debe admitir aprobación por mayoría cuando se configura un quorum de aprobadores | EP02 – FlowEngine | Permite patrones de votación en comités, no soportados de forma nativa por NINTEX en la configuración actual de Claro |
-| RF08 | El sistema debe permitir la delegación automática de aprobaciones ante la ausencia de un aprobador | EP02 – FlowEngine | Elimina la parálisis de flujos durante ausencias del personal aprobador |
-| RF09 | El sistema debe enviar notificaciones automáticas por correo electrónico corporativo y por Microsoft Teams en cada evento del flujo (asignación, recordatorio, escalamiento, resolución) | EP02 – FlowEngine | Integra Flowtex con los canales de comunicación ya adoptados corporativamente por Claro |
-| RF10 | El sistema debe escalar automáticamente las solicitudes no atendidas según los tiempos de espera configurados por flujo | EP02 – FlowEngine | Reemplaza la intervención manual del Área de TI para resolver cuellos de botella en aprobaciones |
+| RF01 | El sistema debe permitir crear formularios con al menos 10 tipos de campo configurables (texto, número, fecha, archivo, lista desplegable, casilla de verificación, radio, correo, teléfono, área de texto) | EP01: FormBuilder | Replica y amplía la capacidad de NINTEX para definir campos; es el núcleo del módulo FormBuilder |
+| RF02 | El sistema debe proveer un editor drag-and-drop para la disposición visual de los campos del formulario | EP01: FormBuilder | Reduce la dependencia de configuración técnica avanzada; permite que administradores TI sin conocimientos de código construyan formularios |
+| RF03 | El sistema debe validar los datos ingresados en los formularios según las reglas configuradas (obligatoriedad, formato, longitud, expresión regular) | EP01: FormBuilder | Garantiza la integridad de la información antes de iniciar el flujo de aprobación |
+| RF04 | El sistema debe gestionar versiones de cada formulario, permitiendo consultar y restaurar versiones anteriores | EP01: FormBuilder | Cubre la ausencia crítica de versionamiento en NINTEX; requisito de trazabilidad para auditoría |
+| RF05 | El sistema debe generar un ticket de seguimiento único por cada solicitud enviada a través de un formulario | EP01: FormBuilder | Permite al solicitante y al aprobador identificar y rastrear cada transacción de forma unívoca |
+| RF06 | El sistema debe soportar flujos de aprobación secuenciales y paralelos configurables por formulario | EP02: FlowEngine | Habilita los dos patrones de aprobación más frecuentes en Claro Perú, actualmente gestionados de forma manual |
+| RF07 | El sistema debe admitir aprobación por mayoría cuando se configura un quorum de aprobadores | EP02: FlowEngine | Permite patrones de votación en comités, no soportados de forma nativa por NINTEX en la configuración actual de Claro |
+| RF08 | El sistema debe permitir la delegación automática de aprobaciones ante la ausencia de un aprobador | EP02: FlowEngine | Elimina la parálisis de flujos durante ausencias del personal aprobador |
+| RF09 | El sistema debe enviar notificaciones automáticas por correo electrónico corporativo y por Microsoft Teams en cada evento del flujo (asignación, recordatorio, escalamiento, resolución) | EP02: FlowEngine | Integra Flowtex con los canales de comunicación ya adoptados corporativamente por Claro |
+| RF10 | El sistema debe escalar automáticamente las solicitudes no atendidas según los tiempos de espera configurados por flujo | EP02: FlowEngine | Reemplaza la intervención manual del Área de TI para resolver cuellos de botella en aprobaciones |
 
 ### 1.6.2 Requisitos No Funcionales
 
@@ -240,11 +240,11 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-#### EP01 – FormBuilder
+#### EP01: FormBuilder
 
 ---
 
-**HU01 — Tipos de campo configurables**
+**HU01: Tipos de campo configurables**
 
 > Como administrador TI de Claro,
 > quiero poder seleccionar y configurar distintos tipos de campo al construir un formulario (texto, número, fecha, archivo, lista desplegable, casilla de verificación, radio, correo, teléfono, área de texto),
@@ -259,7 +259,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU02 — Editor drag-and-drop**
+**HU02: Editor drag-and-drop**
 
 > Como administrador TI de Claro,
 > quiero construir formularios arrastrando y soltando componentes en un área de diseño visual,
@@ -274,7 +274,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU03 — Validaciones de campo**
+**HU03: Validaciones de campo**
 
 > Como administrador TI de Claro,
 > quiero configurar reglas de validación para cada campo del formulario (obligatoriedad, formato de correo, longitud mínima y máxima, expresión regular),
@@ -289,7 +289,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU04 — Versionamiento de formularios**
+**HU04: Versionamiento de formularios**
 
 > Como administrador TI de Claro,
 > quiero que cada cambio publicado en un formulario quede registrado como una nueva versión accesible,
@@ -304,7 +304,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU05 — Generación de ticket de seguimiento**
+**HU05: Generación de ticket de seguimiento**
 
 > Como solicitante de cualquier área de Claro,
 > quiero recibir un código de ticket único al enviar un formulario,
@@ -319,11 +319,11 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-#### EP02 – FlowEngine
+#### EP02: FlowEngine
 
 ---
 
-**HU06 — Aprobación secuencial y paralela**
+**HU06: Aprobación secuencial y paralela**
 
 > Como administrador TI de Claro,
 > quiero configurar flujos de aprobación que puedan ser secuenciales (un aprobador a la vez en orden) o paralelos (todos los aprobadores simultáneamente),
@@ -338,7 +338,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU07 — Aprobación por mayoría**
+**HU07: Aprobación por mayoría**
 
 > Como administrador TI de Claro,
 > quiero configurar flujos donde la solicitud se aprueba si un porcentaje o número mínimo de aprobadores vota a favor,
@@ -353,7 +353,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU08 — Delegación automática de aprobaciones**
+**HU08: Delegación automática de aprobaciones**
 
 > Como aprobador designado,
 > quiero poder configurar períodos de ausencia durante los cuales mis aprobaciones se delegan automáticamente a un suplente,
@@ -368,7 +368,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU09 — Notificaciones automáticas por email y Teams**
+**HU09: Notificaciones automáticas por email y Teams**
 
 > Como aprobador y como solicitante,
 > quiero recibir notificaciones automáticas por correo electrónico corporativo y por Microsoft Teams en cada evento relevante del flujo (nueva solicitud asignada, recordatorio, escalamiento, resolución),
@@ -383,7 +383,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU10 — Escalamiento automático**
+**HU10: Escalamiento automático**
 
 > Como administrador TI de Claro,
 > quiero configurar tiempos de espera máximos por paso del flujo, de modo que las solicitudes no atendidas sean escaladas automáticamente al siguiente nivel,
@@ -398,7 +398,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU11 — Historial de flujo auditado**
+**HU11: Historial de flujo auditado**
 
 > Como auditor o personal de Compliance de Claro,
 > quiero consultar el historial completo de cada solicitud (todos los eventos del flujo: asignaciones, aprobaciones, rechazos, delegaciones, escalamientos y comentarios),
@@ -413,7 +413,7 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-**HU12 — Seguimiento de solicitudes**
+**HU12: Seguimiento de solicitudes**
 
 > Como solicitante de cualquier área de Claro,
 > quiero consultar en tiempo real el estado de mis solicitudes activas y el historial de mis solicitudes pasadas,
@@ -428,11 +428,11 @@ No se trata de un producto comercializable externamente, sino de una solución e
 
 ---
 
-#### EP03 – MigraFlow
+#### EP03: MigraFlow
 
 ---
 
-**HU13 — Pruebas en paralelo durante la migración**
+**HU13: Pruebas en paralelo durante la migración**
 
 > Como administrador TI de Claro,
 > quiero ejecutar en paralelo el mismo formulario y flujo de aprobación en NINTEX y en Flowtex durante el período de migración,
@@ -521,7 +521,7 @@ Los siguientes objetivos se definen bajo el marco SMART (Específico, Medible, A
 
 ---
 
-## 1.8 Herramientas de priorización — MoSCoW aplicado a las Historias de Usuario
+## 1.8 Herramientas de priorización: MoSCoW aplicado a las Historias de Usuario
 
 ### 1.8.1 Tabla de priorización MoSCoW
 
@@ -531,6 +531,12 @@ Los siguientes objetivos se definen bajo el marco SMART (Específico, Medible, A
 | **Should Have** (importante, no bloqueante para el MVP) | HU03, HU07, HU10, HU13 | Mejoran significativamente la calidad y robustez del sistema, pero el MVP puede desplegarse sin ellas en una primera iteración. HU03 (validaciones avanzadas) y HU07 (mayoría) amplían los casos de uso; HU10 (escalamiento) y HU13 (migración paralela) reducen riesgos operativos pero no bloquean el uso básico. |
 | **Could Have** (deseable si el tiempo lo permite) | HU08 | La delegación automática (HU08) es una funcionalidad de alto valor para el usuario, pero los administradores pueden gestionar la delegación manualmente en etapas iniciales. Se incluirá si el ritmo del equipo lo permite dentro del ciclo 2026-10. |
 | **Won't Have** (fuera del alcance del MVP) | Reportería ejecutiva avanzada, dashboards de BI, integración con sistemas ERP legacy | Estas funcionalidades generan valor estratégico a largo plazo pero no son necesarias para reemplazar NINTEX en el MVP. Se registran en el backlog para ciclos futuros. |
+
+> **Nota sobre los ocho Must Have de la visión y los del backlog operativo.**
+> Los ocho Must Have de esta tabla (HU01, HU02, HU04, HU05, HU06, HU09, HU11, HU12) corresponden al nivel de la visión del producto descrita en este capítulo I: son las capacidades imprescindibles que definen qué debe hacer Flowtex para reemplazar funcionalmente a NINTEX.
+> El backlog operativo del capítulo III (sección 3.0.3) descompone esa visión en aproximadamente dieciocho Historias de Usuario ejecutables, renombradas por bounded context (HU-IAM, HU-FB, HU-WF, HU-TR), que son las unidades reales de trabajo del tablero.
+> Ambos conjuntos son válidos porque operan en niveles distintos: la visión enuncia el "qué" imprescindible del producto, mientras que el backlog operativo enuncia el "cómo" imprescindible de la construcción.
+> No existe contradicción entre los ocho y los dieciocho: el segundo número es la granularidad ejecutable del primero.
 
 ### 1.8.2 Detalle por Historia de Usuario
 
@@ -559,9 +565,21 @@ Esto implica que las funcionalidades Must Have son exactamente las que, si estuv
 Las funcionalidades Should Have y Could Have mejoran la experiencia y la autonomía del sistema, pero su ausencia temporal no bloquea la operación básica.
 Las funcionalidades Won't Have se excluyen del alcance del MVP para mantener el foco del equipo y respetar el cronograma del ciclo 2026-10.
 
+### 1.8.4 MoSCoW frente a SAFe y WSJF: priorización cualitativa y cuantitativa
+
+MoSCoW ordena el backlog en cuatro categorías cualitativas (Must, Should, Could, Won't) según el criterio experto del Product Owner y del equipo.
+Es rápido de aplicar y comunica con claridad qué entra y qué no entra en el MVP, pero no produce un número que permita comparar dos historias que caen dentro de una misma categoría.
+El marco SAFe (Scaled Agile Framework) propone para ese caso la métrica WSJF (Weighted Shortest Job First), que prioriza de forma cuantitativa.
+WSJF se calcula dividiendo el costo del retraso (Cost of Delay, estimado a partir del valor de negocio, la criticidad temporal y la reducción de riesgo u oportunidad) entre el tamaño o duración del trabajo (Job Size).
+Las historias con mayor WSJF se desarrollan primero, porque entregan más valor por unidad de esfuerzo.
+
+Para Flowtex se adoptó MoSCoW como técnica principal por su simplicidad y por la claridad que aporta a la conversación con el cliente Claro, dado que el equipo es de cinco personas y el backlog es acotado.
+WSJF se reserva como herramienta de desempate cuantitativo cuando dos historias de la misma categoría MoSCoW compiten por la capacidad de un mismo período: en ese caso, el cociente entre costo de retraso y tamaño ofrece un criterio objetivo para decidir cuál se ejecuta antes.
+La combinación aprovecha la agilidad comunicativa de MoSCoW y el rigor numérico de WSJF sin renunciar a ninguno de los dos.
+
 ---
 
-## 1.9 Generación de valor — Análisis PEST
+## 1.9 Generación de valor: Análisis PEST
 
 El análisis PEST permite identificar los factores del entorno que impactan sobre la viabilidad y el valor estratégico de Flowtex, tanto desde perspectivas externas como internas a la organización.
 
@@ -601,6 +619,20 @@ El análisis PEST permite identificar los factores del entorno que impactan sobr
 | Arquitectura DDD + CQRS | El diseño Domain-Driven Design con separación de comandos y consultas (CQRS) permite escalar el sistema horizontalmente y agregar nuevos módulos sin reescribir el core | Garantiza que Flowtex pueda crecer con las necesidades de Claro sin incurrir en deuda técnica estructural |
 | Automatización de notificaciones | La integración con SMTP corporativo y la API de Microsoft Teams permite notificaciones en tiempo real sin infraestructura adicional | Reemplaza y supera la capacidad de notificación básica de NINTEX con notificaciones multicanal integradas |
 
+### 1.9.5 Análisis FODA
+
+Mientras el análisis PEST examina los factores del entorno, el análisis FODA cruza el diagnóstico interno del proyecto (Fortalezas y Debilidades) con el diagnóstico externo (Oportunidades y Amenazas) para situar su posición estratégica.
+Las cuatro dimensiones se construyen a partir del contexto ya descrito en las secciones anteriores.
+
+| Dimensión | Factores identificados en Flowtex |
+|---|---|
+| **Fortalezas** (internas, favorables) | Desarrollo inhouse por Hitss Perú, con acceso directo a la infraestructura cloud de América Móvil y alineación con sus estándares de seguridad. Equipo con roles complementarios y autonomía técnica plena sobre la arquitectura (DDD + CQRS). Soberanía de datos: la información reside en infraestructura propia del grupo y no en un proveedor externo. Stack tecnológico moderno y maduro (Java 21, Spring Boot 3.3, React 18) con amplio soporte. |
+| **Debilidades** (internas, desfavorables) | Equipo reducido de cinco personas, lo que limita la capacidad de trabajo en paralelo. Concentración de conocimiento clave (por ejemplo, el modelo de datos en el Product Owner), mitigada con pair programming y ADRs. Producto nuevo sin historial de operación en producción frente a una herramienta consolidada como NINTEX. Necesidad de construir desde cero funcionalidades que NINTEX ya ofrece como servicio empaquetado. |
+| **Oportunidades** (externas, favorables) | Costo de licenciamiento de NINTEX superior a S/. 400,000 anuales, que justifica económicamente el reemplazo. Adopción corporativa de Microsoft Teams, que facilita la integración de notificaciones. Transformación digital posterior a la pandemia, que reduce la resistencia al cambio dentro de Claro. Cumplimiento regulatorio de OSIPTEL como diferenciador demostrable ante auditorías. |
+| **Amenazas** (externas, desfavorables) | Riesgo operativo en la migración de los formularios y flujos activos desde NINTEX. Cambios en la API de Microsoft Teams que afecten las notificaciones. Expectativa del cliente de equivalencia funcional con NINTEX desde el primer despliegue. Riesgo regulatorio si la trazabilidad no cumple los requisitos de OSIPTEL. |
+
+Del cruce de estas dimensiones se desprende la estrategia del proyecto: apalancar las fortalezas internas (solución inhouse, soberanía de datos, autonomía técnica) sobre las oportunidades del entorno (ahorro de licencias, canales corporativos ya adoptados) para neutralizar las amenazas de la migración y del cumplimiento regulatorio, mientras se corrigen las debilidades mediante prácticas de transferencia de conocimiento y validación temprana con el cliente.
+
 ---
 
 ## 1.10 Adaptación de los valores y principios del Manifiesto Ágil a la organización
@@ -629,6 +661,43 @@ La siguiente tabla presenta la adaptación de los cuatro valores y los doce prin
 | **Principio 7: El software funcionando es la medida principal de progreso** | El avance del proyecto se mide en Historias de Usuario completadas y verificadas en QA, no en documentos entregados ni en horas trabajadas | El criterio de "hecho" (Definition of Done) incluye pruebas pasadas, deploy en QA y validación del representante de Claro; cualquier HU que no cumpla estos criterios no cuenta como progreso |
 | **Principio 8: Los procesos ágiles promueven el desarrollo sostenible** | El límite de trabajo en progreso (WIP limit) del tablero Kanban evita la sobrecarga del equipo de cinco personas y mantiene un ritmo de entrega predecible | Un equipo de cinco personas con un WIP sin límite tiende a acumular trabajo incompleto; el WIP limit garantiza que el equipo termine las HUs comenzadas antes de iniciar nuevas |
 | **Principio 9: La atención continua a la excelencia técnica y al buen diseño mejora la agilidad** | La arquitectura DDD + CQRS, el versionamiento automático de formularios y la obligatoriedad de tests unitarios e integración en el pipeline de CI/CD garantizan la calidad del código base | La calidad técnica sostenida reduce el costo de mantenimiento a largo plazo para Hitss y previene la acumulación de deuda técnica que haría costoso agregar nuevas funcionalidades en ciclos futuros |
-| **Principio 10: La simplicidad — el arte de maximizar la cantidad de trabajo no realizado — es esencial** | MoSCoW prioriza únicamente las funcionalidades que replican y mejoran el núcleo de NINTEX en el MVP; las funcionalidades de valor secundario se posponen explícitamente | Construir funcionalidades no esenciales (dashboards de BI, integraciones ERP legacy) en el primer ciclo habría consumido capacidad del equipo sin incrementar el valor entregado al cliente en el plazo definido |
+| **Principio 10: La simplicidad (el arte de maximizar la cantidad de trabajo no realizado) es esencial** | MoSCoW prioriza únicamente las funcionalidades que replican y mejoran el núcleo de NINTEX en el MVP; las funcionalidades de valor secundario se posponen explícitamente | Construir funcionalidades no esenciales (dashboards de BI, integraciones ERP legacy) en el primer ciclo habría consumido capacidad del equipo sin incrementar el valor entregado al cliente en el plazo definido |
 | **Principio 11: Las mejores arquitecturas, requisitos y diseños emergen de equipos autoorganizados** | Cada miembro del equipo de Hitss tiene autonomía para proponer soluciones técnicas dentro de la arquitectura acordada, sin dependencia de aprobación jerárquica en cada decisión de implementación | La autoorganización del equipo aceleró la decisión sobre el stack tecnológico (Java 21 + React 18) y la arquitectura (DDD + CQRS), evitando ciclos de aprobación burocrática que habrían retrasado el inicio del desarrollo |
 | **Principio 12: El equipo reflexiona regularmente sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia** | Se realiza una retrospectiva quincenal al cierre de cada sprint, con análisis estructurado de lo que funcionó, lo que debe mejorar y compromisos de ajuste concretos para el siguiente ciclo | El equipo adapta sus herramientas, sus procesos y su distribución de tareas al ritmo real del proyecto, en lugar de seguir una planificación rígida que no contemple los aprendizajes de cada sprint |
+
+---
+
+## 1.11 Selección del enfoque con Cynefin
+
+El marco Cynefin, formulado por Dave Snowden a inicios de la década de 2000 durante su trabajo en IBM, es una herramienta de toma de decisiones que clasifica los problemas según la naturaleza de la relación entre causa y efecto.
+Su utilidad para Flowtex es que permite justificar, antes de elegir una metodología, por qué un enfoque ágil resulta más adecuado que uno predictivo tradicional.
+Cynefin distingue cinco dominios: cuatro dominios principales y un quinto dominio central de desorden, que aplica cuando todavía no se sabe en cuál de los otros cuatro se está.
+
+### 1.11.1 Los cuatro dominios
+
+| Dominio | Relación causa-efecto | Secuencia de actuación | Enfoque adecuado |
+|---|---|---|---|
+| **Claro (simple u obvio)** | Evidente y conocida por todos; existen buenas prácticas establecidas | Sentir, categorizar, responder | Procedimientos estándar y buenas prácticas |
+| **Complicado** | Existe y es cognoscible, pero requiere análisis o expertise para descubrirla | Sentir, analizar, responder | Buenas prácticas de expertos |
+| **Complejo** | Solo se comprende en retrospectiva; no es predecible de antemano | Experimentar, sentir, responder | Prácticas emergentes obtenidas mediante iteración |
+| **Caótico** | No hay relación causa-efecto discernible; la situación es turbulenta | Actuar, sentir, responder | Acción inmediata para estabilizar |
+
+En el dominio Claro la respuesta correcta es evidente y basta aplicar el procedimiento conocido.
+En el dominio Complicado hay una respuesta correcta, pero está oculta y requiere el análisis de un experto para hallarla.
+En el dominio Complejo no existe una respuesta correcta conocida de antemano: el sistema solo revela su comportamiento cuando se interviene, por lo que se avanza mediante experimentos que generan aprendizaje.
+En el dominio Caótico no hay tiempo de analizar y lo primero es actuar para restablecer un mínimo de orden.
+
+### 1.11.2 Flowtex se ubica en el dominio complejo
+
+El problema que resuelve Flowtex pertenece al dominio complejo y no al complicado.
+No basta con el análisis experto previo, porque no se conoce con certeza de antemano qué configuración exacta de formularios y flujos necesitará cada área de Claro, ni qué comportamientos de NINTEX habrá que replicar exactamente durante la migración.
+Los requisitos de aprobación evolucionan con los procesos del negocio y la migración desde NINTEX revela casos no previstos que solo se entienden observando el uso real.
+Por eso la relación entre lo que se construye y el valor percibido se comprende en retrospectiva, que es el rasgo característico del dominio complejo.
+La secuencia propia de este dominio es "experimentar, sentir, responder": el equipo lanza un experimento acotado (un MVP o una Historia de Usuario verificable en QA), siente su efecto a través del feedback del cliente y de los KPIs, y responde ajustando el backlog en función de lo aprendido.
+
+### 1.11.3 Justificación del enfoque ágil sobre el predictivo
+
+Un enfoque predictivo tradicional (tipo cascada) supone que la relación causa-efecto es conocida al inicio, supuesto que solo se cumple en los dominios Claro y Complicado.
+En el dominio complejo ese supuesto falla: fijar todo el alcance por adelantado produciría un plan rígido que la realidad de la migración desviaría de forma constante.
+El enfoque ágil, en cambio, institucionaliza la secuencia "experimentar, sentir, responder" mediante iteraciones cortas, entregas frecuentes y retrospectivas periódicas.
+Por esta razón Flowtex adopta un sistema de trabajo ágil basado en Kanban y en los valores y principios del Manifiesto Ágil (sección 1.10), coherente con la naturaleza compleja del problema diagnosticado con Cynefin.

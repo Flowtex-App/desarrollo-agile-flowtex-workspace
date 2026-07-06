@@ -2,16 +2,20 @@
 
 ## 4.1 Las cuatro fases de TUCKMAN para el equipo que desarrolla el método
 
-El modelo de desarrollo de equipos propuesto por Bruce Tuckman describe cuatro fases secuenciales por las que atraviesa todo equipo antes de alcanzar un rendimiento sostenido: Forming, Storming, Norming y Performing. A continuación se describe cómo cada fase se manifiesta en el equipo de Hitss Perú durante el desarrollo de Flowtex, y las intervenciones específicas del Scrum Master (Omar) en cada etapa.
+El modelo de desarrollo de equipos propuesto por Bruce Tuckman describe cuatro fases secuenciales por las que atraviesa todo equipo antes de alcanzar un rendimiento sostenido: Forming, Storming, Norming y Performing.
+El curso SI570 mapea esas cuatro fases a un vocabulario de liderazgo en español: Forming se denomina "Comprender el contexto", Storming se denomina "Capacitar", Norming se denomina "Liberar de mando y control" y Performing se denomina "Empoderar".
+A continuación se describe cómo cada fase se manifiesta en el equipo de Hitss Perú durante el desarrollo de Flowtex, el estilo de liderazgo del Scrum Master (Omar) en cada etapa y la señal que marca el tránsito entre fases.
 
-| Fase | Descripción en el contexto de Flowtex | Acciones del líder (Omar, Scrum Master) |
-|---|---|---|
-| **Forming** (Formación) | El equipo de Hitss se reúne por primera vez para analizar el problema de NINTEX. Se definen los roles: PO (Christopher), Frontend (Angello), Data Science (Milagros), Backend (Jose), Scrum Master (Omar). El equipo revisa el backlog inicial de 13 HUs y comprende la magnitud del reemplazo funcional requerido por Claro. | Omar facilita la sesión de kick-off; Christopher presenta el contexto de Claro y el objetivo de reemplazar NINTEX. Se acuerda el uso del tablero Kanban como herramienta principal del sistema de trabajo. Se establecen las reglas de convivencia del equipo. |
-| **Storming** (Conflicto) | Surgen desacuerdos sobre la arquitectura del backend (¿DDD monolítico vs. microservicios?) y el framework del frontend (¿React vs. Vue?). Christopher y Jose tienen perspectivas distintas sobre el modelo de datos de FormBuilder, lo que genera tensión en las primeras sesiones de diseño técnico. | Omar media el debate; el equipo aplica la técnica de votación ponderada y documenta la decisión como ADR-0003 (DDD + CQRS) y ADR-0002 (arquitectura hexagonal). Se acuerda que las decisiones técnicas de impacto requieren consenso del equipo y deben quedar registradas en los ADRs del repositorio. |
-| **Norming** (Normalización) | El equipo adopta las convenciones de código (Conventional Commits, naming DDD), el tablero Kanban con WIP limits, y el calendario de cadencias. Las revisiones de código se vuelven colaborativas en lugar de correctivas. El equipo desarrolla una comprensión compartida del dominio de negocio de Flowtex. | Omar introduce la herramienta de check list de Definition of Done; Christopher consolida el backlog ordenado por MoSCoW. El equipo completa su primera HU (HU01: tipos de campo del FormBuilder) sin bloqueadores, lo que refuerza la confianza colectiva en el proceso. |
-| **Performing** (Rendimiento) | El equipo trabaja con ritmo predecible: throughput de 3 HUs/semana, code reviews completados en menos de 4 horas, CI/CD funcionando con despliegue automático al ambiente QA. La tasa de re-trabajo se mantiene por debajo del 5%. El equipo detecta y resuelve sus propios cuellos de botella sin intervención externa. | Omar facilita las retrospectivas quincenales; el equipo propone y ejecuta mejoras de proceso autónomamente (por ejemplo: reducir el WIP de 4 a 3 después de detectar un cuello de botella en la columna Testing). La intervención del Scrum Master es de soporte, no directiva. |
+| Fase Tuckman | Denominación del curso | Descripción en el contexto de Flowtex | Estilo y acciones del líder (Omar, Scrum Master) |
+|---|---|---|---|
+| **Forming** (Formación) | Comprender el contexto | El equipo de Hitss se reúne por primera vez para analizar el problema de NINTEX. Se definen los roles: PO (Christopher), Frontend (Angello), Data Science (Milagros), Backend (Jose), Scrum Master (Omar). El equipo revisa el backlog inicial y comprende la magnitud del reemplazo funcional requerido por Claro. | El líder dirige y explica: Omar facilita la sesión de kick-off, Christopher presenta el contexto de Claro y el objetivo de reemplazar NINTEX. Se acuerda el uso del tablero Kanban y se establecen las reglas de convivencia del equipo. |
+| **Storming** (Conflicto) | Capacitar | Surgen desacuerdos sobre la arquitectura del backend (¿DDD monolítico versus microservicios?) y el framework del frontend (¿React versus Vue?). Christopher y Jose tienen perspectivas distintas sobre el modelo de datos de FormBuilder, lo que genera tensión en las primeras sesiones de diseño técnico. | El líder capacita y aclara: Omar media el debate, el equipo aplica votación ponderada y documenta las decisiones como ADR-0003 (DDD + CQRS) y ADR-0002 (arquitectura hexagonal). Se acuerda que las decisiones técnicas de impacto requieren consenso y quedan registradas en los ADRs del repositorio. |
+| **Norming** (Normalización) | Liberar de mando y control | El equipo adopta las convenciones de código (Conventional Commits, naming DDD), el tablero Kanban con WIP limits y el calendario de cadencias. Las revisiones de código se vuelven colaborativas en lugar de correctivas. El equipo desarrolla una comprensión compartida del dominio de negocio de Flowtex. Esta es la fase en la que se encuentra actualmente el equipo. | El líder delega: Omar retira la supervisión directa y deja que las normas acordadas gobiernen el trabajo; introduce el check list de Definition of Done y Christopher consolida el backlog ordenado por MoSCoW. |
+| **Performing** (Rendimiento) | Empoderar | Estado objetivo hacia el que evoluciona el equipo: ritmo predecible, code reviews resueltos con rapidez, CI/CD con despliegue automático a QA y detección autónoma de cuellos de botella. Aún se encuentra en consolidación. | El líder empodera y acompaña: a medida que el equipo se autoorganiza, la intervención del Scrum Master se reduce al soporte y a la remoción de impedimentos; el equipo propone y ejecuta mejoras de proceso por su cuenta (por ejemplo, reducir el WIP de 4 a 3 tras detectar un cuello de botella en la columna Testing). |
 
-La progresión a través de las cuatro fases de Tuckman no es automática ni garantizada. Las intervenciones deliberadas del Scrum Master en Forming y Storming son condición necesaria para que el equipo alcance la fase Performing dentro del horizonte temporal del proyecto.
+**Señal de tránsito a "Liberar de mando y control" (Norming):** el equipo pasó de "Capacitar" a "Liberar de mando y control" cuando completó su primera Historia de Usuario sin bloqueadores ni intervención directiva (HU01, tipos de campo del FormBuilder).
+Ese hito evidenció que el equipo podía operar bajo sus propias normas acordadas sin necesidad de mando y control constante, lo que habilitó al Scrum Master a delegar y retirar la supervisión directa.
+La progresión a través de las cuatro fases de Tuckman no es automática ni garantizada: las intervenciones deliberadas del líder en "Comprender el contexto" y "Capacitar" son condición necesaria para que el equipo alcance la autonomía de "Liberar de mando y control" y, posteriormente, el empoderamiento pleno de Performing dentro del horizonte temporal del proyecto.
 
 ---
 
@@ -62,7 +66,7 @@ El nivel 4 de madurez Kanban no es un estado que se alcanza desde el inicio del 
 
 La calidad en Flowtex no es una actividad separada del desarrollo; está integrada en el ciclo de vida de cada historia de usuario mediante la Definition of Done y las herramientas de análisis estático.
 
-**Definition of Done (DoD) — Flowtex:**
+**Definition of Done (DoD), Flowtex:**
 
 - Build del backend pasa sin errores (`mvn clean package`).
 - Build del frontend pasa sin errores (`npm run build`).
@@ -71,6 +75,19 @@ La calidad en Flowtex no es una actividad separada del desarrollo; está integra
 - Tests relevantes escritos y pasando con cobertura ≥ 80% (reportado por JaCoCo en backend; Vitest en frontend).
 - Deploy exitoso en el ambiente QA de Hitss (Docker Compose).
 - Validación del PO (Christopher) con evidencia de los criterios de aceptación cumplidos.
+
+**Definition of Ready (DoR), Flowtex:**
+
+Así como la Definition of Done fija cuándo una Historia de Usuario está terminada, la Definition of Ready fija cuándo una Historia de Usuario está lista para entrar a desarrollo.
+Corresponde a la política del tablero enunciada en el capítulo III, sección 3.1: una HU no puede pasar a la columna "En Desarrollo" mientras no cumpla estas condiciones.
+
+- La HU tiene criterios de aceptación en formato gherkin (Given-When-Then) completos y verificables, con al menos dos escenarios.
+- La HU está descrita con el formato "Como [rol], quiero [funcionalidad] para [beneficio]".
+- La HU tiene trazabilidad a los archivos del repositorio (frontend o backend) que se tocan o que la verifican.
+- La HU está estimada en puntos de historia y priorizada con MoSCoW.
+- Las dependencias y bloqueadores de la HU están identificados y no impiden iniciar el trabajo.
+
+La Definition of Ready evita que el equipo comience historias ambiguas o incompletas, lo que reduce el re-trabajo y protege la predictibilidad del flujo Kanban.
 
 **Code review obligatorio:** toda HU requiere revisión de al menos un integrante del equipo diferente al autor antes de pasar a la columna Testing.
 
@@ -141,7 +158,7 @@ flowchart TD
 
 ---
 
-## 4.7 Tabla de pasos del método — fase de ejecución
+## 4.7 Tabla de pasos del método: fase de ejecución
 
 La siguiente tabla describe los cinco componentes del método FlowAgile desarrollados durante la fase de ejecución, su origen en las herramientas del sílabo del curso SI570 y el respaldo en los valores y principios del Manifiesto Ágil.
 

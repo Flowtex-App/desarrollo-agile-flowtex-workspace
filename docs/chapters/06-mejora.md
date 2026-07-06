@@ -16,7 +16,7 @@ La siguiente tabla describe las tres herramientas y su aplicación concreta en e
 
 | Dimensión | Herramienta | Descripción | Aplicación en Flowtex |
 |---|---|---|---|
-| Personas | Roses, Thorns and Buds (Rosas, Espinas y Brotes) | El equipo identifica qué funcionó bien (rosas), qué causó fricción (espinas) y qué potencial aún no explorado existe (brotes). | Se aplica para reflexionar sobre la dinámica del equipo de Hitss: comunicación, carga de trabajo y motivación. Ejemplo — rosa: el pair programming en FlowEngine redujo defectos; espina: falta de visibilidad del representante de Claro en el Daily; brote: Milagros puede aportar análisis predictivo al dashboard de adopción. |
+| Personas | Roses, Thorns and Buds (Rosas, Espinas y Brotes) | El equipo identifica qué funcionó bien (rosas), qué causó fricción (espinas) y qué potencial aún no explorado existe (brotes). | Se aplica para reflexionar sobre la dinámica del equipo de Hitss: comunicación, carga de trabajo y motivación. Ejemplo: rosa: el pair programming en FlowEngine redujo defectos; espina: falta de visibilidad del representante de Claro en el Daily; brote: Milagros puede aportar análisis predictivo al dashboard de adopción. |
 | Procesos | 4Ls (Liked, Learned, Lacked, Longed For) | El equipo responde cuatro preguntas: ¿Qué me gustó? ¿Qué aprendí? ¿Qué faltó? ¿Qué desearía para el futuro? | Se aplica para mejorar el proceso Kanban. Liked: el WIP limit eliminó el cuello de botella de revisión. Learned: el STATIK reveló que MigraFlow necesita más capacidad. Lacked: tiempo explícito para spike técnico. Longed For: automatizar el análisis del CFD semanalmente. |
 | Productos | Start, Stop, Continue (Iniciar, Parar, Continuar) | El equipo identifica qué prácticas iniciar, cuáles detener y cuáles mantener respecto al producto. | Se aplica al MVP de Flowtex. Start: agregar templates predefinidos en FormBuilder para reducir el tiempo de creación. Stop: no construir funcionalidades de reportería avanzada sin validar primero el MVP. Continue: versionamiento automático de formularios, que es el diferenciador principal respecto a NINTEX. |
 
@@ -24,19 +24,19 @@ La siguiente tabla describe las tres herramientas y su aplicación concreta en e
 
 FlowAgile define cuatro pasos mínimos para que la mejora sea sistemática, medible y no dependa de la memoria individual del equipo.
 
-**Paso 1 — Recolectar evidencia.**
+**Paso 1: Recolectar evidencia.**
 Al cierre de cada período de dos semanas, el equipo recopila las métricas del tablero Kanban: Lead Time, Throughput, tasa de re-trabajo y WIP promedio.
 Estas métricas identifican con datos objetivos las áreas de mejora antes de que comience la retrospectiva, evitando que la sesión se base únicamente en percepciones subjetivas.
 
-**Paso 2 — Aplicar la retrospectiva estructurada.**
+**Paso 2: Aplicar la retrospectiva estructurada.**
 El Scrum Master facilita la sesión de retrospectiva quincenal usando las herramientas asignadas por dimensión: Roses/Thorns/Buds para personas, 4Ls para procesos y Start/Stop/Continue para productos.
 El rol de facilitador rota entre los miembros del equipo para desarrollar la habilidad de facilitación en todos, no solo en Omar.
 
-**Paso 3 — Priorizar las acciones de mejora.**
+**Paso 3: Priorizar las acciones de mejora.**
 Las acciones identificadas en la retrospectiva se filtran usando MoSCoW: Must Have, Should Have, Could Have y Won't Have.
 Cada acción seleccionada (Must Have o Should Have) se convierte en una Historia de Usuario de tipo "chore" con un responsable nombrado y una fecha comprometida en el tablero Kanban.
 
-**Paso 4 — Implementar y medir el impacto.**
+**Paso 4: Implementar y medir el impacto.**
 Las acciones de mejora se ejecutan en el siguiente período de dos semanas como cualquier otra Historia de Usuario.
 Al cierre del período, el equipo mide si el indicador afectado mejoró: por ejemplo, si la acción era reducir el re-trabajo, se verifica si la tasa bajó por debajo del 10 %.
 Si el indicador no mejoró, la acción se revisa y se ajusta antes de ser reincorporada al backlog.
@@ -83,14 +83,34 @@ flowchart TD
     R --> M
 ```
 
-## 6.6 Tabla de los 5 pasos del método — Fase de Mejora
+## 6.6 Tabla de los 5 pasos del método: Fase de Mejora
 
 La siguiente tabla presenta las cinco herramientas propias de FlowAgile para la fase de mejora, indicando su origen en el sílabo SI570, la fusión o creación que las define y el valor o principio del Manifiesto Ágil que las respalda.
 
 | Herramienta/s del sílabo SI570 | Fusión / creación / combinación | Respaldo en Valor o Principio del Manifiesto Ágil |
 |---|---|---|
-| Roses, Thorns and Buds + Lean (métricas de satisfacción del equipo) | **PersonaFlow**: retrospectiva de personas que combina la dinámica de Roses/Thorns/Buds con indicadores cuantitativos del equipo (tasa de retrabajo, throughput individual, tiempo de resolución de bloqueadores) para generar mejoras con base en datos, no solo en percepciones. | Valor 1: "Individuos e interacciones sobre procesos y herramientas" — PersonaFlow prioriza el bienestar y el desarrollo del equipo como condición para la sostenibilidad del proyecto. |
+| Roses, Thorns and Buds + Lean (métricas de satisfacción del equipo) | **PersonaFlow**: retrospectiva de personas que combina la dinámica de Roses/Thorns/Buds con indicadores cuantitativos del equipo (tasa de retrabajo, throughput individual, tiempo de resolución de bloqueadores) para generar mejoras con base en datos, no solo en percepciones. | Valor 1: "Individuos e interacciones sobre procesos y herramientas". PersonaFlow prioriza el bienestar y el desarrollo del equipo como condición para la sostenibilidad del proyecto. |
 | 4Ls (Liked, Learned, Lacked, Longed For) + Kanban | **ProcessRetro**: retrospectiva de proceso que usa el 4Ls para evaluar el sistema de trabajo Kanban y genera acciones de mejora que se incorporan como HUs de tipo "chore" en el backlog, integrando la mejora continua al flujo normal de trabajo. | Principio 12: "A intervalos regulares el equipo reflexiona sobre cómo ser más efectivo para a continuación ajustar y perfeccionar su comportamiento en consecuencia." |
-| Start/Stop/Continue + MVP (feedback del usuario) | **ProductRetro**: retrospectiva de producto que integra el feedback del cliente Claro (obtenido en la Review semanal) con la herramienta Start/Stop/Continue para decidir qué funcionalidades agregar, cuáles retirar y cuáles mantener en el roadmap del MVP. | Principio 1: "Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor" — ProductRetro asegura que cada período el producto se acerca más al problema real del usuario. |
-| Kaizen (mejora incremental) + Cycle Time (métricas de flujo) | **KaizenFlow**: ciclo de mejora incremental basado en reducir el Cycle Time de un tipo de tarea específico en cada período — por ejemplo, reducir el Cycle Time del code review de 2 días a 4 horas —, usando el kaizen enfocado en el cuello de botella identificado por las métricas. | Principio 8: "Los procesos ágiles promueven el desarrollo sostenible. El promotor, los desarrolladores y los usuarios deben ser capaces de mantener un ritmo constante de forma indefinida." |
-| Lean Startup (Pivot o Perseverar) + KPI | **LearnPivot**: mecanismo de decisión que evalúa los KPIs del MVP al cierre de cada período para determinar si el equipo debe perseverar en la dirección actual o pivotar hacia una funcionalidad o enfoque diferente, basándose en evidencia cuantitativa y no en suposiciones. | Principio 2: "Bienvenidos los requisitos cambiantes, incluso en etapas avanzadas del desarrollo" — LearnPivot institucionaliza la capacidad de cambiar de dirección con base en aprendizaje real. |
+| Start/Stop/Continue + MVP (feedback del usuario) | **ProductRetro**: retrospectiva de producto que integra el feedback del cliente Claro (obtenido en la Review semanal) con la herramienta Start/Stop/Continue para decidir qué funcionalidades agregar, cuáles retirar y cuáles mantener en el roadmap del MVP. | Principio 1: "Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor". ProductRetro asegura que cada período el producto se acerca más al problema real del usuario. |
+| Kaizen (mejora incremental) + Cycle Time (métricas de flujo) | **KaizenFlow**: ciclo de mejora incremental basado en reducir el Cycle Time de un tipo de tarea específico en cada período (por ejemplo, reducir el Cycle Time del code review de 2 días a 4 horas), usando el kaizen enfocado en el cuello de botella identificado por las métricas. | Principio 8: "Los procesos ágiles promueven el desarrollo sostenible. El promotor, los desarrolladores y los usuarios deben ser capaces de mantener un ritmo constante de forma indefinida." |
+| Lean Startup (Pivot o Perseverar) + KPI | **LearnPivot**: mecanismo de decisión que evalúa los KPIs del MVP al cierre de cada período para determinar si el equipo debe perseverar en la dirección actual o pivotar hacia una funcionalidad o enfoque diferente, basándose en evidencia cuantitativa y no en suposiciones. | Principio 2: "Bienvenidos los requisitos cambiantes, incluso en etapas avanzadas del desarrollo". LearnPivot institucionaliza la capacidad de cambiar de dirección con base en aprendizaje real. |
+
+## 6.7 El ciclo PDCA como marco de la mejora continua
+
+El ciclo PDCA (Plan-Do-Check-Act, es decir Planificar-Hacer-Verificar-Actuar) es el marco de mejora continua popularizado por W. Edwards Deming, razón por la cual también se conoce como ciclo de Deming, sobre la base del trabajo previo de Walter Shewhart.
+PDCA describe un lazo iterativo de cuatro etapas que se repite de forma indefinida: se planifica un cambio, se ejecuta, se verifica su efecto con datos y se actúa sobre lo aprendido para estandarizar la mejora o corregir el rumbo.
+Su propósito es institucionalizar el aprendizaje, de modo que el equipo mejore mediante evidencia y no por intuición o de forma esporádica: cada período se convierte en un experimento controlado del que se extraen conclusiones.
+
+En Flowtex, PDCA no es una ceremonia adicional, sino la estructura subyacente que ordena las cadencias que el equipo ya ejecuta.
+El mapeo a las ceremonias reales del equipo es directo.
+
+| Etapa PDCA | Ceremonia del equipo Flowtex | Qué ocurre |
+|---|---|---|
+| **Plan (Planificar)** | Sprint planning y Replenishment | El PO y el equipo seleccionan y priorizan las Historias de Usuario del período con MoSCoW, definen las metas y estiman la capacidad disponible. |
+| **Do (Hacer)** | Desarrollo de las HUs | El equipo construye las Historias de Usuario en el tablero Kanban siguiendo el ciclo de diseño DDD, TDD, code review, deploy a QA y validación del PO. |
+| **Check (Verificar)** | Retrospectiva quincenal | Cada dos semanas el equipo recolecta las métricas del tablero (Lead Time, Throughput, tasa de re-trabajo, WIP) y evalúa qué funcionó y qué no, con las herramientas por dimensión (Roses/Thorns/Buds, 4Ls, Start/Stop/Continue). |
+| **Act (Actuar)** | Acciones de mejora | Las conclusiones de la retrospectiva se convierten en acciones de mejora priorizadas con MoSCoW, registradas como Historias de Usuario de tipo "chore" con responsable y fecha, que se ejecutan en el período siguiente. |
+
+De este modo, la retrospectiva quincenal descrita en las secciones anteriores es exactamente la etapa Check del ciclo, y las acciones de mejora que produce son la etapa Act.
+El cierre del lazo es lo que da continuidad al método: las acciones de mejora (Act) alimentan la planificación del período siguiente (Plan), de manera que cada iteración de dos semanas equivale a una vuelta completa del ciclo PDCA.
+El equipo adopta PDCA porque le da un lenguaje común y una disciplina para que la mejora sea sistemática y basada en evidencia, en coherencia con el Principio 12 del Manifiesto Ágil (el equipo reflexiona a intervalos regulares sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia).

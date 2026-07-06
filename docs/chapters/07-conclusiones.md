@@ -83,11 +83,11 @@ PersonaFlow desarrolla al equipo mientras el proyecto avanza, sin separar el des
 KaizenFlow mejora el proceso de forma incremental y focalizada sin interrumpir la entrega de valor.
 LearnPivot asegura que el producto evoluciona con base en evidencia cuantitativa real del usuario, no en suposiciones.
 
-## 7.2 Tabla de 4 valores y 12 principios del Manifiesto Ágil — verificación en Flowtex
+## 7.2 Tabla de 4 valores y 12 principios del Manifiesto Ágil: verificación en Flowtex
 
 La siguiente tabla verifica el cumplimiento de los cuatro valores y doce principios del Manifiesto Ágil en el proyecto Flowtex, indicando qué asegura cada uno en el contexto específico del producto.
 
-| Principio / Valor | Check list — verificación en Flowtex | Qué asegura en el proyecto |
+| Principio / Valor | Check list: verificación en Flowtex | Qué asegura en el proyecto |
 |---|---|---|
 | Valor 1: Individuos e interacciones sobre procesos y herramientas | ✓ El equipo realiza daily standup diario; el PO tiene acceso directo al representante de Claro Perú. | Asegura que los cambios de requisito se detectan y comunican rápidamente, sin esperar a una reunión formal. |
 | Valor 2: Software funcionando sobre documentación exhaustiva | ✓ Cada Historia de Usuario completada se despliega en QA y es validada por el PO antes de marcarla como Hecha. | Asegura que el avance se mide en funcionalidades verificables, no en documentos de especificación. |
@@ -110,7 +110,7 @@ La siguiente tabla verifica el cumplimiento de los cuatro valores y doce princip
 
 **Inicio (EmpathySPIN + FlowVision + ImpactPriority + LearnBuild + JourneyKPI).**
 FlowAgile busca en esta fase el valor de la comprensión real del problema antes de cualquier inversión técnica.
-EmpathySPIN garantiza que el equipo entiende el dolor del usuario —el administrador de TI que espera semanas por un formulario en NINTEX— antes de diseñar la solución.
+EmpathySPIN garantiza que el equipo entiende el dolor del usuario (el administrador de TI que espera semanas por un formulario en NINTEX) antes de diseñar la solución.
 FlowVision alinea al equipo y al cliente en una visión compartida del producto que sirve como norte durante todo el proyecto.
 ImpactPriority asegura que se construye primero lo que más valor aporta al proceso crítico del cliente, no lo más técnicamente interesante.
 LearnBuild y JourneyKPI validan con evidencia real que la propuesta de valor es correcta antes de comprometer recursos en la construcción.
@@ -156,7 +156,7 @@ La siguiente tabla presenta diez recomendaciones para el gestor de proyecto ági
 | 5 | Aplicar retrospectivas con herramientas diferenciadas por dimensión (personas, procesos, productos). | Una sola herramienta de retrospectiva no captura todas las dimensiones de mejora; las personas, los procesos y los productos tienen dinámicas distintas que requieren preguntas distintas. | Principio 12: A intervalos regulares el equipo reflexiona y ajusta su comportamiento. |
 | 6 | Mantener WIP limits estrictos y aplicar "stop starting, start finishing". | El trabajo en curso excesivo es la principal causa de retrasos en equipos de desarrollo; el WIP descontrolado aumenta el Lead Time de forma no lineal. | Principio 8: Ritmo constante e indefinido para todos los involucrados. |
 | 7 | Tomar las decisiones técnicas por consenso del equipo y documentarlas como ADRs. | Las decisiones no documentadas se pierden y generan inconsistencias cuando el equipo crece, cambia o el proyecto es mantenido por otro equipo. | Principio 9: La atención continua a la excelencia técnica y al buen diseño mejora la agilidad. |
-| 8 | Priorizar con MoSCoW + clases de servicio de Kanban, no solo por urgencia percibida. | La urgencia percibida sin criterio objetivo lleva a construir lo que pide más fuerte, no lo que más valor aporta al negocio del cliente. | Principio 10: La simplicidad —el arte de maximizar el trabajo no hecho— es esencial. |
+| 8 | Priorizar con MoSCoW + clases de servicio de Kanban, no solo por urgencia percibida. | La urgencia percibida sin criterio objetivo lleva a construir lo que pide más fuerte, no lo que más valor aporta al negocio del cliente. | Principio 10: La simplicidad (el arte de maximizar el trabajo no hecho) es esencial. |
 | 9 | Integrar CI/CD desde el primer sprint, no como actividad de "cuando haya tiempo". | El CI/CD automatiza la validación técnica y libera capacidad del equipo para el trabajo de mayor valor; postponerlo genera deuda técnica de entrega que se vuelve muy costosa. | Principio 3: Entregar software funcionando frecuentemente, desde un par de semanas hasta un par de meses. |
 | 10 | Usar el método para aprender, no para cumplir un proceso: si una herramienta no genera valor en el contexto, cambiarla. | Los métodos ágiles son marcos adaptativos, no recetas fijas; su valor está en la reflexión que generan y en la mejora que producen, no en su ejecución mecánica. | Principio 12: Ajustar y perfeccionar el comportamiento del equipo a intervalos regulares. |
 
@@ -201,7 +201,7 @@ Tampoco es adecuado para proyectos con requisitos completamente fijos y sin posi
 El MVP de Flowtex comprende tres módulos: FormBuilder (creación de formularios), FlowEngine (motor de flujos de aprobación) y MigraFlow (migración de formularios existentes).
 Los siguientes flujos funcionales documentan el comportamiento del MVP desplegado en el ambiente QA de Hitss Perú con automatización CI/CD.
 
-### Flujo 1 — Creación de formulario en FormBuilder
+### Flujo 1: Creación de formulario en FormBuilder
 
 El administrador accede a la sección "Mis Formularios" y hace clic en el botón "Nuevo Formulario".
 El sistema abre el editor visual con el panel de tipos de campo en el lado izquierdo y el lienzo de construcción en el centro de la pantalla.
@@ -210,24 +210,24 @@ Repite el proceso con los tipos de campo: fecha, lista desplegable y adjunto, co
 Al hacer clic en "Guardar", el sistema crea automáticamente la versión 1.0 del formulario con la fecha, la hora y el nombre del administrador como metadatos de auditoría.
 El administrador hace clic en "Publicar" y el sistema genera el enlace único del formulario listo para compartir con los solicitantes del área.
 
-### Flujo 2 — Configuración de flujo de aprobación en FlowEngine
+### Flujo 2: Configuración de flujo de aprobación en FlowEngine
 
 El administrador accede a la sección "Mis Flujos" y selecciona el formulario creado en el Flujo 1.
-En el editor de flujo, el administrador define dos pasos de aprobación en modo secuencial: Paso 1 — Analista TI (aprobador: Jose Ames); Paso 2 — Gerente de TI (aprobador: Ricardo Alvarado).
+En el editor de flujo, el administrador define dos pasos de aprobación en modo secuencial: Paso 1, Analista TI (aprobador: Jose Ames); Paso 2, Gerente de TI (aprobador: Ricardo Alvarado).
 El administrador configura una regla condicional mediante el panel de lógica: si el campo "Tipo de solicitud" es igual a "Urgente", el flujo salta directamente al Paso 2, omitiendo el Paso 1.
 Para cada paso, el administrador define un SLA de 48 horas y activa el escalamiento automático al siguiente nivel si el SLA vence sin acción del aprobador.
 Al hacer clic en "Guardar y Activar", el sistema valida la configuración del flujo y lo deja disponible para recibir solicitudes.
 
-### Flujo 3 — Envío de solicitud y seguimiento por el solicitante
+### Flujo 3: Envío de solicitud y seguimiento por el solicitante
 
 El solicitante accede al enlace publicado del formulario desde su navegador o desde el portal interno de Claro Perú.
 El solicitante completa los campos requeridos: nombre, fecha, tipo de solicitud y adjunto, y hace clic en "Enviar".
 El sistema valida que todos los campos obligatorios están completos y, si la validación es exitosa, genera el ticket con el identificador FLOW-00142.
 El solicitante recibe inmediatamente una confirmación por correo electrónico con el número de ticket y el enlace de seguimiento en tiempo real.
-Al ingresar al enlace de seguimiento, el solicitante visualiza el estado actual de su solicitud: "Paso 1: Aprobación Analista TI — Pendiente (24 h restantes)".
+Al ingresar al enlace de seguimiento, el solicitante visualiza el estado actual de su solicitud: "Paso 1: Aprobación Analista TI, Pendiente (24 h restantes)".
 El estado se actualiza automáticamente cada vez que un aprobador realiza una acción sobre la solicitud.
 
-### Flujo 4 — Aprobación y notificación al siguiente paso
+### Flujo 4: Aprobación y notificación al siguiente paso
 
 El aprobador designado (Jose Ames) recibe una notificación por correo electrónico y por Microsoft Teams en menos de un minuto después de que la solicitud llega a su paso.
 El mensaje de Teams incluye el número de ticket, el nombre del solicitante y un enlace directo a la solicitud, sin necesidad de ingresar al sistema por separado.
@@ -239,4 +239,4 @@ Al completarse el último paso de aprobación, el sistema notifica al solicitant
 ### Enlace del ambiente QA
 
 El MVP de Flowtex se desplegó en el ambiente de QA de Hitss Perú con automatización CI/CD mediante GitHub Actions y contenedores Docker.
-Las capturas de pantalla de los flujos 1 a 4 —incluyendo el editor de FormBuilder, el editor de flujo de FlowEngine, la vista de seguimiento del solicitante y las notificaciones de Teams— se adjuntan en la sección de Anexos del informe final.
+Las capturas de pantalla de los flujos 1 a 4 (incluyendo el editor de FormBuilder, el editor de flujo de FlowEngine, la vista de seguimiento del solicitante y las notificaciones de Teams) se adjuntan en la sección de Anexos del informe final.

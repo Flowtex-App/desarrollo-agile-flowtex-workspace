@@ -4,7 +4,7 @@
 
 El equipo de Flowtex aplicó las cinco fases del Design Thinking para comprender el problema real de los administradores de TI de Claro Perú antes de proponer cualquier solución técnica.
 
-### Fase 1 — Empatizar
+### Fase 1: Empatizar
 
 Se utilizó la técnica SPIN para entrevistar al Administrador de TI de Claro Perú, con el objetivo de diagnosticar el problema desde la perspectiva del usuario real.
 
@@ -15,7 +15,7 @@ Se utilizó la técnica SPIN para entrevistar al Administrador de TI de Claro Pe
 | I (Implicancia) | ¿Qué consecuencias genera esa demora en las áreas que solicitan los cambios? | Áreas como RRHH y Legal bloquean aprobaciones durante días, afectando procesos críticos de la empresa |
 | N (Necesidad) | ¿Qué necesitaría para resolver este problema de forma sostenible? | Autonomía para crear o modificar formularios en días, sin depender de licencias ni tiempos de respuesta externos |
 
-### Fase 2 — Definir
+### Fase 2: Definir
 
 A partir de las entrevistas se construyó el perfil del User Persona principal.
 
@@ -24,13 +24,35 @@ Ricardo Alvarado tiene 34 años y se desempeña como Coordinador de Plataformas 
 Sus objetivos son alcanzar autonomía operativa, garantizar trazabilidad completa de los procesos y eliminar la dependencia de proveedores externos.
 Sus principales frustraciones son los tiempos de espera de 3 a 6 semanas con NINTEX, la ausencia de rollback en formularios, y el hecho de que los datos se alojan en infraestructura externa a Claro.
 
-**Mapa de Empatía:** El mapa de empatía construido revela que Ricardo siente presión de las áreas internas que lo responsabilizan por los retrasos, piensa que debería existir una solución más ágil dentro de la empresa, y actúa escalando solicitudes manualmente porque no tiene otra alternativa.
+**Mapa de Empatía:** El mapa de empatía organiza la comprensión del usuario en seis cuadrantes, cada uno asociado a una pregunta: ¿Qué piensa y siente?, ¿Qué oye?, ¿Qué ve?, ¿Qué dice y hace?, ¿cuáles son sus esfuerzos o dolores? y ¿cuáles son sus resultados o beneficios esperados?
+Aplicado a Ricardo, el mapa arroja los siguientes hallazgos.
+
+| Cuadrante | Hallazgo sobre Ricardo |
+|---|---|
+| ¿Qué piensa y siente? | Cree que debería existir una solución más ágil dentro de la empresa y siente la presión de retrasos que no puede controlar. |
+| ¿Qué oye? | Escucha de las áreas internas (RRHH, Legal) quejas por los tiempos de espera y comentarios sobre la lentitud del proceso actual. |
+| ¿Qué ve? | Observa que cada solicitud depende del proveedor NINTEX y que no dispone de trazabilidad ni de rollback de formularios. |
+| ¿Qué dice y hace? | Escala solicitudes manualmente y explica a las áreas que el retraso proviene de la dependencia externa. |
+| Esfuerzos o dolores | Tiempos de espera de 3 a 6 semanas, ausencia de rollback y datos alojados fuera del control de Claro. |
+| Resultados o beneficios | Autonomía para crear formularios en días, trazabilidad completa y eliminación de la dependencia de proveedores externos. |
 
 **Point of View (POV):** Ricardo necesita autonomía para crear formularios y flujos de aprobación sin depender de NINTEX, porque cada semana de espera le cuesta credibilidad ante las áreas internas de la organización.
 
-### Fase 3 — Idear
+### Fase 3: Idear
 
 El equipo generó ideas a partir del pain point central identificado en la Fase 2.
+
+**Técnicas de ideación empleadas:** Para maximizar el número de ideas antes de converger, el equipo aplicó tres dinámicas en secuencia, seguidas de una votación para priorizar.
+Cada técnica se corresponde con una fase del modelo de Tuckman según el grado de madurez del equipo.
+
+| Técnica | En qué consiste | Fase de Tuckman asociada |
+|---|---|---|
+| Escribir en silencio (brainwriting) | Cada integrante escribe sus ideas de forma individual y en silencio, sin discutirlas todavía, para evitar el sesgo de quien habla primero y lograr que todos aporten por igual. | Forming: el equipo recién se conoce y la escritura individual reduce la inhibición inicial. |
+| Round robin | Cada integrante expone sus ideas por turnos, una a la vez, rotando la palabra, de modo que la participación sea equitativa y ordenada. | Norming: el turno rotativo refuerza las normas de participación equitativa ya acordadas. |
+| Free for all | Discusión abierta y espontánea donde las ideas se construyen unas sobre otras sin turnos rígidos, aprovechando la confianza establecida. | Performing: el equipo, ya cohesionado, produce ideas de forma fluida y colaborativa. |
+
+Tras la generación, el equipo prioriza las ideas mediante dot voting (votación por puntos): cada integrante distribuye un número fijo de votos entre las ideas propuestas y las más votadas pasan al backlog.
+El Scrum Master (Omar) recibe y consolida todas las ideas, elimina duplicados y traslada las priorizadas al tablero para su posterior refinamiento con el Product Owner.
 
 **Wireframe de FormBuilder:** Se diseñó un panel drag-and-drop con tipos de campo básicos (texto, número, fecha, lista desplegable, checkbox) y una barra lateral de propiedades por campo.
 
@@ -38,12 +60,12 @@ El equipo generó ideas a partir del pain point central identificado en la Fase 
 
 | Etapa | Acción del usuario | Pensamiento | Punto de dolor |
 |---|---|---|---|
-| 1 — Detecta la necesidad | Recibe solicitud de nueva área vía correo | "Otra semana de espera si lo proceso por NINTEX" | Falta de canal directo de solicitudes |
-| 2 — Diseña el formulario | Arrastra campos al canvas de FormBuilder | "Esto es mucho más rápido que lo anterior" | Sin vista previa en tiempo real |
-| 3 — Configura el flujo | Define los niveles de aprobación en FlowEngine | "¿Puedo poner reglas condicionales?" | La interfaz de reglas no es intuitiva aún |
-| 4 — Publica y monitorea | Activa el formulario y comparte el enlace | "¿Cómo sé si alguien ya lo completó?" | Sin dashboard de seguimiento en el MVP inicial |
+| 1: Detecta la necesidad | Recibe solicitud de nueva área vía correo | "Otra semana de espera si lo proceso por NINTEX" | Falta de canal directo de solicitudes |
+| 2: Diseña el formulario | Arrastra campos al canvas de FormBuilder | "Esto es mucho más rápido que lo anterior" | Sin vista previa en tiempo real |
+| 3: Configura el flujo | Define los niveles de aprobación en FlowEngine | "¿Puedo poner reglas condicionales?" | La interfaz de reglas no es intuitiva aún |
+| 4: Publica y monitorea | Activa el formulario y comparte el enlace | "¿Cómo sé si alguien ya lo completó?" | Sin dashboard de seguimiento en el MVP inicial |
 
-### Fase 4 — Prototipar
+### Fase 4: Prototipar
 
 Se construyó un prototipo funcional del FlowEngine con un flujo de tres pasos y reglas condicionales.
 
@@ -57,7 +79,7 @@ Inicio → Aprobación TI → Completado
 | Si Prioridad = Urgente | Escalar directamente al Gerente TI (saltar aprobación intermedia) |
 | Si Monto < S/. 5,000 | Flujo de un solo nivel de aprobación |
 
-### Fase 5 — Testear
+### Fase 5: Testear
 
 Se ejecutó un plan de pruebas con cinco tareas sobre el prototipo.
 
@@ -104,7 +126,21 @@ El equipo de Hitss Perú transitó por las cuatro fases del modelo de desarrollo
 | Forming (Formación) | El equipo de Hitss se reúne, define roles y establece el objetivo del proyecto (reemplazar NINTEX en Claro Perú) | Omar (Scrum Master) facilita la sesión de kick-off y presenta el contexto del cliente Claro al equipo completo |
 | Storming (Conflicto) | Surgen discusiones sobre el stack tecnológico y la arquitectura: ¿DDD monolítico versus microservicios? ¿React versus Vue? | Omar media el debate; el equipo vota la decisión y la documenta como ADR (Architecture Decision Record) |
 | Norming (Normalización) | Se acuerda la arquitectura DDD + CQRS para el backend y arquitectura hexagonal para el frontend; el tablero Kanban se establece como herramienta de trabajo compartida | Christopher como Product Owner prioriza el backlog; el equipo adopta las convenciones de código y nomenclatura de ramas |
-| Performing (Rendimiento) | El equipo trabaja con ritmo fluido: code reviews diarios, pipeline CI/CD funcionando y entregas cada dos semanas | Omar facilita las retrospectivas bisemanales; el equipo ajusta los WIP limits según el throughput real medido en el tablero |
+| Performing (Rendimiento, estado objetivo) | Meta hacia la que evoluciona el equipo: ritmo fluido con code reviews diarios, pipeline CI/CD funcionando, entregas cada dos semanas y autoorganización plena | Omar facilita las retrospectivas bisemanales; a medida que el equipo se empodera, la intervención del líder se reduce al soporte y a la remoción de impedimentos |
+
+**Denominación en español del modelo (mapeo del curso SI570):** El curso mapea las cuatro fases de Tuckman a un vocabulario de liderazgo en español que describe qué hace el líder en cada etapa.
+
+| Fase Tuckman | Denominación del curso | Qué hace el líder |
+|---|---|---|
+| Forming | Comprender el contexto | Explica el contexto del cliente Claro, presenta el problema de NINTEX y ayuda al equipo a entender el propósito. Dirige. |
+| Storming | Capacitar | Media los conflictos técnicos, forma al equipo en las convenciones y decisiones (ADRs) y aclara los desacuerdos. Enseña. |
+| Norming | Liberar de mando y control | Delega las decisiones al equipo, retira la supervisión directa y deja que las normas acordadas gobiernen el trabajo. Delega. |
+| Performing | Empoderar | El equipo se autoorganiza; el líder solo remueve impedimentos y sostiene el ritmo. Acompaña. |
+
+**Fase actual del equipo Flowtex:** El equipo de Hitss se encuentra en la fase Norming, denominada "Liberar de mando y control".
+Las convenciones de código, el tablero Kanban con WIP limits y las cadencias ya están internalizadas, y el Scrum Master ha retirado la supervisión directa para dejar que el equipo se gobierne por las normas acordadas.
+La señal que confirmó la entrada a "Liberar de mando y control" fue la primera Historia de Usuario completada sin bloqueadores ni intervención directiva (HU01, tipos de campo del FormBuilder), que evidenció que el equipo puede operar bajo sus propias normas sin mando y control constante.
+La fase Performing ("Empoderar"), de autoorganización plena, se plantea como estado objetivo aún en consolidación.
 
 ### Check List de Verificación de Liderazgo Ágil
 
@@ -136,9 +172,15 @@ El equipo de Flowtex adoptó un conjunto de técnicas colaborativas orientadas a
 
 ## 2.5 Lean Startup y Lean Inception Aplicados al Proyecto
 
-### Lean Startup — Ciclo Build-Measure-Learn
+El equipo articuló ambos enfoques en un orden deliberado.
+Primero aplicó Lean Startup para construir y validar el primer MVP con la menor inversión posible, sometiendo a prueba la hipótesis central del proyecto (¿pueden los administradores TI crear formularios de forma autónoma?).
+Una vez obtenido ese aprendizaje, aplicó Lean Inception para alinear al equipo y al cliente en torno a la visión del producto y planificar la siguiente iteración con mayor alcance.
+De este modo, Lean Startup gobierna el descubrimiento del primer incremento y Lean Inception estructura la evolución posterior del producto.
+
+### Lean Startup: Ciclo Build-Measure-Learn
 
 El equipo aplicó el ciclo Lean Startup para estructurar el desarrollo del MVP y reducir el riesgo de construir funcionalidades que no generen valor real al usuario.
+El ciclo Build-Measure-Learn (Construir-Medir-Aprender) fue formulado por Eric Ries en su obra "The Lean Startup", y propone validar las hipótesis de negocio con el menor esfuerzo posible antes de comprometer recursos en la construcción completa del producto.
 
 | Fase | Aplicación en Flowtex |
 |---|---|
@@ -146,7 +188,20 @@ El equipo aplicó el ciclo Lean Startup para estructurar el desarrollo del MVP y
 | Measure (Medir) | Se miden tres KPIs principales: tiempo de creación de formulario, tasa de aprobación dentro del SLA, y NPS inicial de los administradores TI de Claro |
 | Learn (Aprender) | Se valida la hipótesis central del proyecto: ¿los administradores de TI pueden crear formularios funcionales en menos de 2 días sin capacitación previa? |
 
-### Lean Inception — Visión del Producto
+### Lean Inception: Visión del Producto
+
+Lean Inception es un taller colaborativo de cinco días formulado por Paulo Caroli, orientado a alinear a un equipo en torno a la construcción del MVP correcto.
+El taller recorre de forma canónica cinco pasos que van de lo general a lo concreto:
+
+1. **Visión del producto:** se declara para quién es el producto, qué es y qué lo diferencia, apoyándose en el Product Vision Board como lienzo de visión.
+2. **Personas:** se identifican los usuarios del producto y sus necesidades principales.
+3. **Journey (viaje del usuario):** se mapea el recorrido de cada persona a través del producto.
+4. **Características (features):** se derivan las funcionalidades necesarias para sostener ese recorrido.
+5. **Secuenciador y MVP Canvas:** se ordenan las características en incrementos y se sintetiza el alcance mínimo en el MVP Canvas.
+
+El primer día del taller incluye la actividad "El producto ES / NO ES / HACE / NO HACE", que delimita el alcance acotando de forma explícita lo que el producto es y lo que no es, y lo que hace y lo que no hace.
+El quinto día cierra con un Showcase, en el que el equipo presenta a los interesados los resultados obtenidos durante el taller.
+Las secciones siguientes muestran cómo Flowtex recorrió estos pasos.
 
 **Declaración de visión de Flowtex:**
 Para administradores de TI de Claro que necesitan gestionar formularios y flujos sin depender de NINTEX,
@@ -166,14 +221,14 @@ A diferencia de NINTEX, Flowtex es autónomo, más rápido, con trazabilidad com
 
 | Secuencia | Funcionalidades | Descripción |
 |---|---|---|
-| 1 — FormBuilder básico | HU01, HU02, HU04, HU05 | El administrador crea formularios; el solicitante los completa y el sistema genera un número de ticket |
-| 2 — FlowEngine básico | HU06, HU09, HU11, HU12 | Aprobación secuencial con notificaciones por correo y seguimiento por número de ticket |
-| 3 — Extensión del FlowEngine | HU03, HU07, HU10, HU08 | Validaciones avanzadas, aprobación por mayoría, escalamiento automático y delegación |
-| 4 — MigraFlow | HU13 | Migración paralela y controlada desde NINTEX hacia Flowtex |
+| 1: FormBuilder básico | HU01, HU02, HU04, HU05 | El administrador crea formularios; el solicitante los completa y el sistema genera un número de ticket |
+| 2: FlowEngine básico | HU06, HU09, HU11, HU12 | Aprobación secuencial con notificaciones por correo y seguimiento por número de ticket |
+| 3: Extensión del FlowEngine | HU03, HU07, HU10, HU08 | Validaciones avanzadas, aprobación por mayoría, escalamiento automático y delegación |
+| 4: MigraFlow | HU13 | Migración paralela y controlada desde NINTEX hacia Flowtex |
 
 ---
 
-## 2.6 MVP — Sustentación, Validación y Funcionalidades Fundamentales
+## 2.6 MVP: Sustentación, Validación y Funcionalidades Fundamentales
 
 ### Funcionalidades incluidas en el MVP
 
@@ -219,23 +274,23 @@ Los indicadores clave de desempeño de Flowtex se definen con fórmulas explíci
 
 El equipo definió cinco pasos mínimos para evaluar la factibilidad del proyecto antes de comprometer el desarrollo del MVP.
 
-**Paso 1 — Validación técnica:**
+**Paso 1: Validación técnica**
 Se verifica que el stack seleccionado (Java 21 + Spring Boot 3.3, React 18 + TypeScript, MySQL 8) puede soportar los requisitos no funcionales del sistema: 500 usuarios concurrentes, tiempo de respuesta inferior a 3 segundos para el 95% de las operaciones y disponibilidad igual o superior al 99.5%.
 La validación se realiza mediante pruebas de carga con JMeter sobre el entorno de preproducción de Hitss.
 
-**Paso 2 — Validación económica:**
+**Paso 2: Validación económica**
 Se compara el costo total de desarrollo y mantenimiento de Flowtex (equipo Hitss propio, sin licencias externas) con el costo anual de NINTEX más los servicios profesionales de personalización y soporte externo, proyectado a un horizonte de 3 años.
 El resultado debe mostrar una reducción mínima del 60% para justificar la inversión inicial.
 
-**Paso 3 — Validación operacional:**
+**Paso 3: Validación operacional**
 Se confirma que el equipo de TI de Claro puede operar y mantener Flowtex de forma autónoma sin depender del equipo de Hitss para correcciones menores.
 La validación se ejecuta mediante una sesión de capacitación de 4 horas seguida de una prueba de administración autónoma donde el equipo de Claro realiza tareas definidas de configuración y mantenimiento sin asistencia.
 
-**Paso 4 — Validación de aceptación de usuario:**
+**Paso 4: Validación de aceptación de usuario**
 Se ejecutan las pruebas de usabilidad del prototipo con al menos 3 administradores de TI de Claro (como se realizó en la Fase 5 del Design Thinking) y se mide el Net Promoter Score (NPS) inicial antes del inicio del desarrollo del MVP.
 Un NPS igual o superior a 7 sobre 10 se considera una señal de aceptación suficiente para proceder.
 
-**Paso 5 — Validación regulatoria:**
+**Paso 5: Validación regulatoria**
 Se confirma con las áreas de Legal y Compliance de Claro Perú que la arquitectura de Flowtex cumple con los requisitos de soberanía de datos establecidos por OSIPTEL y las políticas internas de seguridad de América Móvil, incluyendo el tratamiento de datos sensibles capturados mediante formularios.
 La validación concluye con la emisión de un documento de conformidad firmado por el área de Compliance antes del despliegue en producción.
 
@@ -268,8 +323,8 @@ La siguiente tabla presenta cinco herramientas tomadas del sílabo del curso SI5
 
 | Herramienta/s tomadas del sílabo SI570 | Fusión / creación / combinación / interpretación | Respaldo en Valor o Principio del Manifiesto Ágil |
 |---|---|---|
-| Design Thinking (Empatizar) + SPIN | **EmpathySPIN**: técnica de empatía contextual que combina las cinco fases del Design Thinking con la estructura de preguntas SPIN para diagnosticar el problema real del usuario antes de proponer cualquier solución técnica | Principio 1: "Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor" — la empatía previa al diseño garantiza que el software construido resuelve el problema real y no una suposición del equipo |
-| Lean Inception (Product Vision) + Business Model Canvas | **FlowVision**: lienzo de visión del producto que combina la declaración de visión de Lean Inception con los bloques del Business Model Canvas, orientado a proyectos de software interno de tipo B2B dentro de un corporativo | Valor 1: "Individuos e interacciones sobre procesos y herramientas" — FlowVision prioriza entender al usuario y su contexto organizacional sobre documentar requerimientos formales en documentos extensos |
-| MoSCoW + Impact Mapping | **ImpactPriority**: método de priorización que combina las categorías MoSCoW (Must, Should, Could, Won't) con el mapa de impacto para ordenar las historias de usuario según su contribución directa a los procesos críticos del negocio | Principio 10: "La simplicidad —el arte de maximizar el trabajo no hecho— es esencial" — ImpactPriority elimina del backlog las funcionalidades que no contribuyen al valor central del producto en la iteración actual |
-| Lean Startup (Build-Measure-Learn) + MVP | **LearnBuild**: ciclo iterativo donde el MVP se construye enfocado en las hipótesis de mayor riesgo del proyecto (¿puede el administrador crear formularios autónomamente?), se mide con KPIs con fórmulas explícitas y se aprende para ajustar la prioridad del backlog en el siguiente sprint | Principio 3: "Entregar software funcionando frecuentemente, en períodos de dos semanas a dos meses, con preferencia al período más corto" — LearnBuild impone un ritmo de entrega medible y orientado al aprendizaje validado |
-| Journey Map + KPI Formula (numerador / denominador) | **JourneyKPI**: métricas de validación derivadas directamente del journey del usuario, donde cada pain point identificado en el journey map se convierte en un KPI con fórmula medible de numerador y denominador, asegurando que las métricas reflejan la experiencia real del usuario y no indicadores técnicos desvinculados | Principio 7: "El software funcionando es la medida principal de progreso" — los KPIs de JourneyKPI verifican que el software funciona para el usuario en su contexto real, no solo que compila y pasa las pruebas unitarias |
+| Design Thinking (Empatizar) + SPIN | **EmpathySPIN**: técnica de empatía contextual que combina las cinco fases del Design Thinking con la estructura de preguntas SPIN para diagnosticar el problema real del usuario antes de proponer cualquier solución técnica | Principio 1: "Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor", la empatía previa al diseño garantiza que el software construido resuelve el problema real y no una suposición del equipo |
+| Lean Inception (Product Vision) + Business Model Canvas | **FlowVision**: lienzo de visión del producto que combina la declaración de visión de Lean Inception con los bloques del Business Model Canvas, orientado a proyectos de software interno de tipo B2B dentro de un corporativo | Valor 1: "Individuos e interacciones sobre procesos y herramientas", FlowVision prioriza entender al usuario y su contexto organizacional sobre documentar requerimientos formales en documentos extensos |
+| MoSCoW + Impact Mapping | **ImpactPriority**: método de priorización que combina las categorías MoSCoW (Must, Should, Could, Won't) con el mapa de impacto para ordenar las historias de usuario según su contribución directa a los procesos críticos del negocio | Principio 10: "La simplicidad (el arte de maximizar el trabajo no hecho) es esencial", ImpactPriority elimina del backlog las funcionalidades que no contribuyen al valor central del producto en la iteración actual |
+| Lean Startup (Build-Measure-Learn) + MVP | **LearnBuild**: ciclo iterativo donde el MVP se construye enfocado en las hipótesis de mayor riesgo del proyecto (¿puede el administrador crear formularios autónomamente?), se mide con KPIs con fórmulas explícitas y se aprende para ajustar la prioridad del backlog en el siguiente sprint | Principio 3: "Entregar software funcionando frecuentemente, en períodos de dos semanas a dos meses, con preferencia al período más corto", LearnBuild impone un ritmo de entrega medible y orientado al aprendizaje validado |
+| Journey Map + KPI Formula (numerador / denominador) | **JourneyKPI**: métricas de validación derivadas directamente del journey del usuario, donde cada pain point identificado en el journey map se convierte en un KPI con fórmula medible de numerador y denominador, asegurando que las métricas reflejan la experiencia real del usuario y no indicadores técnicos desvinculados | Principio 7: "El software funcionando es la medida principal de progreso", los KPIs de JourneyKPI verifican que el software funciona para el usuario en su contexto real, no solo que compila y pasa las pruebas unitarias |

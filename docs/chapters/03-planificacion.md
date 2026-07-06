@@ -24,11 +24,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ### 3.0.2 Historias de Usuario
 
-#### EP01 — IAM (Identidad y acceso)
+#### EP01: IAM (Identidad y acceso)
 
 ---
 
-##### HU-IAM-01 — Registro con código de empleado Claro
+##### HU-IAM-01: Registro con código de empleado Claro
 
 > **Como** colaborador de Claro Perú,
 > **quiero** registrarme en FLOWTEX usando mi código de empleado, mi cargo y mi área,
@@ -46,11 +46,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 - **Escenario 2: Rechazo de código de empleado mal formado**
   - **Dado** que el colaborador ingresa un código que no respeta el patrón `C\d{5}` (por ejemplo `12345` o `CC123`)
   - **Cuando** intenta enviar el formulario
-  - **Entonces** el sistema muestra el error "Código inválido — formato esperado C##### (cinco dígitos)" y bloquea el envío hasta que el campo se corrija
+  - **Entonces** el sistema muestra el error "Código inválido: formato esperado C##### (cinco dígitos)" y bloquea el envío hasta que el campo se corrija
 
 ---
 
-##### HU-IAM-02 — Inicio de sesión con JWT
+##### HU-IAM-02: Inicio de sesión con JWT
 
 > **Como** colaborador registrado,
 > **quiero** autenticarme con mi usuario y contraseña,
@@ -72,7 +72,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-IAM-03 — Perfil con cargo, área y código
+##### HU-IAM-03: Perfil con cargo, área y código
 
 > **Como** usuario autenticado,
 > **quiero** que mi perfil exhiba mi nombre, cargo, especialidad, área y código de empleado,
@@ -94,7 +94,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-IAM-04 — Asignación de roles por administrador
+##### HU-IAM-04: Asignación de roles por administrador
 
 > **Como** administrador,
 > **quiero** asignar los roles `ROLE_ADMIN`, `ROLE_DESIGNER`, `ROLE_APPROVER` o `ROLE_USER` a otros colaboradores,
@@ -116,7 +116,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-IAM-05 — Bandeja de usuarios filtrable
+##### HU-IAM-05: Bandeja de usuarios filtrable
 
 > **Como** administrador,
 > **quiero** ver el listado de todos los usuarios con filtros por área y cargo,
@@ -138,11 +138,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP02 — FormBuilder (Diseño de formularios)
+#### EP02: FormBuilder (Diseño de formularios)
 
 ---
 
-##### HU-FB-01 — Tipos de campo configurables
+##### HU-FB-01: Tipos de campo configurables
 
 > **Como** diseñador de formularios,
 > **quiero** elegir entre 24 tipos de campo (texto, número, fecha, archivo, firma, lista, radio, casilla, sección, encabezado, auto-fill, etc.),
@@ -164,7 +164,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-02 — Editor drag-and-drop con grid
+##### HU-FB-02: Editor drag-and-drop con grid
 
 > **Como** diseñador de formularios,
 > **quiero** posicionar los campos en un canvas con grid (X/Y),
@@ -186,7 +186,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-03 — Validaciones por campo
+##### HU-FB-03: Validaciones por campo
 
 > **Como** diseñador de formularios,
 > **quiero** declarar reglas de validación por campo (obligatoriedad, longitud mínima/máxima, expresión regular, formato de correo),
@@ -208,7 +208,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-04 — Auto-fill desde perfil del solicitante
+##### HU-FB-04: Auto-fill desde perfil del solicitante
 
 > **Como** diseñador de formularios,
 > **quiero** colocar campos que se auto-rellenen con datos del usuario logueado (nombre, código de empleado, cargo, área),
@@ -230,7 +230,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-05 — Sugerencias de campos por IA
+##### HU-FB-05: Sugerencias de campos por IA
 
 > **Como** diseñador de formularios,
 > **quiero** describir el propósito del formulario en lenguaje natural y recibir sugerencias de campos relevantes,
@@ -252,7 +252,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-06 — Versionamiento automático al publicar
+##### HU-FB-06: Versionamiento automático al publicar
 
 > **Como** diseñador de formularios,
 > **quiero** que cada publicación cree una versión nueva inmutable,
@@ -274,7 +274,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-FB-07 — Vincular formulario con un workflow
+##### HU-FB-07: Vincular formulario con un workflow
 
 > **Como** diseñador de formularios,
 > **quiero** ligar un formulario a un workflow específico,
@@ -296,11 +296,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP03 — Workflow (Diseño de flujos)
+#### EP03: Workflow (Diseño de flujos)
 
 ---
 
-##### HU-WF-01 — Editor visual de canvas
+##### HU-WF-01: Editor visual de canvas
 
 > **Como** diseñador de flujos,
 > **quiero** componer un workflow arrastrando pasos en un canvas y conectándolos visualmente,
@@ -322,7 +322,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-WF-02 — Aprobadores por usuario, área+cargo o rol
+##### HU-WF-02: Aprobadores por usuario, área+cargo o rol
 
 > **Como** diseñador de flujos,
 > **quiero** declarar el aprobador de un paso de tres formas distintas (un usuario nominal, una combinación de área y cargo, o un rol del sistema),
@@ -344,7 +344,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-WF-03 — Modo de paso secuencial / paralelo / mayoría
+##### HU-WF-03: Modo de paso secuencial / paralelo / mayoría
 
 > **Como** diseñador de flujos,
 > **quiero** elegir el modo de un paso entre secuencial (un aprobador a la vez), paralelo (todos a la vez) o mayoría (quorum),
@@ -366,7 +366,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-WF-04 — Transiciones por decisión (aprobar/rechazar/devolver)
+##### HU-WF-04: Transiciones por decisión (aprobar/rechazar/devolver)
 
 > **Como** diseñador de flujos,
 > **quiero** que cada paso tenga transiciones distintas según la decisión del aprobador (aprobar, rechazar, devolver),
@@ -377,18 +377,18 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 **Criterios de aceptación:**
 
 - **Escenario 1: Decisión REJECT toma la transición ON_REJECT**
-  - **Dado** un paso con dos transiciones salientes — `ON_APPROVE → "Aprobación final"` y `ON_REJECT → "Revisión obligatoria"`
+  - **Dado** un paso con dos transiciones salientes: `ON_APPROVE → "Aprobación final"` y `ON_REJECT → "Revisión obligatoria"`
   - **Cuando** el aprobador rechaza el paso
   - **Entonces** el `WorkflowEngine` elige la transición `ON_REJECT`, asigna el siguiente paso "Revisión obligatoria" y registra evento `STEP_ASSIGNED` en el audit
 
 - **Escenario 2: Sin transición que matchee, el flujo cierra con el resultado del paso**
   - **Dado** un paso final con sólo una transición `ON_APPROVE` y el aprobador rechaza
   - **Cuando** ninguna transición matchea
-  - **Entonces** la submission cierra como `REJECTED` con evento `WORKFLOW_COMPLETED` "Solicitud rechazada — fin del flujo"
+  - **Entonces** la submission cierra como `REJECTED` con evento `WORKFLOW_COMPLETED` "Solicitud rechazada, fin del flujo"
 
 ---
 
-##### HU-WF-05 — Constructor de condiciones personalizadas
+##### HU-WF-05: Constructor de condiciones personalizadas
 
 > **Como** diseñador de flujos,
 > **quiero** declarar transiciones que dependan del valor de un campo del formulario (campo + operador + valor),
@@ -399,7 +399,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 **Criterios de aceptación:**
 
 - **Escenario 1: Condición `monto > 5000` enruta a paso de Gerencia**
-  - **Dado** un paso con dos transiciones — `CUSTOM {field: "monto", operator: "GT", value: 5000} → "Gerencia"` y `ALWAYS → "Cierre"`
+  - **Dado** un paso con dos transiciones: `CUSTOM {field: "monto", operator: "GT", value: 5000} → "Gerencia"` y `ALWAYS → "Cierre"`
   - **Cuando** un solicitante envía una submission con `monto = 7800`
   - **Entonces** el `WorkflowEngine` evalúa la primera transición, matchea, y enruta al paso "Gerencia"
 
@@ -410,7 +410,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-WF-06 — Snapshot inmutable del workflow al envío
+##### HU-WF-06: Snapshot inmutable del workflow al envío
 
 > **Como** diseñador de flujos,
 > **quiero** que cada submission registre una copia del workflow en el momento del envío,
@@ -432,11 +432,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP04 — Tracking (Ejecución y trazabilidad)
+#### EP04: Tracking (Ejecución y trazabilidad)
 
 ---
 
-##### HU-TR-01 — Envío de solicitud con ticket único
+##### HU-TR-01: Envío de solicitud con ticket único
 
 > **Como** colaborador de cualquier área,
 > **quiero** llenar un formulario publicado y enviarlo como solicitud,
@@ -458,7 +458,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-02 — Decisión sobre paso (aprobar/rechazar/devolver)
+##### HU-TR-02: Decisión sobre paso (aprobar/rechazar/devolver)
 
 > **Como** aprobador asignado a un paso,
 > **quiero** decidir aprobar, rechazar o devolver la solicitud con un comentario,
@@ -480,7 +480,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-03 — Reenvío del solicitante tras devolución
+##### HU-TR-03: Reenvío del solicitante tras devolución
 
 > **Como** solicitante,
 > **quiero** corregir mi solicitud cuando un aprobador la devuelve y reenviarla al flujo,
@@ -502,7 +502,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-04 — Cancelación de solicitud por solicitante
+##### HU-TR-04: Cancelación de solicitud por solicitante
 
 > **Como** solicitante,
 > **quiero** cancelar mi solicitud mientras el flujo no haya cerrado,
@@ -524,7 +524,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-05 — Bandeja "mis solicitudes"
+##### HU-TR-05: Bandeja "mis solicitudes"
 
 > **Como** solicitante,
 > **quiero** ver mis solicitudes activas e históricas con filtros por estado,
@@ -546,7 +546,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-06 — Bandeja "asignadas a mí" para aprobadores
+##### HU-TR-06: Bandeja "asignadas a mí" para aprobadores
 
 > **Como** aprobador,
 > **quiero** ver todas las solicitudes pendientes de mi decisión en una bandeja única,
@@ -568,7 +568,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-TR-07 — Timeline cronológico de eventos
+##### HU-TR-07: Timeline cronológico de eventos
 
 > **Como** auditor o solicitante o aprobador,
 > **quiero** ver una línea de tiempo cronológica de todos los eventos de una submission,
@@ -590,11 +590,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP05 — Notifications (Notificaciones por email)
+#### EP05: Notifications (Notificaciones por email)
 
 ---
 
-##### HU-NT-01 — Email al aprobador en asignación
+##### HU-NT-01: Email al aprobador en asignación
 
 > **Como** aprobador,
 > **quiero** recibir un correo cuando una submission me sea asignada,
@@ -616,7 +616,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-NT-02 — Email al solicitante en cierre
+##### HU-NT-02: Email al solicitante en cierre
 
 > **Como** solicitante,
 > **quiero** recibir un correo cuando mi solicitud se aprueba o se rechaza,
@@ -638,7 +638,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-NT-03 — Email al solicitante en devolución
+##### HU-NT-03: Email al solicitante en devolución
 
 > **Como** solicitante,
 > **quiero** recibir un correo cuando un aprobador me devuelva la solicitud,
@@ -660,11 +660,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP06 — Reporting (Reportes y auditoría)
+#### EP06: Reporting (Reportes y auditoría)
 
 ---
 
-##### HU-RP-01 — Reporte de solicitudes por estado y rango de fechas
+##### HU-RP-01: Reporte de solicitudes por estado y rango de fechas
 
 > **Como** auditor o administrador,
 > **quiero** consultar las solicitudes filtradas por estado, rango de fechas y formulario,
@@ -686,7 +686,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-RP-02 — KPI tiempo promedio de ciclo por formulario
+##### HU-RP-02: KPI tiempo promedio de ciclo por formulario
 
 > **Como** product owner,
 > **quiero** ver el tiempo promedio de ciclo (envío → cierre) de cada formulario,
@@ -708,7 +708,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-RP-03 — KPI aprobación / rechazo por área
+##### HU-RP-03: KPI aprobación / rechazo por área
 
 > **Como** product owner,
 > **quiero** ver la tasa de aprobación y rechazo de solicitudes agrupadas por área del solicitante,
@@ -730,7 +730,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-RP-04 — Exportación CSV de bandeja
+##### HU-RP-04: Exportación CSV de bandeja
 
 > **Como** auditor,
 > **quiero** descargar una bandeja de submissions filtrada como archivo CSV,
@@ -752,7 +752,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-RP-05 — Reporte detallado por formulario
+##### HU-RP-05: Reporte detallado por formulario
 
 > **Como** product owner,
 > **quiero** abrir un reporte por formulario que muestre versiones publicadas, conteo total de submissions, distribución por estado y tiempo medio de ciclo,
@@ -774,11 +774,11 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-#### EP07 — Operación (Delegación, escalamiento, reasignación)
+#### EP07: Operación (Delegación, escalamiento, reasignación)
 
 ---
 
-##### HU-OP-01 — Delegación temporal a suplente
+##### HU-OP-01: Delegación temporal a suplente
 
 > **Como** aprobador,
 > **quiero** declarar un suplente y un rango de fechas en mi perfil,
@@ -800,7 +800,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-OP-02 — Escalamiento por jerarquía IAM
+##### HU-OP-02: Escalamiento por jerarquía IAM
 
 > **Como** product owner,
 > **quiero** que cuando un paso busque un aprobador por área+cargo y no exista nadie en esa combinación, el sistema escale por la jerarquía Claro hasta encontrar un usuario activo,
@@ -822,7 +822,7 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 
 ---
 
-##### HU-OP-03 — Reasignación manual por administrador
+##### HU-OP-03: Reasignación manual por administrador
 
 > **Como** administrador,
 > **quiero** reasignar el paso activo de una submission a otro aprobador desde el detalle,
@@ -852,6 +852,12 @@ El módulo MigraFlow del cap. I queda fuera del alcance del MVP académico (ver 
 | **Should Have** | HU-FB-05 (sugerencias IA) · HU-WF-05 (condiciones custom) · HU-TR-03, 04 (devolución, cancelación) · HU-NT-01, 02, 03 (email) · HU-RP-01, 02, 04 (reportes base) | Mejoran la calidad del flujo y entregan KPIs verificables, pero el MVP puede demostrarse sin ellas en una primera iteración. |
 | **Could Have** | HU-RP-03 (KPI por área) · HU-RP-05 (reporte por formulario) · HU-OP-01, 02, 03 (delegación, escalamiento, reasignación) | Son robustez del producto. Aportan mucho valor pero el MVP cubre la operación básica sin ellas. |
 | **Won't Have del MVP** | Notificaciones Microsoft Teams (ADR-0009) · Escalamiento programado por SLA (ADR-0010) · Exportación PDF · Migración paralela contra NINTEX (ADR-0007 + ADR-0008) · Dashboards BI ejecutivos · Integración con sistemas ERP legacy | Quedan registradas como visión a futuro, fuera del alcance verificable del ciclo académico. |
+
+> **Nota sobre los Must Have del capítulo I y los de este backlog.**
+> Los ocho Must Have de la sección 1.8.1 corresponden al nivel de la visión del producto (capítulo I): enuncian las capacidades imprescindibles que definen qué debe hacer Flowtex para reemplazar a NINTEX.
+> La tabla anterior descompone esa visión en el backlog operativo del MVP: aproximadamente dieciocho Historias de Usuario Must Have renombradas por bounded context (HU-IAM, HU-FB, HU-WF, HU-TR), que son las unidades ejecutables del tablero.
+> Ambos conjuntos son válidos porque operan en niveles distintos: el capítulo I fija el "qué" imprescindible del producto y este capítulo fija el "cómo" imprescindible de la construcción.
+> No existe contradicción entre los ocho y los dieciocho: el segundo número es la granularidad ejecutable del primero.
 
 ---
 
@@ -997,7 +1003,7 @@ flowchart TD
 
 ---
 
-## 3.7 Tabla de pasos del método — fase de planificación
+## 3.7 Tabla de pasos del método: fase de planificación
 
 | Herramienta/s del sílabo SI570 | Fusión / creación / combinación | Respaldo en Valor o Principio del Manifiesto Ágil |
 |---|---|---|
