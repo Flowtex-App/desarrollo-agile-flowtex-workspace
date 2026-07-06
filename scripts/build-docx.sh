@@ -34,7 +34,7 @@ fi
 mkdir -p "$OUTPUT_DIR"
 
 # Recolectar capítulos en orden alfabético
-mapfile -t CHAPTERS < <(find "$CHAPTERS_DIR" -maxdepth 1 -name "*.md" | sort)
+mapfile -t CHAPTERS < <(find "$CHAPTERS_DIR" -maxdepth 1 -name "*.md" ! -name "README.md" ! -iname "*placeholder*" | sort)
 
 if [ ${#CHAPTERS[@]} -eq 0 ]; then
   echo "Error: no hay archivos .md en $CHAPTERS_DIR" >&2
