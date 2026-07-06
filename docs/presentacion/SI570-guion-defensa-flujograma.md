@@ -93,7 +93,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 > Esto es lo que diferencia un 17 de un 20. La profesora valora ver que cada decisión está atada a teoría del curso.
 
-### El flujograma cubre cinco marcos teóricos enganchados entre sí
+### El flujograma cubre siete marcos teóricos enganchados entre sí
 
 | Marco teórico | Pensador principal | Dónde aparece en el flujograma |
 |---|---|---|
@@ -102,11 +102,13 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 | **Lean Startup / Producto mínimo viable** | Eric Ries (2011) | Paso 9 (liberar producto mínimo viable) y todo el ciclo build-measure-learn |
 | **Lean Inception** | Paulo Caroli (2018) | Paso 12 (iterar en cinco días) |
 | **Kanban Method** | David Anderson (2010) | Paso 13 (tablero) y Paso 14 (Ley de Little) |
+| **Cynefin** | Dave Snowden (1999) | Justifica el enfoque ágil: el problema es del dominio Complejo |
+| **PDCA** | Walter Shewhart / Edwards Deming | Todo el ciclo del flujograma: Plan, Do, Check, Act |
 
 ### Frases listas para soltar al pasar por cada bloque
 
 **Cuando llegues al paso 2 — Tuckman:**
-> *"Tuckman propuso en 1965 cuatro fases por las que pasa todo equipo nuevo: Forming, Storming, Norming, Performing. Aplicar herramientas sin entender en qué fase está el equipo es como recetar sin diagnosticar."*
+> *"Tuckman propuso en 1965 cuatro fases por las que pasa todo equipo nuevo: Forming ('Comprender el contexto'), Storming ('Capacitar'), Norming ('Liberar de mando y control') y Performing ('Empoderar'). Hoy el equipo está en Norming. Aplicar herramientas sin entender en qué fase está el equipo es como recetar sin diagnosticar."*
 
 **Cuando llegues al paso 4 — Design Thinking:**
 > *"Design Thinking, popularizado por IDEO y Tim Brown, dice que para resolver un problema primero hay que ponerse en los zapatos de quien lo sufre. Por eso empatizamos antes de construir."*
@@ -115,13 +117,25 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 > *"Eric Ries en Lean Startup propone que la mejor forma de aprender es entregar lo mínimo viable que ya genere valor, medir cómo lo usa el cliente, y aprender para la siguiente iteración. Es el ciclo Build-Measure-Learn. Por eso liberamos solo el bloque Must Have del backlog."*
 
 **Cuando llegues al paso 12 — Lean Inception:**
-> *"Paulo Caroli propone comprimir el descubrimiento de una característica nueva en cinco días: visión, persona, stack lógico, mapa de calor de funcionalidades, y lanzamiento controlado. Es Design Thinking acelerado para cuando el contexto general ya es conocido."*
+> *"Paulo Caroli propone comprimir el descubrimiento de una característica nueva en un taller de cinco días con cinco pasos: visión del producto (con el Product Vision Board), personas, journey del usuario, características, y el secuenciador o MVP Canvas. El quinto día cierra con un Showcase. Es Design Thinking acelerado para cuando el contexto general ya es conocido. Primero usamos Lean Startup para el primer producto mínimo viable, y luego Lean Inception para cada iteración siguiente."*
 
 **Cuando llegues al paso 13 — Kanban:**
 > *"David Anderson formalizó Kanban para software en 2010. Tres reglas básicas: visualizar el trabajo, limitar las tareas en curso, y jalar el trabajo cuando hay capacidad libre, no empujarlo por agenda."*
 
 **Cuando llegues al paso 14 — Ley de Little:**
 > *"La Ley de Little dice que el tiempo de entrega depende de cuántas tareas estamos trabajando en paralelo. **Cuantas más tareas a la vez, más lento sale cada una.** Por eso limitamos las tareas en curso en el Kanban: menos cosas en paralelo, más rápido todo el mundo."*
+
+---
+
+## 5.b Por qué ágil (Cynefin) y dónde vive el PDCA
+
+> Dos marcos que la profesora ya preguntó y que atan todo el flujograma. Tenerlos listos sube la nota.
+
+**Por qué elegimos ágil y no predictivo (Cynefin):**
+> *"Para decidir el enfoque usamos el marco Cynefin, de Dave Snowden. Clasifica los problemas en cuatro dominios: Claro, Complicado, Complejo y Caótico. FLOWTEX cae en el dominio Complejo, porque los requisitos de los formularios de Claro evolucionan y no se conocen por completo al inicio. En un dominio Complejo la receta es experimentar, sentir y responder, que es justo lo que hace un enfoque ágil con iteraciones cortas. Un enfoque predictivo asume que todo se planifica de antemano, y eso solo funciona en el dominio Complicado. Por eso ágil, no cascada."*
+
+**Dónde vive el PDCA (Deming, base Shewhart):**
+> *"Todo el ciclo del flujograma es un PDCA, el ciclo de mejora continua que popularizó Deming sobre la base de Walter Shewhart. Plan es el sprint planning donde priorizamos el backlog con MoSCoW. Do es el desarrollo de las Historias de Usuario. Check son las métricas de la Ley de Little y la retrospectiva quincenal. Act son las acciones de mejora que aplicamos en el siguiente sprint. Las tres flechas de retroalimentación son la evidencia visual de ese PDCA: el proceso planifica, hace, verifica y ajusta, y vuelve a empezar."*
 
 ---
 
@@ -148,7 +162,7 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 ### "¿En qué fase de Tuckman está hoy el equipo?"
 
-> *"En Performing. El kick-off cerró Forming, la discusión de arquitectura cerró Storming, las políticas de Kanban cerraron Norming. Hoy el Product Owner ya no revisa cada cambio, suelta el control y el equipo opera autónomo."*
+> *"En Norming, que en el vocabulario del curso es 'Liberar de mando y control'. El kick-off cerró Forming ('Comprender el contexto') y la discusión de arquitectura cerró Storming ('Capacitar'). Hoy las políticas de Kanban y las convenciones del equipo ya están interiorizadas, así que el Product Owner suelta el control y el equipo se autoorganiza. Performing ('Empoderar') es el estado objetivo hacia el que evolucionamos, todavía en consolidación. La señal de que entramos a Performing será cerrar la primera Historia de Usuario sin bloqueadores ni intervención directiva."*
 
 ### "¿Por qué tres herramientas de ideación si solo se usa una?"
 
@@ -182,11 +196,19 @@ Estos son los dos puntos donde el flujograma deja claro que **no se aplican toda
 
 > *"Porque la línea termina y el ciclo aprende. Las tres flechas de retroalimentación llevan información del final hacia el principio: las métricas a los objetivos, el producto al contexto, la solución al problema. El proceso de FLOWTEX no entrega y se apaga, entrega y vuelve a empezar con más aprendizaje."*
 
+### "¿Por qué eligieron un enfoque ágil y no predictivo?"
+
+> *"Por Cynefin, el marco de Dave Snowden. Nuestro problema está en el dominio Complejo: los requisitos de los formularios de Claro cambian y no se conocen del todo al inicio. En ese dominio se experimenta, se siente y se responde, que es el trabajo iterativo del agilismo. Un enfoque predictivo solo sirve en el dominio Complicado, donde todo se puede planificar por adelantado. Por eso elegimos ágil."*
+
+### "¿Dónde está el PDCA en tu proceso?"
+
+> *"En todo el ciclo. El PDCA lo popularizó Deming sobre la base de Shewhart. Plan es el sprint planning con MoSCoW, Do es el desarrollo de las Historias de Usuario, Check son las métricas de la Ley de Little y la retrospectiva, y Act son las mejoras del siguiente sprint. Las tres flechas de retroalimentación son ese PDCA hecho visible."*
+
 ---
 
 ## 8. La frase de cierre — con la que rematas el 20
 
-> *"El flujograma de FLOWTEX no es una serie de cajas conectadas con flechas. Es un sistema vivo que combina cinco marcos teóricos enganchados: Tuckman para el equipo, Design Thinking para empatizar y validar con el usuario, Lean Startup para el producto mínimo viable y la inteligencia artificial, Lean Inception para cada iteración y Kanban con la Ley de Little para la operación.*
+> *"El flujograma de FLOWTEX no es una serie de cajas conectadas con flechas. Es un sistema vivo que combina siete marcos enganchados: Cynefin para justificar el enfoque ágil, Tuckman para el equipo, Design Thinking para empatizar y validar con el usuario, Lean Startup para el producto mínimo viable y la inteligencia artificial, Lean Inception para cada iteración, Kanban con la Ley de Little para la operación, y el PDCA que envuelve todo el ciclo.*
 
 > *Cada decisión está atada a una pieza del curso. Las dos decisiones del flujo demuestran que el equipo sabe elegir la herramienta correcta según el contexto. Las tres flechas de retroalimentación demuestran que el proceso aprende.*
 
@@ -209,6 +231,9 @@ Si tienes 10 minutos para memorizar lo esencial, son estas 10 filas. Si las domi
 | **Kanban** | David Anderson. Visualizar el trabajo, limitar las tareas en curso, jalar en lugar de empujar. |
 | **Ley de Little** | Cuanta más cosas en paralelo, más lento sale cada una. Tres indicadores: tiempo de entrega, velocidad, tasa de bloqueo. |
 | **Waiting waste** | El desperdicio de esperar a otro equipo. Es lo que mata la inteligencia artificial del paso 9b. |
+| **Cynefin** | Dave Snowden. Cuatro dominios. FLOWTEX es Complejo: experimentar, sentir, responder. Por eso ágil, no predictivo. |
+| **PDCA** | Deming (base Shewhart). Plan=planning, Do=desarrollo, Check=métricas y retrospectiva, Act=mejoras. Todo el ciclo es un PDCA. |
+| **Tuckman hoy** | El equipo está en Norming ("Liberar de mando y control"). Performing ("Empoderar") es el objetivo. |
 | **Ciclo, no línea** | Tres flechas de retroalimentación cierran el bucle. El proceso aprende. |
 
 ---
